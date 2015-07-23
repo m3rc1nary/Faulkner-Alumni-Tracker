@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * show major information to be edited or deleted
+ * Show major information to be edited or deleted
  * 
  * @author: Robert Vines
  */
@@ -12,6 +12,17 @@
     
     $pdo = new PDO($connString, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>
+<?php
+    if(isset($_GET['delete_id']))
+    {               
+        $degreeID = $_GET['delete_id'];
+        
+        $sql= "DELETE FROM degree WHERE DegreeID=".$degreeID;
+        $pdo->query($sql);
+ 
+        header("Location: EditMajor.php");
+    }
 ?>
 
 <html>
@@ -46,11 +57,11 @@
                     <td> </td>
                 </tr>
                 <?php
-                    $sql = "SELECT degree.DegreeID, degree.Type, degree.Major, department.DeptName"
+                    $sql2 = "SELECT degree.DegreeID, degree.Type, degree.Major, department.DeptName"
                             . " FROM degree "
                             . "JOIN department "
                             . "ON degree.Department_DepartmentID = department.DepartmentID ";
-                    $result = $pdo->query($sql);
+                    $result = $pdo->query($sql2);
                        
                     while($val=$result->fetch()):
                     
@@ -64,7 +75,7 @@
                     <td><?php echo $degreeMajor; ?></td>
                     <td><?php echo $deptName; ?></td>
                     <td><a href="EditMajorForm.php?edit_id=<?php echo $degreeID ?>"><button type="button">Edit</button></a></td>
-                    <td><input type="submit" value="Delete"></td>
+                    <td><a href="EditMajor.php?delete_id=<?php echo $degreeID ?>" onclick="return confirm('Are you sure you want to delete this major?');"><input type="submit" value="Delete"></td>
                 </tr>
                 <?php
                     endwhile;

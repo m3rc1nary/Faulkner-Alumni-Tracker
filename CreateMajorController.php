@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * Send degree information to database.
+ * Send major information to degree table.
  * 
  * @author Robert Vines
  */

@@ -1,4 +1,9 @@
 <?php
+/*
+ * Check login iformation and create sessoin.
+ * 
+ * @author: Robert Vines  */
+
     // Start Session because we will save some values to session varaible.
     session_start();
     ob_start();

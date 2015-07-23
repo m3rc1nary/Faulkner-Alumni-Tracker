@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Display Users to edit and delete them.
  *
@@ -27,8 +26,6 @@
         $sql="DELETE schoolemployee.*, login.* FROM schoolemployee "
                 . "JOIN login "
                 . "ON schoolemployee.Login_LoginID=login.LoginID WHERE EmployeeId=".$employeeId;
-        
-//        $sql="DELETE FROM schoolemployee WHERE EmployeeID=".$employeeId;
         $pdo->query($sql);
         
         header("Location: EditUser.php");

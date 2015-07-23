@@ -1,4 +1,8 @@
 <?php
+    /**
+     * Configurations for login page
+     */
+
     $con = mysql_connect("localhost","root","root");
     
     if (!$con)

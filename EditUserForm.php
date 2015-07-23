@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change or delete a user.
  *
