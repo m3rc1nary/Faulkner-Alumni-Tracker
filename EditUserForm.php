@@ -58,7 +58,7 @@
         <div id="nav">
             <ul>
                 <li><a id="user" href="CreateUser.php">Create User</a></li>
-                <li><a href="EditUser.php">Edit User</a></li>
+                <li><a href="EditUser.php"><span id="current">Edit User</span></a></li>
                 <li><a href="CreateMajor.php">Create Major</a></li>
                 <li><a href="EditMajor.php">Edit Major</a></li>
                 <li><a href="CreateDepartment.php">Create Department</a></li>
@@ -72,14 +72,14 @@
             <p>Email: <input type="text" name="Email" value="<?php echo $email;?>"></p>
             <p>Role: 
                 <select name="Role">
-                    <option><?php echo $role;?></option>
+                    <option><?php echo $role; ?></option>
                     <option>Secretary</option>
                     <option>Department Chair</option>
                     <option>Dean</option>
                 </select></p>
             <p>Department: 
                 <select name="DeptName">
-                    <option><?php echo $dept;?></option>
+                    <option><?php echo $dept; ?></option>
                     <?php 
                         $sql = "SELECT DeptName FROM department";
                         $result = $pdo->query($sql);
@@ -92,8 +92,8 @@
                         }endwhile;
                     ?>
                     </select></p>
-            <p>User Name: <input type="text" name="UserName" value="<?php echo $userName;?>"></p>
-            <p>Password: <input type="text" name="Password" value="<?php echo $password;?>"></p>
+            <p>User Name: <input type="text" name="UserName" value="<?php echo $userName ;?>"></p>
+            <p>Password: <input type="text" name="Password" value="<?php echo $password ;?>"></p>
             <a href="EditUserForm.php?edit_user=<?php echo $employeeId ?>"><input type="submit" value="Edit User"></a>
         </div>
     </body>

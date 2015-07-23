@@ -11,35 +11,25 @@
     $user ="root";
     $pass ="root";
 
+
     $pdo = new PDO($connString, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     $deptName = $_POST['Dept']; 
     $type = $_POST['Type'];
     $major = $_POST['Major'];
-
-    $sql = "SELECT DepartmentID FROM department WHERE DeptName='".$deptName."'";
-    $pdo->query($sql);
-    
+ 
+    $sql = "SELECT * FROM department WHERE DeptName='".$deptName."'";
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+   
     $deptID = $val['DepartmentID'];
-    echo $deptID;
+
     
-//    $sql = "SELECT * FROM department WHERE DeptName='".$deptName."'";
-//    $pdo->query($sql);
-//    
-//    $deptN = $val['DeptName'];
-//    $deptID = $val['DepartmentID'];
-//    
-//    echo $deptN;
-//    echo $deptName;
-//    echo $deptID;
-//    echo $type;
-//    echo $major;
-//    
-//    $sql2 = "INSERT INTO degree (Type, Major, Department_DepartmentID)
-//             VALUES ('".$type."','".$major."','".$deptID."')";
-//    
-//    $pdo->exec($sql2);
+    $sql2 = "INSERT INTO degree (Type, Major, Department_DepartmentID)
+             VALUES ('".$type."','".$major."','".$deptID."')";
     
-//    header("Location: EditMajor.php");
+    $pdo->exec($sql2);
+    
+    header("Location: EditMajor.php");
 ?>

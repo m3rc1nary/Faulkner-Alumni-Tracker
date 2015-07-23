@@ -3,9 +3,29 @@
 /*
  * Form to edit a major.
  *
- * @author Robert Vined
+ * @author Robert Vines
  */
-?>
+
+    $connString = "mysql:host=localhost;dbname=alumnitracker";
+    $user ="root";
+    $pass ="root";
+    
+    $pdo = new PDO($connString, $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $degreeID = $_GET['edit_id'];
+    
+    $sql = "SELECT degree.DegreeID, degree.Type, degree.Major, department.DeptName"
+            . " FROM degree "
+            . "JOIN department "
+            . "ON degree.Department_DepartmentID = department.DepartmentID WHERE DegreeID=".$degreeID;
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+    
+    $degreeType = $val['Type'];
+    $degreeMajor = $val['Major'];
+    $deptName = $val['DeptName'];
+    ?>
 
 <html>
     <head>
@@ -30,8 +50,23 @@
         </div>
         <div id="body">
             <h2>Edit Major</h2>
-            <p>Type: <input type="text" name="FirstName"></p>
-            <p>Field: <input type="text" name="LastName"></p>
+            <p>Type: <input type="text" name="Type" value="<?php echo $degreeType; ?>"></p>
+            <p>Major: <input type="text" name="Major" value="<?php echo $degreeMajor; ?>"></p>
+            <p>Department: 
+                <select name="Dept">
+                    <option><?php echo $deptName; ?></option>
+                    <?php 
+                        $sql = "SELECT DeptName FROM department";
+                        $result = $pdo->query($sql);
+                        
+                        while ($val = $result->fetch()):
+                        
+                        $deptName = $val['DeptName'];    
+                        {
+                            echo "<option>" . $deptName . "</option>";
+                        }endwhile;
+                    ?>
+                </select></p>
             <input type="submit" value="Change User">
         </div>
     </body>
