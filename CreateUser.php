@@ -5,8 +5,6 @@
  * @author Robert Vines
  */
 
-    include('UserSession_Admin.php');
-
     $connString = "mysql:host=localhost;dbname=alumnitracker";
     $user ="root";
     $pass ="root";

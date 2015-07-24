@@ -20,12 +20,12 @@
         <div id="header"></div>
         <div id="page">
             <div id="loginBox">
-                <form method="post" action="CheckLogin.php">
+                <form method="post" action="Login.php">
                     <p id='loginHeader'>Enter User Name and Password to Login</p>
                     <p id="loginText">User Name:
-                        <input type="text" name="userName"></p>
+                        <input type="text" name="UserName"></p>
                     <p id="loginText">Password:
-                        <input type="text" name="password"></p>
+                        <input type="password" name="Password"></p>
                     <p id="loginText"><input type="submit" value="Login"></p>
                 </form>
             </div>
