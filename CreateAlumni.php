@@ -103,7 +103,7 @@
                 <div class="tabs">
                     <div class="tab">
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
-                            <label for="tab-1">Employment</label>
+                            <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
                                     Current Job: <input type="text" name="Current Job">
                                     <P>In Field:
@@ -116,7 +116,7 @@
                     </div> 
                     <div class="tab">
                         <input type="radio" id="tab-2" name="tab-group-1">
-                            <label for="tab-2">Grad School</label> 
+                            <label for="tab-2"><b>Grad School</b></label> 
                                 <div class="content">
                                     Applied: 
                                     <select name="Applied">

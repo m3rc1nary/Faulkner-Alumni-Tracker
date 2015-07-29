@@ -15,7 +15,7 @@
     position: absolute;
     top: 0;
     left: 250px;
-    width: 100%;
+    width: 81.7%;
     height: 96px;
     background: #4F81BD;
     }
@@ -113,7 +113,7 @@ a:visited {
     padding: 15;
     top: 35;
     position: relative;
-    width: 100%;
+    width: 90%;
     float: left;
     font: 14px arial, sans-serif;
     }
