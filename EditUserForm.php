@@ -31,20 +31,6 @@
     $userName = $val['UserName'];
     $password = $val['Password'];
 ?>
-<?php
-    if(isset($_GET['edit_user']))
-    {          
-        //update statement
-        $employeeId = $_GET['edit_id'];
-                                        
-        $sql="Update schoolemployee"
-                . "SET "
-                . " WHERE EmployeeID=".$employeeId;
-        $pdo->query($sql);           
-               
-        header("Location: EditUser.php");
-    }
-?>
 <html>
     <head>
         <title>Edit User</title>
@@ -68,7 +54,7 @@
         </div>
         <div id="body">
             <h2>Edit User</h2>
-            <form method='post'>
+            <form method='post' action='EditUserController.php?edit_user=<?php echo $employeeID ?>'>
                 <p>First Name: <input type="text" name="FirstName" value="<?php echo $firstName;?>"></p>
                 <p>Last Name: <input type="text" name="LastName" value="<?php echo $lastName;?>"></p>
                 <p>Email: <input type="text" name="Email" value="<?php echo $email;?>"></p>
@@ -96,7 +82,7 @@
                         </select></p>
                 <p>User Name: <input type="text" name="UserName" value="<?php echo $userName ;?>"></p>
                 <p>Password: <input type="text" name="Password" value="<?php echo $password ;?>"></p>
-                <a href="EditUserForm.php?edit_user=<?php echo $employeeId ?>"><input type="submit" value="Edit User"></a>
+                <input type="submit" value="Edit User">
             </form>
         </div>
     </body>
