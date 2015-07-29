@@ -31,7 +31,7 @@
         </div>
         <div id="body">
             <h2>Create Alumni</h2>
-            <form method='post' action="">
+            <form method='post' action="CreateAlumniController.php">
                 <table id="tablebody" id="alumniTable">
                     <tr>
                         <th>First Name:</th> <th><input type="text" name="FirstName"></th>
@@ -44,7 +44,7 @@
                         <th>Work Number:</th> <th><input type="text" name="WorkNum"></th>
                    </tr>
                    <tr>
-                        <th>Primary Email:</th> <th><input type="text" name="Firstemail"></th>
+                        <th>Primary Email:</th> <th><input type="text" name="FirstEmail"></th>
                         <th>Secondary Email:</td> <th><input type="text" name="SecondEmail"></th>
                         <th>Tracked:</th>   
                         <th><select name="Tracked">
@@ -102,19 +102,19 @@
                                 <div class="content">
                                     <table id="tablebody" id="alumniTable">
                                         <tr>
-                                            <th>Current Job:</th> <th><input type="text" name="Current Job"></th>
+                                            <th>Current Job:</th> <th><input type="text" name="CurrentJob"></th>
                                             <th>In Field:</th>
-                                            <th><select>
+                                            <th><select name="Field">
                                                 <option>Yes</option>
                                                 <option>No</option>
                                             </select></th>
                                         </tr>
                                         <tr>
-                                            <th>Employer Name:</th> <th><input type="text" name="Current Job"></th>
-                                            <th>Employer Number:</th> <th><input type="text" name="Current Job"></th>
+                                            <th>Employer Name:</th> <th><input type="text" name="EmployerName"></th>
+                                            <th>Employer Number:</th> <th><input type="text" name="EmployerNum"></th>
                                         </tr>
                                         <tr>
-                                            <th>Employer Company:</th> <th><input type="text" name="Current Job"></th>
+                                            <th>Employer Company:</th> <th><input type="text" name="EmployerComp"></th>
                                         </tr>
                                     </table>
                                 </div> 
@@ -131,7 +131,7 @@
                                                     <option>No</option>
                                                 </select></th>
                                                 <th>Accepted:</th>
-                                            <th><select>
+                                            <th><select name="Accepted">
                                                 <option>In Process</option>
                                                 <option>Yes</option>
                                                 <option>No</option>
