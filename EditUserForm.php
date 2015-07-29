@@ -33,12 +33,14 @@
 ?>
 <?php
     if(isset($_GET['edit_user']))
-    {               
+    {          
         //update statement
-//      $employeeId = $_GET['edit_id'];
-//                                        
-//      $sql="Update schoolemployee WHERE EmployeeID=".$employeeId;
-//      $pdo->query($sql);           
+        $employeeId = $_GET['edit_id'];
+                                        
+        $sql="Update schoolemployee"
+                . "SET "
+                . " WHERE EmployeeID=".$employeeId;
+        $pdo->query($sql);           
                
         header("Location: EditUser.php");
     }
@@ -66,34 +68,36 @@
         </div>
         <div id="body">
             <h2>Edit User</h2>
-            <p>First Name: <input type="text" name="FirstName" value="<?php echo $firstName;?>"></p>
-            <p>Last Name: <input type="text" name="LastName" value="<?php echo $lastName;?>"></p>
-            <p>Email: <input type="text" name="Email" value="<?php echo $email;?>"></p>
-            <p>Role: 
-                <select name="Role">
-                    <option><?php echo $role; ?></option>
-                    <option>Secretary</option>
-                    <option>Department Chair</option>
-                    <option>Dean</option>
-                </select></p>
-            <p>Department: 
-                <select name="DeptName">
-                    <option><?php echo $dept; ?></option>
-                    <?php 
-                        $sql = "SELECT DeptName FROM department";
-                        $result = $pdo->query($sql);
-                        
-                        while ($val = $result->fetch()):
-                        
-                        $deptName = $val['DeptName'];    
-                        {
-                            echo "<option>" . $deptName . "</option>";
-                        }endwhile;
-                    ?>
+            <form method='post'>
+                <p>First Name: <input type="text" name="FirstName" value="<?php echo $firstName;?>"></p>
+                <p>Last Name: <input type="text" name="LastName" value="<?php echo $lastName;?>"></p>
+                <p>Email: <input type="text" name="Email" value="<?php echo $email;?>"></p>
+                <p>Role: 
+                    <select name="Role">
+                        <option><?php echo $role; ?></option>
+                        <option>Secretary</option>
+                        <option>Department Chair</option>
+                        <option>Dean</option>
                     </select></p>
-            <p>User Name: <input type="text" name="UserName" value="<?php echo $userName ;?>"></p>
-            <p>Password: <input type="text" name="Password" value="<?php echo $password ;?>"></p>
-            <a href="EditUserForm.php?edit_user=<?php echo $employeeId ?>"><input type="submit" value="Edit User"></a>
+                <p>Department: 
+                    <select name="DeptName">
+                        <option><?php echo $dept; ?></option>
+                        <?php 
+                            $sql = "SELECT DeptName FROM department";
+                            $result = $pdo->query($sql);
+
+                            while ($val = $result->fetch()):
+
+                            $deptName = $val['DeptName'];    
+                            {
+                                echo "<option>" . $deptName . "</option>";
+                            }endwhile;
+                        ?>
+                        </select></p>
+                <p>User Name: <input type="text" name="UserName" value="<?php echo $userName ;?>"></p>
+                <p>Password: <input type="text" name="Password" value="<?php echo $password ;?>"></p>
+                <a href="EditUserForm.php?edit_user=<?php echo $employeeId ?>"><input type="submit" value="Edit User"></a>
+            </form>
         </div>
     </body>
 </html>

@@ -5,7 +5,12 @@
  * 
  * @author: Robert Vines
  */
-
+    $connString = "mysql:host=localhost;dbname=alumnitracker";
+    $user ="root";
+    $pass ="root";
+    
+    $pdo = new PDO($connString, $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <html>
@@ -58,11 +63,22 @@
                     <tr>
                         <th>Degree Type:</th>
                         <th><select name="DegreeType">
-                                <option></option>
+                               <option>Associates</option>
+                               <option>Bachelors</option>
                             </select></th>
                         <th>Major:</th> 
                         <th><select name="Major">
-                               <option></option>
+                                <?php 
+                                    $sql = "SELECT Major FROM degree";
+                                    $result = $pdo->query($sql);
+
+                                    while ($val = $result->fetch()):
+
+                                    $degreeName = $val['Major'];    
+                                    {
+                                        echo "<option>" . $degreeName . "</option>";
+                                    }endwhile;
+                                ?>
                             </select></th>
                         <th>Month Graduated:</th>
                         <th><input type="text" name="MonthGrad"></th>

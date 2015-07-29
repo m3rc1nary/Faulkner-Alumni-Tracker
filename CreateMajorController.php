@@ -11,7 +11,6 @@
     $user ="root";
     $pass ="root";
 
-
     $pdo = new PDO($connString, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
@@ -24,7 +23,6 @@
     $val=$result->fetch();
    
     $deptID = $val['DepartmentID'];
-
     
     $sql2 = "INSERT INTO degree (Type, Major, Department_DepartmentID)
              VALUES ('".$type."','".$major."','".$deptID."')";

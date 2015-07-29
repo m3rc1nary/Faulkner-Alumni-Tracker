@@ -11,14 +11,16 @@
     
     $pdo = new PDO($connString, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
     $deptID = $_GET['edit_id'];
     
     $sql="SELECT * FROM department WHERE DepartmentID=".$deptID;
     $result = $pdo->query($sql);
     $val=$result->fetch();
+    
+    $departmentId = $val['DepartmentID'];
+    $departmentName = $val['DeptName'];
 ?>
-
 <html>
     <head>
         <title>Edit Department</title>
@@ -42,11 +44,10 @@
         </div>
         <div id="body">
             <h2>Create Department</h2>
-            <form method='post' action="CreateDepartmentController.php">
-                <p>Department Name: <input type="text" name="DeptName" value="<?php echo $val['DeptName'];?>"></p>
+            <form method='post' action='EditDepartmentController.php?edit_dept=<?php echo $deptID ?>'>
+                <p>Department Name: <input type="text" name="DeptName" value="<?php echo $departmentName;?>"></p>
                 <input type="submit" value="Edit Department">
             </form>
         </div>
     </body>
 </html>
-
