@@ -138,7 +138,12 @@ table, td {
     padding-bottom: 3px;
     padding-left: 5px;
     }
-    
+
+    /*
+#other {
+    background-color: F2F2F2;    
+    }    
+    */
 /*format table in create alumni*/
 table, th {
     font-weight: normal;

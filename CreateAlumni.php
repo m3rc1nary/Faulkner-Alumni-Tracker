@@ -34,40 +34,41 @@
             <form method='post' action="">
                 <table id="tablebody" id="alumniTable">
                     <tr>
-                        <th>First Name:</th>
-                        <th><input type="text" name="FirstName"></th>
-                        <th>Middle Name:</th> 
-                        <th><input type="text" name="MiddleName"></th>
-                        <th>Last Name:</th> 
-                        <th><input type="text" name="LastName"></th>
+                        <th>First Name:</th> <th><input type="text" name="FirstName"></th>
+                        <th>Middle Name:</th> <th><input type="text" name="MiddleName"></th>
+                        <th>Last Name:</th> <th><input type="text" name="LastName"></th>
+                   </tr>
+                   <tr id='other'>
+                        <th>Cell Number:</td> <th><input type="text" name="CellNum"></th>
+                        <th>Home Number:</th> <th><input type="text" name="HomeNum"></th>
+                        <th>Work Number:</th> <th><input type="text" name="WorkNum"></th>
                    </tr>
                    <tr>
-                        <th>Cell Number:</td> 
-                        <th><input type="text" name="CellNum"></th>
-                        <th>Home Number:</th>
-                        <th><input type="text" name="HomeNum"></th>
-                        <th>Work Number:</th>
-                        <th><input type="text" name="WorkNum"></th>
-                   </tr>
-                   <tr>
-                        <th>Primary Email:</th> 
-                        <th><input type="text" name="Firstemail"></th>
-                        <th>Secondary Email:</td>
-                        <th><input type="text" name="SecondEmail"></th>
-                        <th>Tracked:</th>
+                        <th>Primary Email:</th> <th><input type="text" name="Firstemail"></th>
+                        <th>Secondary Email:</td> <th><input type="text" name="SecondEmail"></th>
+                        <th>Tracked:</th>   
                         <th><select name="Tracked">
                                 <option>Yes</option>
                                 <option>No</option>
                             </select></th>
-                    </tr>
-                    <tr>
+                   </tr>
+                   <tr id='other'>
+                        <th>Street:</th> <th><input type="text" name="Street"></th>
+                        <th>City:</th> <th><input type="text" name="City"></th>
+                        <th>State:</th> <th><input type="text" name="State"></th>
+                   </tr>
+                   <tr>
+                        <th>Country:</th> <th><input type="text" name="Country"></th>
+                        <th>Zip:</th> <th><input type="text" name="Zip"></th>
+                   </tr>
+                   <tr id='other'>
                         <th>Degree Type:</th>
                         <th><select name="DegreeType">
                                <option>Associates</option>
                                <option>Bachelors</option>
                             </select></th>
                         <th>Major:</th> 
-                        <th><select name="Major">
+                        <th colspan="2"><select name="Major">
                                 <?php 
                                     $sql = "SELECT Major FROM degree";
                                     $result = $pdo->query($sql);
@@ -80,24 +81,18 @@
                                     }endwhile;
                                 ?>
                             </select></th>
+                   </tr>
+                   <tr>
                         <th>Month Graduated:</th>
-                        <th><input type="text" name="MonthGrad"></th>
-                   </tr>
-                   <tr>
-                        <th>Year Graduated:</th> 
-                        <th><input type="text" name="YearGrad"></th>
-                        <th>Street:</th> 
-                        <th><input type="text" name="Street"></th>
-                        <th>City:</th> 
-                        <th><input type="text" name="City"></th>
-                   </tr>
-                   <tr>
-                        <th>State:</th> 
-                        <th><input type="text" name="State"></th>
-                        <th>Country:</th>
-                        <th><input type="text" name="Country"></th>
-                        <th>Zip:</th>
-                        <th><input type="text" name="Zip"></th>
+                        <th><select name="MonthGrad">
+                                <option>January</option><option>February</option>
+                                <option>March</option><option>April</option>
+                                <option>May</option><option>June</option>
+                                <option>July</option><option>August</option>
+                                <option>September</option><option>October</option>
+                                <option>November</option><option>December</option>
+                            </select></th>
+                        <th>Year Graduated:</th> <th><input type="text" name="YearGrad"></th>
                    </tr>
                 </table>
                 <div class="tabs">
@@ -105,32 +100,48 @@
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
                             <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
-                                    Current Job: <input type="text" name="Current Job">
-                                    <P>In Field:
-                                    <select>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select></p>
-                                    <p>Employer Name: <input type="text" name="Current Job"></p>
+                                    <table id="tablebody" id="alumniTable">
+                                        <tr>
+                                            <th>Current Job:</th> <th><input type="text" name="Current Job"></th>
+                                            <th>In Field:</th>
+                                            <th><select>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Employer Name:</th> <th><input type="text" name="Current Job"></th>
+                                            <th>Employer Number:</th> <th><input type="text" name="Current Job"></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Employer Company:</th> <th><input type="text" name="Current Job"></th>
+                                        </tr>
+                                    </table>
                                 </div> 
                     </div> 
                     <div class="tab">
                         <input type="radio" id="tab-2" name="tab-group-1">
                             <label for="tab-2"><b>Grad School</b></label> 
                                 <div class="content">
-                                    Applied: 
-                                    <select name="Applied">
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select>
-                                    <p>Accepted:
-                                    <select>
-                                        <option>In Process</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
-                                    </select></p>
-                                    <p>Status: <input type="text" name="Status"></p>
-                                    <p>School Name:</p>
+                                    <table id="tablebody" id="alumniTable">
+                                        <tr>
+                                            <th>Applied:</th>
+                                            <th><select name="Applied">
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select></th>
+                                                <th>Accepted:</th>
+                                            <th><select>
+                                                <option>In Process</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                </select></th>
+                                        </tr>
+                                        <tr>
+                                            <th>Status:</th> <th><input type="text" name="Status"></th>
+                                            <th>School Name:</th>
+                                        </tr>
+                                    </table>
                                 </div> 
                     </div>
                 </div>
