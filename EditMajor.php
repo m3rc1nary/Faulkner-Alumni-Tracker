@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /* 
  * Show major information to be edited or deleted
