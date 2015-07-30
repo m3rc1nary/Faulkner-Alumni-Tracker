@@ -34,7 +34,7 @@
     $applied = $_POST['Applied'];
     $accepted = $_POST['Accepted'];
     $status = $_POST['Status'];
-    //$schoolName
+    $schoolName = $_POST['SchoolName'];
 
     //SQL Statement
 ?>

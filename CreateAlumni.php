@@ -44,8 +44,8 @@
                         <th>Work Number:</th> <th><input type="text" name="WorkNum"></th>
                    </tr>
                    <tr>
-                        <th>Primary Email:</th> <th><input type="text" name="FirstEmail"></th>
-                        <th>Secondary Email:</td> <th><input type="text" name="SecondEmail"></th>
+                        <th>Primary Email:</th> <th><input type="email" name="FirstEmail"></th>
+                        <th>Secondary Email:</td> <th><input type="email" name="SecondEmail"></th>
                         <th>Tracked:</th>   
                         <th><select name="Tracked">
                                 <option>Yes</option>
@@ -139,7 +139,7 @@
                                         </tr>
                                         <tr>
                                             <th>Status:</th> <th><input type="text" name="Status"></th>
-                                            <th>School Name:</th>
+                                            <th>School Name:</th> <th><input type="text" name="SchoolName"></th>
                                         </tr>
                                     </table>
                                 </div> 
