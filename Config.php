@@ -5,11 +5,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-    $con = mysql_connect("localhost","root","root");
+    $connString = "mysql:host=localhost;dbname=alumnitracker";
+    $user ="root";
+    $pass ="root";
     
-    if (!$con)
+     try
+    { 
+        $pdo = new PDO($connString, $user, $pass);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } 
+    catch (Exception $ex) 
     {
-    die('Could not connect: ' . mysql_error());
+        echo "Connection Failed: " . $ex->getMessage();
     }
-    mysql_select_db("YourDbName", $con);
 ?>

@@ -6,10 +6,12 @@
  * and open the template in the editor.
  */
 
-session_start();
-if($_SESSION[type]!='xyz'){
-header('location:home.php');
-exit();
-}
-include('config.php');
+    session_start();
+
+    if($_SESSION['Role']!='Admin')
+        {
+            header('location:Login.php');
+            exit();
+        }
+    include('Config.php');
 ?>
