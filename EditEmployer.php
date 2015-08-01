@@ -1,15 +1,15 @@
 <?php
 
 /* 
- * Create a department name for dropbox
- * 
- * @author: Robert Vines
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 ?>
 
 <html>
     <head>
-        <title>Create Department</title>
+        <title>Edit Employer</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
@@ -22,17 +22,13 @@
             <ul>
                 <li><a id="user" href="EditUser.php">User</a></li>
                 <li><a href="EditMajor.php">Major</a></li>
-                <li><a href="EditDepartment.php"><span id="current">Department</span></a></li>
-                <li><a href="EditEmployer.php">Employer</a></li>
+                <li><a href="EditDepartment.php">Department</a></li>
+                <li><a href="EditEmployer.php"><span id="current">Employer</span></a></li>
                 <li><a href="EditUniversity.php">University</a></li>
             </ul>
         </div>
         <div id="body">
-            <h2>Create Department</h2>
-            <form method='post' action="CreateDepartmentController.php">
-                <p>Department Name: <input type="text" name="DeptName"></p>
-                <input type="submit" value="Create Department">
-            </form>
+
         </div>
     </body>
 </html>

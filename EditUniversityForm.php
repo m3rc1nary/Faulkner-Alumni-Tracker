@@ -1,15 +1,29 @@
 <?php
-
 /* 
  * Create a department name for dropbox
  * 
  * @author: Robert Vines
  */
-?>
 
+    $connString = "mysql:host=localhost;dbname=alumnitracker";
+    $user ="root";
+    $pass ="root";
+    
+    $pdo = new PDO($connString, $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+//    $deptID = $_GET['edit_id'];
+//    
+//    $sql="SELECT * FROM department WHERE DepartmentID=".$deptID;
+//    $result = $pdo->query($sql);
+//    $val=$result->fetch();
+//    
+//    $departmentId = $val['DepartmentID'];
+//    $departmentName = $val['DeptName'];
+?>
 <html>
     <head>
-        <title>Create Department</title>
+        <title>Edit University</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
@@ -28,10 +42,10 @@
             </ul>
         </div>
         <div id="body">
-            <h2>Create Department</h2>
-            <form method='post' action="CreateDepartmentController.php">
-                <p>Department Name: <input type="text" name="DeptName"></p>
-                <input type="submit" value="Create Department">
+            <h2>Edit University</h2>
+            <form method='post' action='EditUniversityController.php?edit_dept=<?php echo $deptID ?>'>
+                <p>University Name: <input type="text" name="DeptName" value="<?php echo $departmentName;?>"></p>
+                <input type="submit" value="Save Department">
             </form>
         </div>
     </body>

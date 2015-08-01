@@ -41,6 +41,8 @@
                 <li><a id="user" href="EditUser.php">User</a></li>
                 <li><a href="EditMajor.php"><span id="current">Major</span></a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
+                <li><a href="EditEmployer.php">Employer</a></li>
+                <li><a href="EditUniversity.php">University</a></li>
             </ul>
         </div>
         <div id="body">
@@ -79,7 +81,7 @@
                 ?>
             </table>
             <br>
-            <a href="CreateMajor.php"><button>Add Major</button></a>
+            <a href="CreateMajor.php"><button id="button">Add Major</button></a>
         </div>
     </body>
 </html>

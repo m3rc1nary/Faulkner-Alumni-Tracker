@@ -4,6 +4,7 @@
  *
  * @author Robert Vines
  */
+
     $connString = "mysql:host=localhost;dbname=alumnitracker";
     $user ="root";
     $pass ="root";
@@ -46,8 +47,8 @@
                 <li><a id="user" href="EditUser.php"><span id="current">User</span></a></li>
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
-                <li><a>Employer</a></li>
-                <li><a>University</a></li>
+                <li><a href="EditEmployer.php">Employer</a></li>
+                <li><a href="EditUniversity.php">University</a></li>
             </ul>
         </div>
         <div id="body">
@@ -96,7 +97,7 @@
                     <td><?php echo $userName; ?></td>
                     <td><?php echo $password; ?></td>
                     <td><a href="EditUserForm.php?edit_id=<?php echo $employeeId ?>"><button type="button">Edit</button></a></td>
-                    <td><a href="EditUser.php?delete_id=<?php echo $employeeId ?>" onclick="return confirm('Are you sure you want to delete this user?');"><input type="submit" value="Delete"></a></td>
+                    <td><a href="EditUser.php?delete_id=<?php echo $employeeId ?>" onclick="return confirm('Are you sure you want to delete this user?');"><button type="button">Delete</button></a></td>
                 </tr>
                 <?php
                     endwhile;

@@ -47,6 +47,8 @@
                 <li><a id="user" href="EditUser.php"><span id="current">User</span></a></li>
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
+                <li><a href="EditEmployer.php">Employer</a></li>
+                <li><a href="EditUniversity.php">University</a></li>
             </ul>
         </div>
         <div id="body">
