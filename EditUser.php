@@ -46,6 +46,8 @@
                 <li><a id="user" href="EditUser.php"><span id="current">User</span></a></li>
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
+                <li><a>Employer</a></li>
+                <li><a>University</a></li>
             </ul>
         </div>
         <div id="body">
@@ -101,7 +103,7 @@
                 ?>
             </table>
             <br>
-            <a href="CreateUser.php"><button type="submit">Add User</button></a>
+            <a href="CreateUser.php"><button id="button" type="submit">Add User</button></a>
         </div>
     </body>
 </html>

@@ -206,3 +206,18 @@ table, th, select {
 [type=radio]:checked ~ label ~ .content {
     z-index: 1;
     }   
+    
+/*Buttons*/
+#button {
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 13px;
+    background: #4d5052;
+    padding: 4px 6px 4px 6px;
+    text-decoration: none;
+    }
+    
+    #button:hover {
+    background: #4F81BD;
+    }
