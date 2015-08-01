@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
     //make page secure
-    include('UserSession_Admin.php');
+    //include('UserSession_Admin.php');
 ?>
 
 <html>

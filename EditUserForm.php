@@ -44,12 +44,9 @@
         <div id="header"></div>
         <div id="nav">
             <ul>
-                <li><a id="user" href="CreateUser.php">Create User</a></li>
-                <li><a href="EditUser.php"><span id="current">Edit User</span></a></li>
-                <li><a href="CreateMajor.php">Create Major</a></li>
-                <li><a href="EditMajor.php">Edit Major</a></li>
-                <li><a href="CreateDepartment.php">Create Department</a></li>
-                <li><a href="EditDepartment.php">Edit Department</a></li>
+                <li><a id="user" href="EditUser.php"><span id="current">User</span></a></li>
+                <li><a href="EditMajor.php">Major</a></li>
+                <li><a href="EditDepartment.php">Department</a></li>
             </ul>
         </div>
         <div id="body">
@@ -82,7 +79,7 @@
                         </select></p>
                 <p>User Name: <input type="text" name="UserName" value="<?php echo $userName ;?>"></p>
                 <p>Password: <input type="text" name="Password" value="<?php echo $password ;?>"></p>
-                <input type="submit" value="Edit User">
+                <input type="submit" value="Save User">
             </form>
         </div>
     </body>

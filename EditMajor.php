@@ -38,12 +38,9 @@
         <div id="header"></div>
         <div id="nav">
             <ul>
-                <li><a id="user" href="CreateUser.php">Create User</a></li> 
-                <li><a href="EditUser.php">Edit User</a></li>
-                <li><a href="CreateMajor.php">Create Major</a></li>
-                <li><a href="EditMajor.php"><span id="current">Edit Major</span></a></li>
-                <li><a href="CreateDepartment.php">Create Department</a></li>
-                <li><a href="EditDepartment.php">Edit Department</a></li>
+                <li><a id="user" href="EditUser.php">User</a></li>
+                <li><a href="EditMajor.php"><span id="current">Major</span></a></li>
+                <li><a href="EditDepartment.php">Department</a></li>
             </ul>
         </div>
         <div id="body">
@@ -81,6 +78,8 @@
                     endwhile;
                 ?>
             </table>
+            <br>
+            <a href="CreateMajor.php"><button>Add Major</button></a>
         </div>
     </body>
 </html>

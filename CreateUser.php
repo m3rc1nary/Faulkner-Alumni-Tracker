@@ -26,12 +26,9 @@
         <div id="header"></div>
         <div id="nav">
             <ul>
-                <li><a id="user" href="CreateUser.php"><span id="current">Create User</span></a></li> 
-                <li><a href="EditUser.php">Edit User</a></li>
-                <li><a href="CreateMajor.php">Create Major</a></li>
-                <li><a href="EditMajor.php">Edit Major</a></li>
-                <li><a href="CreateDepartment.php">Create Department</a></li>
-                <li><a href="EditDepartment.php">Edit Department</a></li>
+                <li><a id="user" href="EditUser.php"><span id="current">User</span></a></li>
+                <li><a href="EditMajor.php">Major</a></li>
+                <li><a href="EditDepartment.php">Department</a></li>
             </ul>
         </div>
         <div id="body">
