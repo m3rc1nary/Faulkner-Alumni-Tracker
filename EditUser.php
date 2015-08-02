@@ -52,7 +52,9 @@
             </ul>
         </div>
         <div id="body">
+            
             <h2>Select User to Edit</h2>
+            <p><a href="CreateUser.php"><button id="button" type="submit">Add User</button></a></p>
             <table>
                 <tr id="tableHead">
                     <td>First Name</td>
@@ -103,8 +105,6 @@
                     endwhile;
                 ?>
             </table>
-            <br>
-            <a href="CreateUser.php"><button id="button" type="submit">Add User</button></a>
         </div>
     </body>
 </html>

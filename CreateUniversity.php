@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * 
+ * 
+ * @author: Robert Vines
  */
 
 ?>
@@ -32,7 +32,7 @@
             <h2>Create University</h2>
             <form method='post' action="CreateUniversityController.php">
                 <p>University Name: <input type="text" name="UniName"></p>
-                <input type="submit" value="Create Employer">
+                <input type="submit" value="Create University">
             </form>
         </div>
     </body>

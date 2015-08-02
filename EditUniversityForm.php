@@ -1,6 +1,6 @@
 <?php
 /* 
- * Create a department name for dropbox
+ * Editing a university name
  * 
  * @author: Robert Vines
  */
@@ -12,14 +12,14 @@
     $pdo = new PDO($connString, $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//    $deptID = $_GET['edit_id'];
-//    
-//    $sql="SELECT * FROM department WHERE DepartmentID=".$deptID;
-//    $result = $pdo->query($sql);
-//    $val=$result->fetch();
-//    
-//    $departmentId = $val['DepartmentID'];
-//    $departmentName = $val['DeptName'];
+    $uniID = $_GET['edit_id'];
+    
+    $sql="SELECT * FROM university WHERE UniversityId=".$uniID;
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+    
+    $uniId = $val['UniversityID'];
+    $uniName = $val['UniName'];
 ?>
 <html>
     <head>
@@ -36,16 +36,16 @@
             <ul>
                 <li><a id="user" href="EditUser.php">User</a></li>
                 <li><a href="EditMajor.php">Major</a></li>
-                <li><a href="EditDepartment.php"><span id="current">Department</span></a></li>
+                <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
-                <li><a href="EditUniversity.php">University</a></li>
+                <li><a href="EditUniversity.php"><span id="current">University</span></a></li>
             </ul>
         </div>
         <div id="body">
             <h2>Edit University</h2>
-            <form method='post' action='EditUniversityController.php?edit_dept=<?php echo $deptID ?>'>
-                <p>University Name: <input type="text" name="DeptName" value="<?php echo $departmentName;?>"></p>
-                <input type="submit" value="Save Department">
+            <form method='post' action='EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
+                <p>University Name: <input type="text" name="uniName" value="<?php echo $uniName;?>"></p>
+                <input type="submit" value="Save University">
             </form>
         </div>
     </body>
