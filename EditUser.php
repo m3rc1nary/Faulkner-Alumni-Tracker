@@ -26,7 +26,7 @@
         
         $sql="DELETE schoolemployee.*, login.* FROM schoolemployee "
                 . "JOIN login "
-                . "ON schoolemployee.Login_LoginID=login.LoginID WHERE EmployeeId=".$employeeId;
+                . "ON schoolemployee.Login_LoginID=login.LoginID WHERE EmployeeID=".$employeeId;
         $pdo->query($sql);
         
         header("Location: EditUser.php");
@@ -69,7 +69,7 @@
                 </tr>
                 <?php
                     //get info from application
-                        $sql2 = "SELECT schoolemployee.EmployeeId, schoolemployee.FirstName, schoolemployee.LastName,"
+                        $sql2 = "SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
                                 . "schoolemployee.Email, schoolemployee.Role, department.DeptName, login.UserName, login.Password"
                                 . " FROM schoolemployee "
                                 . "JOIN department "
@@ -81,7 +81,7 @@
                        
                     while($val=$result->fetch()):
                     
-                    $employeeId = $val['EmployeeId'];
+                    $employeeId = $val['EmployeeID'];
                     $firstName = $val['FirstName'];
                     $lastName = $val['LastName'];
                     $email = $val['Email'];

@@ -44,6 +44,7 @@
                 }
             ?>
             <h2>Select Department to Edit</h2>
+            <p><a href="CreateDepartment.php"><button id="button">Add Department</button></a></p>
             <table>
                 <tr id="tableHead">
                     <td>Department Id</td>
@@ -74,8 +75,6 @@
                     ?>
                 </tr>
             </table>
-            <br>
-            <a href="CreateDepartment.php"><button id="button">Add Department</button></a>
         </div>
     </body>
 </html>

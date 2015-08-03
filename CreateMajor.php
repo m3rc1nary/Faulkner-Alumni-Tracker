@@ -37,26 +37,22 @@
         <div id="body">
             <h2>Create Major</h2>
             <form method='post' action="CreateMajorController.php">
-            <p>Type: 
-                <select name="Type">
-                    <option>Associates</option>
-                    <option>Bachelors</option>
-                </select></p>
-            <p>Major: <input type="text" name="Major"></p>
-            <p>Department:
-                <select name="Dept">
-                    <?php 
-                        $sql = "SELECT DeptName FROM department";
-                        $result = $pdo->query($sql);
-                        
-                        while ($val = $result->fetch()):
-                        
-                        $deptName = $val['DeptName'];    
-                        {
-                            echo "<option>" . $deptName . "</option>";
-                        }endwhile;
-                    ?>
-                    </select></p>
+                <p>Type: <input type="text" name="Type" placeholder="Bachelors,etc."></p>
+                <p>Major: <input type="text" name="Major"></p>
+                <p>Department:
+                    <select name="Dept">
+                        <?php 
+                            $sql = "SELECT DeptName FROM department";
+                            $result = $pdo->query($sql);
+
+                            while ($val = $result->fetch()):
+
+                            $deptName = $val['DeptName'];    
+                            {
+                                echo "<option>" . $deptName . "</option>";
+                            }endwhile;
+                        ?>
+                        </select></p>
             <input type="submit" value="Create Major">
             </form>
         </div>

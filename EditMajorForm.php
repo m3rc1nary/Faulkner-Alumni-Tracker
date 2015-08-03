@@ -51,12 +51,7 @@
         <div id="body">
             <h2>Edit Major</h2>
             <form method='post' action='EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
-                <p>Type: 
-                    <select name="Type">
-                        <option><?php echo $degreeType; ?></option>
-                        <option>Associates</option>
-                        <option>Bachelors</option>
-                    </select></p>
+                <p>Type: <input type="text" name="Type" value="<?php echo $degreeType; ?>">
                 <p>Major: <input type="text" name="Major" value="<?php echo $degreeMajor; ?>"></p>
                 <p>Department: 
                     <select name="Dept">

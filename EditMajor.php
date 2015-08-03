@@ -47,6 +47,7 @@
         </div>
         <div id="body">
             <h2>Select Major to Edit</h2>
+            <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
             <table>
                 <tr id="tableHead">
                     <td>Type</td>
@@ -80,8 +81,6 @@
                     endwhile;
                 ?>
             </table>
-            <br>
-            <a href="CreateMajor.php"><button id="button">Add Major</button></a>
         </div>
     </body>
 </html>

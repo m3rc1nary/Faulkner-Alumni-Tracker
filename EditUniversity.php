@@ -38,13 +38,14 @@
             <?php
                 if(isset($_GET['delete_id']))
                 {               
-                    $sql="DELETE FROM university WHERE UniversityId=".$_GET['delete_id'];
+                    $sql="DELETE FROM university WHERE UniversityID=".$_GET['delete_id'];
                     $pdo->query($sql);           
 
                     header("Location: EditUniversity.php");
                 }
             ?>
             <h2>Select a University to Edit</h2>
+            <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
             <table>
                 <tr id="tableHead">
                     <td>University Id</td>
@@ -60,7 +61,7 @@
                     
                     while($val=$result->fetch()):
                          
-                    $uniId= $val['UniversityId'];
+                    $uniId= $val['UniversityID'];
                     $uniName= $val['UniName'];                  
                 ?>
                 <tr id="tablebody">
@@ -73,8 +74,6 @@
                     ?>
                 </tr>
             </table>
-            <br>
-            <a href="CreateUniversity.php"><button id="button">Add University</button></a>
         </div>
     </body>
 </html>

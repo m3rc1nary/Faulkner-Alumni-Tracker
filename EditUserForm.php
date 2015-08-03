@@ -13,13 +13,13 @@
     
     $employeeID = $_GET['edit_id'];
     
-    $sql="SELECT schoolemployee.EmployeeId, schoolemployee.FirstName, schoolemployee.LastName,"
+    $sql="SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
           . "schoolemployee.Email, schoolemployee.Role, department.DeptName, login.UserName, login.Password"
           . " FROM schoolemployee "
           . "JOIN department "
           . "ON schoolemployee.Department_DepartmentID = department.DepartmentID "
           . "JOIN login"
-          . " ON schoolemployee.Login_LoginID = login.LoginID WHERE EmployeeId=".$employeeID.";";
+          . " ON schoolemployee.Login_LoginID = login.LoginID WHERE EmployeeID=".$employeeID.";";
     $result = $pdo->query($sql);
     $val=$result->fetch();
     

@@ -14,7 +14,7 @@
 
     $uniID = $_GET['edit_id'];
     
-    $sql="SELECT * FROM university WHERE UniversityId=".$uniID;
+    $sql="SELECT * FROM university WHERE UniversityID=".$uniID;
     $result = $pdo->query($sql);
     $val=$result->fetch();
     

@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *
+ * 
+ * @author: Robert Vines
  */
 
 ?>
@@ -31,7 +31,10 @@
         <div id="body">
             <h2>Create Employer</h2>
             <form method='post' action="CreateEmployerController.php">
-                <p>Department Name: <input type="text" name="DeptName"></p>
+                <p>Employer Name: <input type="text" name="EmpName"></p>
+                <p>Employer Number(only numbers): <input type="text" name="EmpNum"></p>
+                <p>Employer Company: <input type="text" name="EmpComp"></p>
+                <p>Employer email: <input type="email" name="EmpEmail"></p>
                 <input type="submit" value="Create Employer">
             </form>
         </div>
