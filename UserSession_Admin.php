@@ -8,7 +8,7 @@
 
     session_start();
 
-    if($_SESSION['Role']!='Admin')
+    if($_SESSION[role]!='Admin')
         {
             header('location:Login.php');
             exit();
