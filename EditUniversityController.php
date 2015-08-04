@@ -17,7 +17,7 @@
     $uniName = $_POST['uniName'];
 
     $sql="UPDATE university "
-            . "SET UniName= '".$uniName."' WHERE UniversityID=".$uniId;
+         . "SET UniName= '".$uniName."' WHERE UniversityID=".$uniId;
     $pdo->query($sql);           
 
     header("Location: EditUniversity.php");
