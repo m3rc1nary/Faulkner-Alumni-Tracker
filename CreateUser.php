@@ -4,13 +4,14 @@
  * 
  * @author Robert Vines
  */
+    include('UserSession_Admin.php');
 
-    $connString = "mysql:host=localhost;dbname=alumnitracker";
-    $user ="root";
-    $pass ="root";
-    
-    $pdo = new PDO($connString, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//    $connString = "mysql:host=localhost;dbname=alumnitracker";
+//    $user ="root";
+//    $pass ="root";
+//    
+//    $pdo = new PDO($connString, $user, $pass);
+//    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <html>
@@ -35,7 +36,7 @@
         </div>
         <div id="body">
             <h2>Create User</h2>
-            <form method='post' action="CreateUserController.php">
+            <form method='post' action='CreateUserController.php'>
                 <table id="tablebody">
                     <tr>
                         <th>First Name:</th><th><input type="text" name="FirstName" required></th>

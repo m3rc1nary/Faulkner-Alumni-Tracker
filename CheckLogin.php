@@ -46,6 +46,9 @@
         $val=$row->fetch();
         
         $role = $val['Role'];
+        $deptName = $val['DeptName'];
+        $userName = $val['UserName'];
+        $password = $val['Password'];
             
             $_SESSION['role']=$role;
             $_SESSION["deptName"]=$deptName;
@@ -54,10 +57,16 @@
 
             echo $_SESSION['role'];
     //Depending on type of user we will redirect to various pages		
-            if($role == 'Admin')	 { header( "location:AdminHome.php"); 	}
-            else if($role == ' ')	 { header( "location:CreateMajor.php"); 	}
-            else if($row[0] == 'Dean')	 { header( "location:AdminHome.php"); 	}
-            else    {   header( "location:Login.php"); }
+            if($role == 'Admin')	 
+                { header( "location:AdminHome.php"); 	}
+            else if($role == 'Department Chair')	 
+                { header( "location:ChairSecHome.php"); }
+            else if($role == 'Secretary')	 
+                { header( "location:ChairSecHome.php"); }
+            else if($role == 'Dean')	 
+                { header( "location:DeanHome.php"); 	}
+            else    
+                {   header( "location:Login.php");      }
     }
     else
     {
