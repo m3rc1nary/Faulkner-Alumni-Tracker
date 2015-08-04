@@ -22,11 +22,17 @@
             <div id="loginBox">
                 <form method="post" action="CheckLogin.php">
                     <p id='loginHeader'>Enter User Name and Password to Login</p>
-                    <p id="loginText">User Name:
-                        <input type="text" name="UserName"></p>
-                    <p id="loginText">Password:
-                        <input type="password" name="Password"></p>
-                    <p id="loginText"><input type="submit" value="Sign In"></p>
+                    <table id="tablebody" align ='center'>
+                        <tr>
+                            <th><p id="loginText">User Name:</th>
+                            <th><input type="text" name="UserName"></th>
+                        </tr>
+                        <tr>
+                            <th><p id="loginText">Password:</th>
+                            <th><input type="password" name="Password"></th>
+                        </tr>
+                    </table>
+                    <p id="loginText"><input type="submit" value="Sign In"></p>    
                 </form>
             </div>
         </div>
