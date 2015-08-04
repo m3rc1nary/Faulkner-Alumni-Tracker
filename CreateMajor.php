@@ -37,22 +37,31 @@
         <div id="body">
             <h2>Create Major</h2>
             <form method='post' action="CreateMajorController.php">
-                <p>Type: <input type="text" name="Type" placeholder="Bachelors,etc."></p>
-                <p>Major: <input type="text" name="Major"></p>
-                <p>Department:
-                    <select name="Dept">
-                        <?php 
-                            $sql = "SELECT DeptName FROM department";
-                            $result = $pdo->query($sql);
+                <table id="tablebody">
+                    <tr>
+                        <th>Type:</th><th><input type="text" name="Type" placeholder="Bachelors,etc."></th>
+                    </tr>
+                    <tr>
+                        <th>Major:</th><th><input type="text" name="Major"></th>
+                    </tr>
+                    <tr>
+                        <th>Department:</th>
+                        <th><select name="Dept">
+                                <?php 
+                                    $sql = "SELECT DeptName FROM department";
+                                    $result = $pdo->query($sql);
 
-                            while ($val = $result->fetch()):
+                                    while ($val = $result->fetch()):
 
-                            $deptName = $val['DeptName'];    
-                            {
-                                echo "<option>" . $deptName . "</option>";
-                            }endwhile;
-                        ?>
-                        </select></p>
+                                    $deptName = $val['DeptName'];    
+                                    {
+                                        echo "<option>" . $deptName . "</option>";
+                                    }endwhile;
+                                ?>
+                                </select></th>
+                    </tr>
+                </table>
+                <br>
             <input type="submit" value="Create Major">
             </form>
         </div>

@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /* 
  * 
@@ -31,7 +31,12 @@
         <div id="body">
             <h2>Create University</h2>
             <form method='post' action="CreateUniversityController.php">
-                <p>University Name: <input type="text" name="UniName"></p>
+                <table id="tablebody">
+                    <tr>
+                        <th>University Name:</th><th><input type="text" name="UniName"></th>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" value="Create University">
             </form>
         </div>

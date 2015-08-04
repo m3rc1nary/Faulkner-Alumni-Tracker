@@ -30,7 +30,12 @@
         <div id="body">
             <h2>Create Department</h2>
             <form method='post' action="CreateDepartmentController.php">
-                <p>Department Name: <input type="text" name="DeptName"></p>
+                <table id="tablebody">
+                    <tr>
+                        <th>Department Name:</th><th><input type="text" name="DeptName"></th>
+                    <tr>
+                </table>
+                <br>
                 <input type="submit" value="Create Department">
             </form>
         </div>

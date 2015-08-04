@@ -54,33 +54,50 @@
         <div id="body">
             <h2>Edit User</h2>
             <form method='post' action='EditUserController.php?edit_user=<?php echo $employeeID ?>'>
-                <p>First Name: <input type="text" name="FirstName" value="<?php echo $firstName;?>"></p>
-                <p>Last Name: <input type="text" name="LastName" value="<?php echo $lastName;?>"></p>
-                <p>Email: <input type="text" name="Email" value="<?php echo $email;?>"></p>
-                <p>Role: 
-                    <select name="Role">
-                        <option><?php echo $role; ?></option>
-                        <option>Secretary</option>
-                        <option>Department Chair</option>
-                        <option>Dean</option>
-                    </select></p>
-                <p>Department: 
-                    <select name="DeptName">
-                        <option><?php echo $dept; ?></option>
-                        <?php 
-                            $sql = "SELECT DeptName FROM department";
-                            $result = $pdo->query($sql);
+                <table id="tablebody">
+                    <tr>
+                        <th>First Name:</th><th><input type="text" name="FirstName" value="<?php echo $firstName;?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Last Name:</th><th><input type="text" name="LastName" value="<?php echo $lastName;?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Email:</th><th><input type="text" name="Email" value="<?php echo $email;?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Role:</th> 
+                            <th><select name="Role">
+                                <option><?php echo $role; ?></option>
+                                <option>Secretary</option>
+                                <option>Department Chair</option>
+                                <option>Dean</option>
+                            </select></th>
+                    </tr>
+                    <tr>
+                        <th>Department:</th> 
+                        <th><select name="DeptName">
+                                <option><?php echo $dept; ?></option>
+                                <?php 
+                                    $sql = "SELECT DeptName FROM department";
+                                    $result = $pdo->query($sql);
 
-                            while ($val = $result->fetch()):
+                                    while ($val = $result->fetch()):
 
-                            $deptName = $val['DeptName'];    
-                            {
-                                echo "<option>" . $deptName . "</option>";
-                            }endwhile;
-                        ?>
-                        </select></p>
-                <p>User Name: <input type="text" name="UserName" value="<?php echo $userName ;?>"></p>
-                <p>Password: <input type="text" name="Password" value="<?php echo $password ;?>"></p>
+                                    $deptName = $val['DeptName'];    
+                                    {
+                                        echo "<option>" . $deptName . "</option>";
+                                    }endwhile;
+                                ?>
+                            </select></th>
+                    </tr>
+                    <tr>
+                        <th>User Name:</th><th><input type="text" name="UserName" value="<?php echo $userName ;?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Password:</th><th><input type="text" name="Password" value="<?php echo $password ;?>"></th>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" value="Save User">
             </form>
         </div>

@@ -31,10 +31,21 @@
         <div id="body">
             <h2>Create Employer</h2>
             <form method='post' action="CreateEmployerController.php">
-                <p>Employer Name: <input type="text" name="EmpName"></p>
-                <p>Employer Number(only numbers): <input type="text" name="EmpNum"></p>
-                <p>Employer Company: <input type="text" name="EmpComp"></p>
-                <p>Employer email: <input type="email" name="EmpEmail"></p>
+                <table id="tablebody">
+                    <tr>
+                        <th>Employer Name:</th><th><input type="text" name="EmpName"></th>
+                    </tr>
+                    <tr>
+                        <th>Employer Number:</th><th><input type="text" name="EmpNum" placeholder="123-456-7890"></th>
+                    </tr>
+                    <tr>
+                        <th>Employer Company:</th><th><input type="text" name="EmpComp"></th>
+                    </tr>
+                    <tr>
+                        <th>Employer email:</th><th><input type="email" name="EmpEmail"></th>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" value="Create Employer">
             </form>
         </div>

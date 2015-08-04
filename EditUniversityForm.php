@@ -44,7 +44,13 @@
         <div id="body">
             <h2>Edit University</h2>
             <form method='post' action='EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
-                <p>University Name: <input type="text" name="uniName" value="<?php echo $uniName;?>"></p>
+                <table id="tablebody">
+                    <tr>
+                        <th>University Name:</th>
+                        <th><input type="text" name="uniName" value="<?php echo $uniName;?>"></th>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" value="Save University">
             </form>
         </div>

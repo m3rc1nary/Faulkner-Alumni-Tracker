@@ -49,10 +49,21 @@
         <div id="body">
             <h2>Create Employer</h2>
             <form method='post' action='EditEmployerController.php?edit_id=<?php echo $empID ?>'>
-                <p>Employer Name: <input type="text" name="EmpName" value="<?php echo $empName ?>"></p>
-                <p>Employer Number(only numbers): <input type="text" name="EmpNum" value="<?php echo $empNum ?>"></p>
-                <p>Employer Company: <input type="text" name="EmpComp" value="<?php echo $empComp ?>"></p>
-                <p>Employer email: <input type="email" name="EmpEmail" value="<?php echo $employerEmail ?>"></p>
+                <table id="tablebody">
+                    <tr>
+                        <th>Employer Name:</th><th><input type="text" name="EmpName" value="<?php echo $empName ?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Employer Number:</th><th><input type="text" name="EmpNum" value="<?php echo $empNum ?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Employer Company:</th><th><input type="text" name="EmpComp" value="<?php echo $empComp ?>"></th>
+                    </tr>
+                    <tr>
+                        <th>Employer email:</th><th><input type="email" name="EmpEmail" value="<?php echo $employerEmail ?>"></th>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" value="Save Employer">
             </form>
         </div>

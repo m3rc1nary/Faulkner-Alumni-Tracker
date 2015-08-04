@@ -44,7 +44,12 @@
         <div id="body">
             <h2>Edit Department</h2>
             <form method='post' action='EditDepartmentController.php?edit_dept=<?php echo $deptID ?>'>
-                <p>Department Name: <input type="text" name="DeptName" value="<?php echo $departmentName;?>"></p>
+                <table id="tablebody">
+                    <tr>
+                        <th>Department Name:</th><th><input type="text" name="DeptName" value="<?php echo $departmentName;?>"></th>
+                    </tr>
+                </table>
+                <br>
                 <input type="submit" value="Save Department">
             </form>
         </div>

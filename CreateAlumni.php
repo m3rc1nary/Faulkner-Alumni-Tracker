@@ -100,7 +100,23 @@
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
                             <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
-                                    <table id="tablebody" id="alumniTable">
+                                    <table>
+                                        <tr id="tableHead">
+                                            <td>Job Title</td>
+                                            <td>In Field</td>
+                                            <td>Employer Name</td>
+                                            <td>Employer Company</td>
+                                            <td>Employer Email</td>
+                                        </tr>
+                                        <tr id="tablebody">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+<!--                                    <table id="tablebody" id="alumniTable">
                                         <tr>
                                             <th>Current Job:</th> <th><input type="text" name="CurrentJob"></th>
                                             <th>In Field:</th>
@@ -116,14 +132,30 @@
                                         <tr>
                                             <th>Employer Company:</th> <th><input type="text" name="EmployerComp"></th>
                                         </tr>
-                                    </table>
+                                    </table>-->
                                 </div> 
                     </div> 
                     <div class="tab">
                         <input type="radio" id="tab-2" name="tab-group-1">
                             <label for="tab-2"><b>Grad School</b></label> 
                                 <div class="content">
-                                    <table id="tablebody" id="alumniTable">
+                                    <table>
+                                        <tr id="tableHead">
+                                            <td>Applied</td>
+                                            <td>Accepted</td>
+                                            <td>Status</td>
+                                            <td>School Name</td>
+                                            <td>Degree</td>
+                                        </tr>
+                                        <tr id="tablebody">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+<!--                                    <table id="tablebody" id="alumniTable">
                                         <tr>
                                             <th>Applied:</th>
                                             <th><select name="Applied">
@@ -141,7 +173,7 @@
                                             <th>Status:</th> <th><input type="text" name="Status"></th>
                                             <th>School Name:</th> <th><input type="text" name="SchoolName"></th>
                                         </tr>
-                                    </table>
+                                    </table>-->
                                 </div> 
                     </div>
                 </div>
