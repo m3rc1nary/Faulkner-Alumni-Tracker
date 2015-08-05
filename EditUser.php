@@ -6,6 +6,7 @@
  */
 
     include('UserSession_Admin.php');
+
 ?>
 <?php
     if(isset($_GET['delete_id']))

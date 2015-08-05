@@ -9,22 +9,13 @@
     $user ="root";
     $pass ="root";
     
-    try
-    { 
-        $pdo = new PDO($connString, $user, $pass);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo 'Connected Woo Hoo';
-    } 
-    catch (Exception $ex) 
-    {
-        echo "Connection Failed: " . $ex->getMessage();
-    }
+    $pdo = new PDO($connString, $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
      //data from CreateDepartment form
     $uniName = $_POST['UniName'];
     
-    $sql="INSERT INTO university (UniName)
-          VALUES ('".$uniName."')";
+    $sql="INSERT INTO university (UniName) VALUES ('".$uniName."')";
     
     $pdo->exec($sql);
     
