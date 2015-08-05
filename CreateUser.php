@@ -5,13 +5,6 @@
  * @author Robert Vines
  */
     include('UserSession_Admin.php');
-
-//    $connString = "mysql:host=localhost;dbname=alumnitracker";
-//    $user ="root";
-//    $pass ="root";
-//    
-//    $pdo = new PDO($connString, $user, $pass);
-//    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <html>
@@ -27,7 +20,8 @@
         <div id="header"></div>
         <div id="nav">
             <ul>
-                <li><a id="user" href="EditUser.php"><span id="current">User</span></a></li>
+                <li><a id="user" href="AdminHome.php">Home</a></li>
+                <li><a href="EditUser.php"><span id="current">User</span></a></li>
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
