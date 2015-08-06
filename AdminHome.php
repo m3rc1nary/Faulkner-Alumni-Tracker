@@ -28,6 +28,7 @@
                 <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
                 <li><a href="EditUniversity.php">University</a></li>
+                <li><a>Alumni</a></li>
             </ul>
         </div>
         <div id="body">
