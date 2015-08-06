@@ -35,9 +35,9 @@
 
     //insert data into schoolemployee table    
     $sql2="INSERT INTO schoolemployee (FirstName,LastName, "
-          . "Email,Role, Login_LoginID, Department_DepartmentID) "
-          . "VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$role."', "
-          ."'".$loginId."', '".$departmentId."' )"; 
+          . " Email,Role, Login_LoginID, Department_DepartmentID) "
+          . " VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$role."', "
+          ." '".$loginId."', '".$departmentId."')"; 
     $pdo->query($sql2);  
 
     header("Location: EditUser.php");

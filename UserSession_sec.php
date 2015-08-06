@@ -8,7 +8,7 @@
 
 session_start();
 
-    if($_SESSION[role]!='Department Chair' || 'Secretary')
+    if($_SESSION[role]!='Secretary')
         {
             header('location:Login.php');
             exit();
