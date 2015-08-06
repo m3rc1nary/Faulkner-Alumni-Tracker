@@ -1,7 +1,7 @@
  <?php
 
 /* 
- * 
+ * Form to create an university.
  * 
  * @author: Robert Vines
  */

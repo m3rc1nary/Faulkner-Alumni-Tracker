@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * 
+ * Database connection
  * 
  * @author: Robert Vines
  */

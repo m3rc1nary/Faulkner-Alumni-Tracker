@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * 
+ * Display user information to update and delete.
  * 
  * @author: Robert Vines
  */

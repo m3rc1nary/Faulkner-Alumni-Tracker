@@ -6,7 +6,7 @@
  * @author Robert Vines
  */
 
-            include('UserSession_Admin.php');
+    include('UserSession_Admin.php');
        
     $degreeID = $_GET['edit_id'];
     

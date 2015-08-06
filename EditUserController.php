@@ -1,9 +1,9 @@
 <?php
 
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * sql information to change information about a user.
+ * 
+ * @author: Robert Vines
  */
 
     $employeeId = $_GET['edit_user'];

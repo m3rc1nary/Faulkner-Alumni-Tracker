@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * Send university info to database.
+ * Send employer info to database.
  * 
  * @author: Robert Vines
  */

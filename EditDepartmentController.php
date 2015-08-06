@@ -1,12 +1,12 @@
 <?php
 
 /* 
- * 
+ * sql to edit a specific department. 
  * 
  * @author: Robert Vines
  */
 
-            include('UserSession_Admin.php');  
+    include('UserSession_Admin.php');  
            
     $dept = $_GET['edit_dept'];
 

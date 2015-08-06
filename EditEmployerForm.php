@@ -1,7 +1,7 @@
 <?php
 
 /* 
- *
+ * For to edit an employer.
  * 
  * @author: Robert Vines
  */
