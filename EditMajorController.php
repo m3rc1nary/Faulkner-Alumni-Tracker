@@ -6,12 +6,7 @@
  * and open the template in the editor.
  */
 
-    $connString = "mysql:host=localhost;dbname=alumnitracker";
-    $user ="root";
-    $pass ="root";
-    
-    $pdo = new PDO($connString, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            include('UserSession_Admin.php');
     
     $degreeID = $_GET['edit_major'];
 

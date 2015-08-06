@@ -5,12 +5,7 @@
  * @author: Robert Vines
  */
 
-    $connString = "mysql:host=localhost;dbname=alumnitracker";
-    $user ="root";
-    $pass ="root";
-    
-    $pdo = new PDO($connString, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include('UserSession_Admin.php');  
 
     $uniID = $_GET['edit_id'];
     

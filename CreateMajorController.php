@@ -6,13 +6,7 @@
  * @author Robert Vines
  */
 
-    //database connection
-    $connString = "mysql:host=localhost;dbname=alumnitracker";
-    $user ="root";
-    $pass ="root";
-
-    $pdo = new PDO($connString, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include('UserSession_Admin.php');
     
     $deptName = $_POST['Dept']; 
     $type = $_POST['Type'];

@@ -4,7 +4,8 @@
  * 
  * @author Robert Vines
  */
-    include('UserSession_Admin.php');
+
+            include('UserSession_Admin.php');
 ?>
 
 <html>
@@ -21,11 +22,12 @@
         <div id="nav">
             <ul>
                 <li><a id="user" href="AdminHome.php">Home</a></li>
-                <li><a href="EditUser.php"><span id="current">User</span></a></li>
+                <li><a href="EditUser.php">User</a></li>
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
                 <li><a href="EditUniversity.php">University</a></li>
+                <li><a>Alumni</a></li>
             </ul>
         </div>
         <div id="body">

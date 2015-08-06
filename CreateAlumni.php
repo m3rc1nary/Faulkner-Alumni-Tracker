@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * Form to collect alumni information.
  * 
@@ -72,9 +71,7 @@
                                 <?php 
                                     $sql = "SELECT Major FROM degree";
                                     $result = $pdo->query($sql);
-
                                     while ($val = $result->fetch()):
-
                                     $degreeName = $val['Major'];    
                                     {
                                         echo "<option>" . $degreeName . "</option>";
@@ -182,4 +179,3 @@
         </div>
     </body>
 </html>
-

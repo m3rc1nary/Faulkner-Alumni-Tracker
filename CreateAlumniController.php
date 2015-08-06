@@ -6,6 +6,22 @@
  * @author: Robert Vines
  */
     //database connection
+    if($_SESSION[role]=='Admin')
+        {
+            include('UserSession_Admin.php');
+        }
+    if($_SESSION[role]=='Dean')
+        {
+            include('UserSession_Dean.php');
+        }    
+    if($_SESSION[role]=='Department Chair')
+        {
+            include('UserSession_chair.php');
+        }
+    if($_SESSION[role]=='Secretary')
+        {
+            include('UserSession_sec.php');
+        }    
 
     //Store form information in variables
     $firstName = $_POST['FirstName'];

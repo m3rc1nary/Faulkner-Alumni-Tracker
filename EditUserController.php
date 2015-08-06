@@ -5,8 +5,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-        
-    include('UserSession_Admin.php');
 
     $employeeId = $_GET['edit_user'];
     $firstName = $_POST['FirstName'];

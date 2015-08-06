@@ -6,8 +6,7 @@
  * @author: Robert Vines
  */
 
-    //database connection
-    include('UserSession_Admin.php');
+            include('UserSession_Admin.php');
     
     //data from create user form
     $firstName = $_POST['FirstName'];

@@ -6,12 +6,7 @@
  * @author: Robert Vines
  */
 
-    $connString = "mysql:host=localhost;dbname=alumnitracker";
-    $user ="root";
-    $pass ="root";
-    
-    $pdo = new PDO($connString, $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include('UserSession_Admin.php');   
 ?>
 <?php
     if(isset($_GET['delete_id']))
@@ -38,11 +33,13 @@
         <div id="header"></div>
         <div id="nav">
             <ul>
-                <li><a id="user" href="EditUser.php">User</a></li>
-                <li><a href="EditMajor.php"><span id="current">Major</span></a></li>
+                <li><a id="user" href="AdminHome.php"><span id="current">Home</span></a></li>
+                <li><a href="EditUser.php">User</a></li>
+                <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
                 <li><a href="EditUniversity.php">University</a></li>
+                <li><a>Alumni</a></li>
             </ul>
         </div>
         <div id="body">
