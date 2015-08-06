@@ -35,6 +35,7 @@
                 <li><a href="EditEmployer.php">Employer</a></li>
                 <li><a href="EditUniversity.php">University</a></li>
                 <li><a href="EditAlumni.php">Alumni</a></li>
+                <li><a id="user" href="Logout.php">Log out</a></li>
             </ul>
         </div>
         <div id="body">

@@ -4,10 +4,10 @@
  * 
  * @author: Robert Vines
  */
-    //make page secure
-    include('UserSession_chair.php');
+//make page secure
+include('UserSession_chair.php');
     
-    //include('UserSession_sec.php');
+//include('UserSession_sec.php');
 ?>
 
 <html>
@@ -27,6 +27,7 @@
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
                 <li><a href="EditUniversity.php">University</a></li>
+                <li><a id="user" href="Logout.php">Log out</a></li>
             </ul>
         </div>
         <div id="body">
