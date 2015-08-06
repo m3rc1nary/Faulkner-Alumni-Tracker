@@ -40,7 +40,7 @@
                         <th>Type:</th><th><input type="text" name="Type" placeholder="Bachelors,etc."></th>
                     </tr>
                     <tr>
-                        <th>Major:</th><th><input type="text" name="Major"></th>
+                        <th>Degree:</th><th><input type="text" name="Degree" placeholder="Computer Science,etc."></th>
                     </tr>
                     <tr>
                         <th>Department:</th>

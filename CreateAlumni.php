@@ -53,7 +53,7 @@
                                 <option>No</option>
                             </select></th>
                    </tr>
-                   <tr id='other'>
+                   <tr>
                         <th>Street:</th> <th><input type="text" name="Street"></th>
                         <th>City:</th> <th><input type="text" name="City"></th>
                         <th>State:</th> <th><input type="text" name="State"></th>
@@ -62,23 +62,34 @@
                         <th>Country:</th> <th><input type="text" name="Country"></th>
                         <th>Zip:</th> <th><input type="text" name="Zip"></th>
                    </tr>
-                   <tr id='other'>
-                        <th>Degree Type:</th>
-                        <th><select name="DegreeType">
-                               <option>Associates</option>
-                               <option>Bachelors</option>
-                            </select></th>
-                        <th>Major:</th> 
+                   <tr>
+                        <th>Major:</th>
                         <th colspan="2"><select name="Major">
                                 <?php 
-                                    $sql = "SELECT Major FROM degree";
-                                    $result = $pdo->query($sql);
-                                    while ($val = $result->fetch()):
-                                    $degreeName = $val['Major'];    
-                                    {
-                                        echo "<option>" . $degreeName . "</option>";
-                                    }endwhile;
-                                ?>
+                                        $sql = "SELECT * FROM degree";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        $degreeName = $val['Major'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeType, " ", $degreeName  . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></th>
+                        <th>Minor:</th> 
+                        <th colspan="2"><select name="Minor">
+                                <?php 
+                                        $sql = "SELECT * FROM degree";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        $degreeName = $val['Major'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeType, " ", $degreeName  . "</option>";
+                                        }endwhile;
+                                    ?>
                             </select></th>
                    </tr>
                    <tr>
@@ -105,9 +116,11 @@
                                             <td>In Field</td>
                                             <td>Employer Name</td>
                                             <td>Employer Company</td>
+                                            <td>Employer Number</td>
                                             <td>Employer Email</td>
                                         </tr>
                                         <tr id="tablebody">
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
