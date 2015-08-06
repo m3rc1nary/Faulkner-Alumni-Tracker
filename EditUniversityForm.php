@@ -33,7 +33,8 @@
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>
-                <li><a href="EditUniversity.php"><span id="current">University</span></a></li>
+                <li><a href="EditUniversity.php">University</a></li>
+                <li><a href="EditAlumni.php">Alumni</a></li>
             </ul>
         </div>
         <div id="body">
