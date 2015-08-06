@@ -8,8 +8,14 @@
  * @author: Robert Vines
  */
     //make page secure
-    include('UserSession_chair.php');
-    //include('UserSession_sec.php');
+    if($_SESSION[role]!='Department Chair')
+    {
+        include('UserSession_chair.php');
+    }
+    if($_SESSION[role]!='Secretary')
+    {
+        include('UserSession_sec.php');
+    }
 ?>
 
 <html>
