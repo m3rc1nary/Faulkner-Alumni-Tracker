@@ -50,10 +50,10 @@
         $userName = $val['UserName'];
         $password = $val['Password'];
             
-            $_SESSION['role']=$role;
-            $_SESSION["deptName"]=$deptName;
-            $_SESSION["userName"]=$userName;
-            $_SESSION["password"]=$password;
+            $_SESSION[role]=$role;
+            $_SESSION[deptName]=$deptName;
+            $_SESSION[userName]=$userName;
+            $_SESSION[password]=$password;
 
             echo $_SESSION['role'];
     //Depending on type of user we will redirect to various pages		

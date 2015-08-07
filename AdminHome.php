@@ -1,10 +1,11 @@
 <?php
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Home page for an admin
+ * 
+ * @author: Robert Vines
  */
     include('UserSession_Admin.php');
+    include('Config.php');
 ?>
 
 <html>

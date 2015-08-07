@@ -13,5 +13,5 @@ session_start();
             header('location:Login.php');
             exit();
         }
-    include('Config.php');
+    
 ?>

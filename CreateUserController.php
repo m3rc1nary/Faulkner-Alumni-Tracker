@@ -6,7 +6,8 @@
  * @author: Robert Vines
  */
 
-            include('UserSession_Admin.php');
+    include('UserSession_Admin.php');
+    include ('Config.php');
     
     //data from create user form
     $firstName = $_POST['FirstName'];

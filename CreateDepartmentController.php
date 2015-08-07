@@ -6,7 +6,16 @@
  * @author: Robert Vines
  */
 
-    include('UserSession_Admin.php');   
+    if($_SESSION[role]=='Admin')
+    {
+        include('UserSession_Admin.php');
+    }
+    if($_SESSION[role]=='Dean')
+    {   
+        include('UserSession_Dean.php');
+    }
+    
+    include('Config.php');   
     
      //data from CreateDepartment form
     $deptName = $_POST['DeptName'];

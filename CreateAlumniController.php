@@ -7,21 +7,23 @@
  */
     //database connection
     if($_SESSION[role]=='Admin')
-        {
-            include('UserSession_Admin.php');
-        }
-    if($_SESSION[role]=='Dean')
-        {
-            include('UserSession_Dean.php');
-        }    
-    if($_SESSION[role]=='Department Chair')
-        {
-            include('UserSession_chair.php');
-        }
+    {
+        include('UserSession_Admin.php');
+    }
+        if($_SESSION[role]=='Department Chair')
+    {
+        include('UserSession_chair.php');
+    }
     if($_SESSION[role]=='Secretary')
-        {
-            include('UserSession_sec.php');
-        }    
+    {   
+        include('UserSession_sec.php');
+    }
+    if($_SESSION[role]=='Dean')
+    {   
+        include('UserSession_Dean.php');
+    }
+    
+    include('Config.php');
 
     //Store form information in variables
     $firstName = $_POST['FirstName'];

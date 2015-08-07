@@ -6,6 +6,7 @@
  * @author: Robert Vines
  */
     include('UserSession_Dean.php');
+    include ('Config.php');
 ?>
 
 <html>

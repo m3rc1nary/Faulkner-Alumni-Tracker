@@ -6,6 +6,7 @@
  */
 
 include('UserSession_Admin.php');
+include ('Config.php');
 
 ?>
 <?php

@@ -5,9 +5,16 @@
  * @author: Robert Vines
  */
 //make page secure
-include('UserSession_chair.php');
-    
-//include('UserSession_sec.php');
+    if($_SESSION[role]=='Department Chair')
+    {
+        include('UserSession_chair.php');
+    }
+    if($_SESSION[role]=='Secretary')
+    {   
+        include('UserSession_sec.php');
+    }
+
+    include ('Config.php');
 ?>
 
 <html>
@@ -18,18 +25,7 @@ include('UserSession_chair.php');
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <img src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
-             Tracker" id="logo">
-        <div id="header"></div>
-        <div id="nav">
-            <ul>
-                <li><a id="user" href="AdminHome.php"><span id="current">Home</span></a></li>
-                <li><a href="EditMajor.php">Major</a></li>
-                <li><a href="EditEmployer.php">Employer</a></li>
-                <li><a href="EditUniversity.php">University</a></li>
-                <li><a id="user" href="Logout.php">Log out</a></li>
-            </ul>
-        </div>
+        <?php include ('ChairSecHeader.php'); ?>
         <div id="body">
           <h2>Hello</h2>
           <p><a href="CreateAlumni.php"><button id="button">Add Alumni</button></a></p>

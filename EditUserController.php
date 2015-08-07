@@ -6,6 +6,9 @@
  * @author: Robert Vines
  */
 
+    include ('UserSession_Admin.php');
+    include ('Config.php');
+
     $employeeId = $_GET['edit_user'];
     $firstName = $_POST['FirstName'];
     $lastName = $POST['LastName'];
