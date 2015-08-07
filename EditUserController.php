@@ -27,7 +27,7 @@
             . "schoolemployee.Email='".$email."', schoolemployee.Role='".$role."',"
             . " schoolemployee.Department_DepartmentID='".$deptID."', login.UserName='".$userName."',"
             . " login.Password='".$password."' "
-            . " WHERE LoginID= EmployeeID=".$employeeId;
+            . " WHERE EmployeeID=".$employeeId;
     $pdo->query($sql2);           
 
     header("Location: EditUser.php");

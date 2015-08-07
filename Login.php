@@ -26,11 +26,11 @@
                     <table id="tablebody" align ='center'>
                         <tr>
                             <th><p id="loginText">User Name:</th>
-                            <th><input type="text" name="UserName"></th>
+                            <th><input type="text" name="UserName" required></th>
                         </tr>
                         <tr>
                             <th><p id="loginText">Password:</th>
-                            <th><input type="password" name="Password"></th>
+                            <th><input type="password" name="Password" required></th>
                         </tr>
                     </table>
                     <p id="loginText"><input type="submit" value="Sign In"></p>    
