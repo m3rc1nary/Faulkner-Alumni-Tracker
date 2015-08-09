@@ -26,6 +26,7 @@
     include('Config.php');
     
     $deptName = $_POST['Dept'];
+    $college = $_POST['College'];
     $type = $_POST['Type'];
     $degree = $_POST['Degree'];
  
@@ -35,8 +36,8 @@
    
     $deptID = $val['DepartmentID'];
     
-    $sql2 = "INSERT INTO degree (Type, Major, Department_DepartmentID)
-             VALUES ('".$type."','".$degree."','".$deptID."')";
+    $sql2 = "INSERT INTO degree (Type, Major, College, Department_DepartmentID)
+             VALUES ('".$type."','".$degree."','".$college."','".$deptID."')";
     
     $pdo->exec($sql2);
     

@@ -29,11 +29,8 @@
 
     $type = $_POST['Type'];
     $major = $_POST['Major'];
+    $college = $_POST['College'];
     $department = $_POST['Dept'];
-    
-    echo $type;
-    echo $major;
-    echo $department;
     
     try
     { 
@@ -50,7 +47,7 @@
     }
    
     $sql2="UPDATE degree "
-            . "SET Type='".$type."', Major='".$major."', Department_DepartmentID='".$deptID."' "
+            . "SET Type='".$type."', Major='".$major."', College='".$college."', Department_DepartmentID='".$deptID."' "
             . " WHERE DegreeID=".$degreeID;
     $pdo->query($sql2);
 

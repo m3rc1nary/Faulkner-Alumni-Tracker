@@ -55,6 +55,14 @@
             <form method='post' action="CreateMajorController.php">
                 <table id="tablebody">
                     <tr>
+                        <th>College:</th>
+                        <th><select name="College">
+                                <option>College of Arts and Sciences</option>
+                                <option>College of Business</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
                         <th>Type:</th><th><input type="text" name="Type" placeholder="Bachelors,etc."></th>
                     </tr>
                     <tr>

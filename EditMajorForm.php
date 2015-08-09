@@ -27,7 +27,7 @@
        
     $degreeID = $_GET['edit_id'];
     
-    $sql = "SELECT degree.DegreeID, degree.Type, degree.Major, department.DeptName"
+    $sql = "SELECT degree.DegreeID, degree.Type, degree.Major, degree.College, department.DeptName"
             . " FROM degree "
             . "JOIN department "
             . "ON degree.Department_DepartmentID = department.DepartmentID WHERE DegreeID=".$degreeID;
@@ -36,6 +36,7 @@
     
     $degreeType = $val['Type'];
     $degreeMajor = $val['Major'];
+    $degreeCollege = $val['College'];
     $deptName = $val['DeptName'];
     ?>
 
@@ -67,6 +68,15 @@
             <h2>Edit Major</h2>
             <form method='post' action='EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="tablebody">
+                    <tr>
+                        <th>College:</th>
+                        <th><select name="College">
+                                <option><?php echo $degreeCollege; ?></option>
+                                <option>College of Arts and Sciences</option>
+                                <option>College of Business</option>
+                            </select>
+                        </th>
+                    </tr>
                     <tr>
                         <th>Type:</th><th><input type="text" name="Type" value="<?php echo $degreeType; ?>"></th>
                     </tr>

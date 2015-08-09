@@ -5,6 +5,7 @@
  * 
  * @author: Robert Vines
  */
+ 
     if($_SESSION[role]=='Admin')
     {
         include('UserSession_Admin.php');
@@ -45,26 +46,15 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <img src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
-                 Tracker" id="logo">
-            <div id="header"></div>
-            <div id="nav">
-                <ul>
-                    <li><a id="user" href="AdminHome.php">Home</a></li>
-                    <li><a href="EditUser.php">User</a></li>
-                    <li><a href="EditMajor.php">Major</a></li>
-                    <li><a href="EditDepartment.php">Department</a></li>
-                    <li><a href="EditEmployer.php">Employer</a></li>
-                    <li><a href="EditUniversity.php">University</a></li>
-                    <li><a href="EditAlumni.php">Alumni</a></li>
-                    <li><a id="user" href="Logout.php">Log out</a></li>
-                </ul>
-            </div>
+        <?php 
+            include ('AdminHeader.php');
+         ?>
         <div id="body">
             <h2>Select Major to Edit</h2>
             <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
             <table>
                 <tr id="tableHead">
+                    <td>College</td>
                     <td>Type</td>
                     <td>Major</td>
                     <td>Department</td>
@@ -72,7 +62,7 @@
                     <td> </td>
                 </tr>
                 <?php
-                    $sql2 = "SELECT degree.DegreeID, degree.Type, degree.Major, department.DeptName"
+                    $sql2 = "SELECT degree.DegreeID, degree.Type, degree.Major, degree.College, department.DeptName"
                             . " FROM degree "
                             . "JOIN department "
                             . "ON degree.Department_DepartmentID = department.DepartmentID ";
@@ -81,11 +71,13 @@
                     while($val=$result->fetch()):
                     
                     $degreeID = $val['DegreeID'];
+                    $degreeCollege = $val['College'];
                     $degreeType = $val['Type'];
                     $degreeMajor = $val['Major'];
                     $deptName = $val['DeptName'];
                 ?>
                 <tr id="tablebody">
+                    <td><?php echo $degreeCollege; ?></td>
                     <td><?php echo $degreeType; ?></td>
                     <td><?php echo $degreeMajor; ?></td>
                     <td><?php echo $deptName; ?></td>
