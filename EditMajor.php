@@ -6,23 +6,26 @@
  * @author: Robert Vines
  */
  
-    if($_SESSION[role]=='Admin')
-    {
-        include('UserSession_Admin.php');
-    }
-    if($_SESSION[role]=='Department Chair')
-    {
-        include('UserSession_chair.php');
-    }
-    if($_SESSION[role]=='Secretary')
-    {   
-        include('UserSession_sec.php');
-    }
-    if($_SESSION[role]=='Dean')
-    {   
-        include('UserSession_Dean.php');
-    }
+    session_start();
+    $session = $_SESSION[role];
     
+    switch($session)
+    {
+        case 'Admin':
+            include('UserSession_Admin.php');
+            break;
+        case 'Department Chair':
+            include('UserSession_chair.php');
+            break;
+        case 'Secretary':
+            include('UserSession_sec.php');
+            break;
+        case 'Dean':
+            include('UserSession_Dean.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
     include('Config.php');
 ?>
 
@@ -47,7 +50,23 @@
     </head>
     <body>
         <?php 
-            include ('AdminHeader.php');
+            session_start();
+
+            switch($session)
+                {
+                    case 'Admin':
+                        include('AdminHeader.php');
+                        break;
+                    case 'Department Chair':
+                        include('ChairSecHeader.php');
+                        break;
+                    case 'Secretary':
+                        include('ChairSecHeader.php');
+                        break;
+                    case 'Dean':
+                        include('DeanHeader.php');
+                        break;
+                }              
          ?>
         <div id="body">
             <h2>Select Major to Edit</h2>

@@ -5,16 +5,21 @@
  * @author: Robert Vines
  */
 //make page secure
-    if($_SESSION[role]=='Department Chair')
+    session_start();
+    $session = $_SESSION[role];
+    
+    switch($session)
     {
-        include('UserSession_chair.php');
-    }
-    if($_SESSION[role]=='Secretary')
-    {   
-        include('UserSession_sec.php');
-    }
-
-    include ('Config.php');
+        case 'Department Chair':
+            include('UserSession_chair.php');
+            break;
+        case 'Secretary':
+            include('UserSession_sec.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
+    include('Config.php');
 ?>
 
 <html>
@@ -25,7 +30,19 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include ('ChairSecHeader.php'); ?>
+        <?php 
+            session_start();
+
+            switch($session)
+                {
+                    case 'Department Chair':
+                        include('ChairSecHeader.php');
+                        break;
+                    case 'Secretary':
+                        include('ChairSecHeader.php');
+                        break;
+                }              
+         ?>
         <div id="body">
           <h2>Hello</h2>
           <p><a href="CreateAlumni.php"><button id="button">Add Alumni</button></a></p>

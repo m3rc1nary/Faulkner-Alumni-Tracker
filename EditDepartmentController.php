@@ -6,14 +6,21 @@
  * @author: Robert Vines
  */
 
-    if($_SESSION[role]=='Admin')
+    isession_start();
+    $session = $_SESSION[role];
+    
+    switch($session)
     {
-        include('UserSession_Admin.php');
-    }
-    if($_SESSION[role]=='Dean')
-    {   
-        include('UserSession_Dean.php');
-    }
+        case 'Admin':
+            include('UserSession_Admin.php');
+            break;
+        case 'Dean':
+            include('UserSession_Dean.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
+    include('Config.php');
     
     include('Config.php');  
            

@@ -6,16 +6,21 @@
  * @author: Robert Vines
  */
 
-    if($_SESSION[role]=='Admin')
-    {
-        include('UserSession_Admin.php');
-    }
-    if($_SESSION[role]=='Dean')
-    {   
-        include('UserSession_Dean.php');
-    }
+session_start();
+    $session = $_SESSION[role];
     
-    include('Config.php');   
+    switch($session)
+    {
+        case 'Admin':
+            include('UserSession_Admin.php');
+            break;
+        case 'Dean':
+            include('UserSession_Dean.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
+    include('Config.php');  
     
      //data from CreateDepartment form
     $deptName = $_POST['DeptName'];

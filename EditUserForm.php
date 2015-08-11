@@ -5,8 +5,18 @@
  * @author Robert Vines
  */
 
-    include('UserSession_Admin.php');  
-    include ('Config.php');
+    session_start();
+    $session = $_SESSION[role];
+    
+    switch($session)
+    {
+        case 'Admin':
+            include('UserSession_Admin.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
+    include('Config.php');
     
     $employeeID = $_GET['edit_id'];
     
@@ -36,21 +46,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <img src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
-             Tracker" id="logo">
-        <div id="header"></div>
-        <div id="nav">
-            <ul>
-                <li><a id="user" href="AdminHome.php">Home</a></li>
-                <li><a href="EditUser.php">User</a></li>
-                <li><a href="EditMajor.php">Major</a></li>
-                <li><a href="EditDepartment.php">Department</a></li>
-                <li><a href="EditEmployer.php">Employer</a></li>
-                <li><a href="EditUniversity.php">University</a></li>
-                <li><a href="EditAlumni.php">Alumni</a></li>
-                <li><a id="user" href="Logout.php">Log out</a></li>
-            </ul>
-        </div>
+        <?php include('AdminHeader.php'); ?>
         <div id="body">
             <h2>Edit User</h2>
             <form method='post' action='EditUserController.php?edit_user=<?php echo $employeeID ?>'>
@@ -68,6 +64,7 @@
                         <th>Role:</th> 
                             <th><select name="Role">
                                 <option><?php echo $role; ?></option>
+                                <option>Admin</option>
                                 <option>Secretary</option>
                                 <option>Department Chair</option>
                                 <option>Dean</option>

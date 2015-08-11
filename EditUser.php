@@ -5,9 +5,18 @@
  * @author Robert Vines
  */
 
-include('UserSession_Admin.php');
-include ('Config.php');
-
+    session_start();
+    $session = $_SESSION[role];
+    
+    switch($session)
+    {
+        case 'Admin':
+            include('UserSession_Admin.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
+    include('Config.php');
 ?>
 <?php
     if(isset($_GET['delete_id']))
@@ -30,21 +39,7 @@ include ('Config.php');
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <img src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
-             Tracker" id="logo">
-        <div id="header"></div>
-        <div id="nav">
-            <ul>
-                <li><a id="user" href="AdminHome.php">Home</a></li>
-                <li><a href="EditUser.php">User</a></li>
-                <li><a href="EditMajor.php">Major</a></li>
-                <li><a href="EditDepartment.php">Department</a></li>
-                <li><a href="EditEmployer.php">Employer</a></li>
-                <li><a href="EditUniversity.php">University</a></li>
-                <li><a href="EditAlumni.php">Alumni</a></li>
-                <li><a id="user" href="Logout.php">Log out</a></li>
-            </ul>
-        </div>
+        <?php include('AdminHeader.php'); ?>
         <div id="body">
             <h2>Select User to Edit</h2>
             <p><a href="CreateUser.php"><button id="button" type="submit">Add User</button></a></p>

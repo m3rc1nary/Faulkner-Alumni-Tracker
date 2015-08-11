@@ -4,7 +4,17 @@
  * 
  * @author: Robert Vines
  */
-    include('UserSession_Admin.php');
+    session_start();
+    $session = $_SESSION[role];
+    
+    switch($session)
+    {
+        case 'Admin':
+            include('UserSession_Admin.php');
+            break;
+        default :
+            header('location:Login.php');
+    }    
     include('Config.php');
 ?>
 
@@ -16,11 +26,17 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include('AdminHeader.php'); ?>
+        <?php 
+            if($_SESSION[role]=='Admin')
+            {
+                include('AdminHeader.php');
+            }
+            ?>
         <div id="body">
           <h2>Hello</h2>
           <p align="center">Department: 
               <select name="DeptName">
+                  <option> </option>
                     <?php 
                         $sql = "SELECT DeptName FROM department";
                         $result = $pdo->query($sql);
