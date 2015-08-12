@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-     session_start();
+    session_start();
     $session = $_SESSION[role];
     
     switch($session)
@@ -21,7 +21,6 @@
             header('location:Login.php');
     }    
     include('Config.php');
-?>
 ?>
 
 <html>
@@ -51,7 +50,13 @@
                 <table id="tablebody">
                     <tr>
                         <th>Department Name:</th><th><input type="text" name="DeptName"></th>
+                    </tr>
                     <tr>
+                        <th>Department Name:</th><th><input type="text" name="DeptName"></th>
+                    </tr>
+                    <tr>
+                        <th>Department Name:</th><th><input type="text" name="DeptName"></th>
+                    </tr>
                 </table>
                 <br>
                 <input type="submit" value="Create Department">
