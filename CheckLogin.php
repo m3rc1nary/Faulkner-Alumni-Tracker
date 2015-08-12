@@ -34,22 +34,27 @@
     // If result matched $myusername and $mypassword, table record must be equal to 1 	
     if($count==1)
     {
-        $sql2="SELECT schoolemployee.Role, department.DeptName, login.UserName, login.Password"
-                            . " FROM schoolemployee "
+        $sql2="SELECT schoolemployee.FirstName, schoolemployee.LastName, schoolemployee.Role, "
+                . "department.DeptName, login.UserName, login.Password "
+                            . "FROM schoolemployee "
                             . "JOIN department "
                             . "ON schoolemployee.Department_DepartmentID = department.DepartmentID "
                             . "JOIN login "
-                            . "ON schoolemployee.Login_LoginID = login.LoginID"
-                            . " WHERE login.UserName='".$myusername."' ";
+                            . "ON schoolemployee.Login_LoginID = login.LoginID "
+                            . "WHERE login.UserName='".$myusername."' ";
         $row=$pdo->query($sql2);
 
         $val=$row->fetch();
         
+        $fName = $val['FirstName'];
+        $lName = $val['LastName'];
         $role = $val['Role'];
         $deptName = $val['DeptName'];
         $userName = $val['UserName'];
         $password = $val['Password'];
             
+            $_SESSION[fName]=$fName;
+            $_SESSION[lName]=$lName;
             $_SESSION[role]=$role;
             $_SESSION[deptName]=$deptName;
             $_SESSION[userName]=$userName;

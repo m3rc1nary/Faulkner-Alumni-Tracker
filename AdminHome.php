@@ -33,7 +33,10 @@
             }
             ?>
         <div id="body">
-          <h2>Hello</h2>
+          <h2><?php session_start();
+                    $fName = $_SESSION[fName];
+                    $lName = $_SESSION[lName];
+                    echo 'Hello '. $fName .' '. $lName .','; ?></h2>
           <p align="center">Department: 
               <select name="DeptName">
                   <option> </option>

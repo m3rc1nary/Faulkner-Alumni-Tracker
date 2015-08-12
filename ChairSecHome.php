@@ -44,7 +44,10 @@
                 }              
          ?>
         <div id="body">
-          <h2>Hello</h2>
+          <h2><?php session_start();
+                    $fName = $_SESSION[fName];
+                    $lName = $_SESSION[lName];
+                    echo 'Hello '. $fName .' '. $lName .','; ?></h2>
           <p><a href="CreateAlumni.php"><button id="button">Add Alumni</button></a></p>
             <table>
                 <tr id="tableHead">

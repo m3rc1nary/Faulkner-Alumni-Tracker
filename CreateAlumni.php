@@ -88,8 +88,21 @@
                         <th>Zip:</th> <th><input type="text" name="Zip"></th>
                    </tr>
                    <tr>
+                       <th>Major Type:</th>
+                       <th><select name="MajorType">
+                                <?php 
+                                        $sql = "SELECT DISTINCT Type FROM degree";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeType . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></th>
                         <th>Major:</th>
-                        <th colspan="2"><select name="Major">
+                        <th><select name="Major">
                                 <?php 
                                         $sql = "SELECT * FROM degree";
                                         $result = $pdo->query($sql);
@@ -98,12 +111,28 @@
                                         $degreeName = $val['Major'];
                                         
                                         {
-                                            echo "<option>" . $degreeType, " ", $degreeName  . "</option>";
+                                            echo "<option>" . $degreeName  . "</option>";
                                         }endwhile;
                                     ?>
                             </select></th>
-                        <th>Minor:</th> 
-                        <th colspan="2"><select name="Minor">
+                   </tr>
+                        <tr>
+                       <th>Minor Type:</th>
+                       <th><select name="MinorType">
+                               <option> </option>
+                                <?php 
+                                        $sql = "SELECT DISTINCT Type FROM degree";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeType . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></th>
+                        <th>Minor:</th>
+                        <th><select name="Minor">
                                 <option> </option>
                                 <?php 
                                         $sql = "SELECT * FROM degree";
@@ -113,7 +142,7 @@
                                         $degreeName = $val['Major'];
                                         
                                         {
-                                            echo "<option>" . $degreeType, " ", $degreeName  . "</option>";
+                                            echo "<option>" . $degreeName  . "</option>";
                                         }endwhile;
                                     ?>
                             </select></th>
@@ -154,23 +183,6 @@
                                             <td></td>
                                         </tr>
                                     </table>
-<!--                                    <table id="tablebody" id="alumniTable">
-                                        <tr>
-                                            <th>Current Job:</th> <th><input type="text" name="CurrentJob"></th>
-                                            <th>In Field:</th>
-                                            <th><select name="Field">
-                                                <option>Yes</option>
-                                                <option>No</option>
-                                            </select></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Employer Name:</th> <th><input type="text" name="EmployerName"></th>
-                                            <th>Employer Number:</th> <th><input type="text" name="EmployerNum"></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Employer Company:</th> <th><input type="text" name="EmployerComp"></th>
-                                        </tr>
-                                    </table>-->
                                 </div> 
                     </div> 
                     <div class="tab">
@@ -193,25 +205,6 @@
                                             <td></td>
                                         </tr>
                                     </table>
-<!--                                    <table id="tablebody" id="alumniTable">
-                                        <tr>
-                                            <th>Applied:</th>
-                                            <th><select name="Applied">
-                                                    <option>Yes</option>
-                                                    <option>No</option>
-                                                </select></th>
-                                                <th>Accepted:</th>
-                                            <th><select name="Accepted">
-                                                <option>In Process</option>
-                                                <option>Yes</option>
-                                                <option>No</option>
-                                                </select></th>
-                                        </tr>
-                                        <tr>
-                                            <th>Status:</th> <th><input type="text" name="Status"></th>
-                                            <th>School Name:</th> <th><input type="text" name="SchoolName"></th>
-                                        </tr>
-                                    </table>-->
                                 </div> 
                     </div>
                 </div>

@@ -51,12 +51,6 @@
                     <tr>
                         <th>Department Name:</th><th><input type="text" name="DeptName"></th>
                     </tr>
-                    <tr>
-                        <th>Department Name:</th><th><input type="text" name="DeptName"></th>
-                    </tr>
-                    <tr>
-                        <th>Department Name:</th><th><input type="text" name="DeptName"></th>
-                    </tr>
                 </table>
                 <br>
                 <input type="submit" value="Create Department">
