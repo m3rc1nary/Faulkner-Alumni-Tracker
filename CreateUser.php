@@ -45,9 +45,9 @@
                         <th>Role:</th> 
                         <th><select name="Role">
                                 <option>Admin</option>
-                                <option>Secretary</option>
-                                <option>Department Chair</option>
                                 <option>Dean</option>
+                                <option>Department Chair</option>
+                                <option>Secretary</option>
                             </select></th>
                     </tr>
                     <tr>
@@ -56,22 +56,28 @@
                     <tr>
                         <th>Password:</th><th><input type="text" name="Password" required></th>
                     </tr>
+                    <tr>
+                        <th>Department:</th>
+                        </tr>
                 </table>
-                Department:
+                <div id='checkbox'>
                         <?php 
-                            $sql = "SELECT DeptName FROM department";
+                            $sql = "SELECT DeptName FROM department ORDER BY DeptName";
                             $result = $pdo->query($sql);
 
                             while ($val = $result->fetch()):
 
-                            $deptName = $val['DeptName'];    
+                            $deptName = $val['DeptName'];  
+
                             {
-                                echo "<input type='checkbox' name='DeptName'>" . $deptName . "";
+                                echo " <input type='checkbox' name='DeptName'>" . $deptName . "<br>";
                             }endwhile;
-                        ?>
+                            ?>
+                </div>
                 <br>
                 <input type="submit" value="Create User">
             </form>
+            
         </div>
     </body>
 </html>

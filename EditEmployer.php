@@ -69,7 +69,6 @@
             <p><a href="CreateEmployer.php"><button id="button">Add Employer</button></a></p>
             <table>
                 <tr id="tableHead">
-                    <td>Employer Id</td>
                     <td>Employer Name</td>
                     <td>Employer Number</td>
                     <td>Employer Company</td>
@@ -82,7 +81,7 @@
                     $pdo = new PDO($connString, $user, $pass);
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
-                    $sql = "SELECT * FROM employer";
+                    $sql = "SELECT * FROM employer ORDER BY EmployerName";
                     $result = $pdo->query($sql);
                     
                     while($val=$result->fetch()):
@@ -94,7 +93,6 @@
                     $employerEmail = $val['EmployerEmail'];
                 ?>
                 <tr id="tablebody">
-                    <td><?php echo $empID; ?></td>
                     <td><?php echo $empName; ?></td>
                     <td><?php echo $empNum; ?></td>
                     <td><?php echo $empComp; ?></td>

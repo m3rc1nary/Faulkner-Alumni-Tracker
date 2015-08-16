@@ -45,8 +45,8 @@
             <p><a href="CreateUser.php"><button id="button" type="submit">Add User</button></a></p>
             <table>
                 <tr id="tableHead">
-                    <td>First Name</td>
                     <td>Last Name</td>
+                    <td>First Name</td>
                     <td>Email</td>
                     <td>Role</td>
                     <td>Department</td>
@@ -61,7 +61,8 @@
                                 . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password"
                                 . " FROM schoolemployee "
                                 . "JOIN login"
-                                . " ON schoolemployee.Login_LoginID = login.LoginID";
+                                . " ON schoolemployee.Login_LoginID = login.LoginID "
+                                . "ORDER BY LastName";
                         
                         $result = $pdo->query($sql2);
                        
@@ -76,8 +77,8 @@
                     $password = $val['Password']; 
                 ?>
                 <tr id="tablebody">
-                    <td><?php echo $firstName; ?></td>
                     <td><?php echo $lastName; ?></td>
+                    <td><?php echo $firstName; ?></td>
                     <td><?php echo $email; ?></td>
                     <td><?php echo $role; ?></td>
                     <td><?php //echo $deptName; ?></td>

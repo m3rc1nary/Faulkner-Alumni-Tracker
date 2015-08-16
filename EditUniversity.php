@@ -70,7 +70,6 @@
             <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
             <table>
                 <tr id="tableHead">
-                    <td>University Id</td>
                     <td>University Name</td>
                     <td> </td>
                     <td> </td>
@@ -78,7 +77,7 @@
                 <?php
                     //get info from application
                     
-                    $sql = "SELECT * FROM university";
+                    $sql = "SELECT * FROM university ORDER BY UniName";
                     $result = $pdo->query($sql);
                     
                     while($val=$result->fetch()):
@@ -87,7 +86,6 @@
                     $uniName= $val['UniName'];                  
                 ?>
                 <tr id="tablebody">
-                    <td><?php echo $uniId; ?></td>
                     <td><?php echo $uniName; ?></td>
                     <td><a href="EditUniversityForm.php?edit_id=<?php echo $uniId ?>"><input type="submit" value="Edit"></a></td>
                     <td><a href="EditUniversity.php?delete_id=<?php echo $uniId ?>" onclick="return confirm('Are you sure you want to delete this university?');"><input type="submit" value="Delete"></a></td>

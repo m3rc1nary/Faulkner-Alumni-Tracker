@@ -41,7 +41,7 @@
               <select name="DeptName">
                   <option> </option>
                     <?php 
-                        $sql = "SELECT DeptName FROM department";
+                        $sql = "SELECT DeptName FROM department ORDER BY DeptName";
                         $result = $pdo->query($sql);
 
                         while ($val = $result->fetch()):

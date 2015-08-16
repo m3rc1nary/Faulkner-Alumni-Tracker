@@ -57,7 +57,6 @@
             <p><a href="CreateDepartment.php"><button id="button">Add Department</button></a></p>
             <table>
                 <tr id="tableHead">
-                    <td>Department Id</td>
                     <td>Department Name</td>
                     <td> </td>
                     <td> </td>
@@ -67,7 +66,7 @@
                     $pdo = new PDO($connString, $user, $pass);
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     
-                    $sql = "SELECT * FROM department";
+                    $sql = "SELECT * FROM department ORDER BY DeptName";
                     $result = $pdo->query($sql);
                     
                     while($val=$result->fetch()):
@@ -76,7 +75,6 @@
                     $deptName= $val['DeptName'];                  
                 ?>
                 <tr id="tablebody">
-                    <td><?php echo $deptId; ?></td>
                     <td><?php echo $deptName; ?></td>
                     <td><a href="EditDepartmentForm.php?edit_id=<?php echo $deptId ?>"><input type="submit" value="Edit"></a></td>
                     <td><a href="EditDepartment.php?delete_id=<?php echo $deptId ?>" onclick="return confirm('Are you sure you want to delete this department?');"><input type="submit" value="Delete"></a></td>

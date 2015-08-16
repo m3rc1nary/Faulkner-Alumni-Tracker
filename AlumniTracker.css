@@ -221,3 +221,9 @@ table, th, select {
 #button:hover {
     background: #4F81BD;
     }
+    
+#checkbox {
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 5;
+    }

@@ -63,9 +63,9 @@
                             <th><select name="Role">
                                 <option><?php echo $role; ?></option>
                                 <option>Admin</option>
-                                <option>Secretary</option>
-                                <option>Department Chair</option>
                                 <option>Dean</option>
+                                <option>Department Chair</option>
+                                <option>Secretary</option>
                             </select></th>
                     </tr>
                     <tr>
@@ -73,7 +73,7 @@
                         <th><select name="DeptName">
                                 <option><?php echo $dept; ?></option>
                                 <?php 
-                                    $sql = "SELECT DeptName FROM department";
+                                    $sql = "SELECT DeptName FROM department ORDER BY DeptName";
                                     $result = $pdo->query($sql);
 
                                     while ($val = $result->fetch()):
