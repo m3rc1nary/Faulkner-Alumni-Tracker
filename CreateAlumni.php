@@ -24,7 +24,7 @@
             break;
         default :
             header('location:Login.php');
-    }    
+   }    
     include('Config.php');
 ?>
 

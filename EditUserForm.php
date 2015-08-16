@@ -21,10 +21,8 @@
     $employeeID = $_GET['edit_id'];
     
     $sql="SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
-          . "schoolemployee.Email, schoolemployee.Role, department.DeptName, login.UserName, login.Password"
+          . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password"
           . " FROM schoolemployee "
-          . "JOIN department "
-          . "ON schoolemployee.Department_DepartmentID = department.DepartmentID "
           . "JOIN login"
           . " ON schoolemployee.Login_LoginID = login.LoginID WHERE EmployeeID=".$employeeID.";";
     $result = $pdo->query($sql);
@@ -34,7 +32,7 @@
     $lastName = $val['LastName'];
     $email = $val['Email'];
     $role = $val['Role'];
-    $dept = $val['DeptName'];
+    //$dept = $val['DeptName'];
     $userName = $val['UserName'];
     $password = $val['Password'];
 ?>

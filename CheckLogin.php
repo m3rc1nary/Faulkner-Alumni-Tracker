@@ -35,10 +35,8 @@
     if($count==1)
     {
         $sql2="SELECT schoolemployee.FirstName, schoolemployee.LastName, schoolemployee.Role, "
-                . "department.DeptName, login.UserName, login.Password "
+                . " login.UserName, login.Password "
                             . "FROM schoolemployee "
-                            . "JOIN department "
-                            . "ON schoolemployee.Department_DepartmentID = department.DepartmentID "
                             . "JOIN login "
                             . "ON schoolemployee.Login_LoginID = login.LoginID "
                             . "WHERE login.UserName='".$myusername."' ";
@@ -49,14 +47,14 @@
         $fName = $val['FirstName'];
         $lName = $val['LastName'];
         $role = $val['Role'];
-        $deptName = $val['DeptName'];
+        //$deptName = $val['DeptName'];
         $userName = $val['UserName'];
         $password = $val['Password'];
             
             $_SESSION[fName]=$fName;
             $_SESSION[lName]=$lName;
             $_SESSION[role]=$role;
-            $_SESSION[deptName]=$deptName;
+            //$_SESSION[deptName]=$deptName;
             $_SESSION[userName]=$userName;
             $_SESSION[password]=$password;
 

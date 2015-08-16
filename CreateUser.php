@@ -51,28 +51,24 @@
                             </select></th>
                     </tr>
                     <tr>
-                        <th>Department:</th>
-                        <th><select name="DeptName">
-                                <?php 
-                                    $sql = "SELECT DeptName FROM department";
-                                    $result = $pdo->query($sql);
-
-                                    while ($val = $result->fetch()):
-
-                                    $deptName = $val['DeptName'];    
-                                    {
-                                        echo "<option>" . $deptName . "</option>";
-                                    }endwhile;
-                                ?>
-                            </select></th>
-                    </tr>
-                    <tr>
                         <th>User Name:</th><th><input type="text" name="UserName" required></th>
                     </tr>
                     <tr>
                         <th>Password:</th><th><input type="text" name="Password" required></th>
                     </tr>
                 </table>
+                Department:
+                        <?php 
+                            $sql = "SELECT DeptName FROM department";
+                            $result = $pdo->query($sql);
+
+                            while ($val = $result->fetch()):
+
+                            $deptName = $val['DeptName'];    
+                            {
+                                echo "<input type='checkbox' name='DeptName'>" . $deptName . "";
+                            }endwhile;
+                        ?>
                 <br>
                 <input type="submit" value="Create User">
             </form>

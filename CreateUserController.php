@@ -39,15 +39,15 @@
         $loginId = $fk->fetchColumn();
 
         //match foreign key from department to school employee
-        $fk2 = $pdo->prepare("SELECT DepartmentID FROM department WHERE DeptName=?");
-        $fk2->execute(array($deptName));
-        $departmentId = $fk2->fetchColumn();
+//        $fk2 = $pdo->prepare("SELECT DepartmentID FROM department WHERE DeptName=?");
+//        $fk2->execute(array($deptName));
+//        $departmentId = $fk2->fetchColumn();
 
     //insert data into schoolemployee table    
     $sql2="INSERT INTO schoolemployee (FirstName,LastName, "
-          . " Email,Role, Login_LoginID, Department_DepartmentID) "
+          . " Email,Role, Login_LoginID) "
           . " VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$role."', "
-          ." '".$loginId."', '".$departmentId."')"; 
+          ." '".$loginId."')"; 
     $pdo->query($sql2);  
 
     header("Location: EditUser.php");

@@ -58,10 +58,8 @@
                 <?php
                     //get info from application
                         $sql2 = "SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
-                                . "schoolemployee.Email, schoolemployee.Role, department.DeptName, login.UserName, login.Password"
+                                . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password"
                                 . " FROM schoolemployee "
-                                . "JOIN department "
-                                . "ON schoolemployee.Department_DepartmentID = department.DepartmentID "
                                 . "JOIN login"
                                 . " ON schoolemployee.Login_LoginID = login.LoginID";
                         
@@ -74,7 +72,6 @@
                     $lastName = $val['LastName'];
                     $email = $val['Email'];
                     $role = $val['Role'];
-                    $deptName = $val['DeptName'];
                     $userName = $val['UserName'];
                     $password = $val['Password']; 
                 ?>
@@ -83,7 +80,7 @@
                     <td><?php echo $lastName; ?></td>
                     <td><?php echo $email; ?></td>
                     <td><?php echo $role; ?></td>
-                    <td><?php echo $deptName; ?></td>
+                    <td><?php //echo $deptName; ?></td>
                     <td><?php echo $userName; ?></td>
                     <td><?php echo $password; ?></td>
                     <td><a href="EditUserForm.php?edit_id=<?php echo $employeeId ?>"><button type="button">Edit</button></a></td>
