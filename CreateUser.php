@@ -70,7 +70,7 @@
                             $deptName = $val['DeptName'];  
 
                             {
-                                echo " <input type='checkbox' name='DeptName'>" . $deptName . "<br>";
+                                echo " <input type='checkbox' name='DeptName[]'>" . $deptName . "<br>";
                             }endwhile;
                             ?>
                 </div>
