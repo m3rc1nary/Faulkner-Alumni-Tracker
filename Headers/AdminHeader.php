@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * 
+ * Header/Nav bar for Administrator
  * 
  * @author: Robert Vines
  */

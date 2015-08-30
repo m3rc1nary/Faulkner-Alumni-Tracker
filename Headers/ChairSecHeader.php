@@ -1,6 +1,7 @@
 <?php
 
 /* 
+ * Header/Nav bar for department chair and secretary
  * 
  * @author: Robert Vines
  */
