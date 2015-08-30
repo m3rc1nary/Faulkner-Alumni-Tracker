@@ -36,10 +36,10 @@
             switch($session)
                 {
                     case 'Department Chair':
-                        include('ChairSecHeader.php');
+                        include('Headers/ChairSecHeader.php');
                         break;
                     case 'Secretary':
-                        include('ChairSecHeader.php');
+                        include('Headers/ChairSecHeader.php');
                         break;
                 }              
          ?>

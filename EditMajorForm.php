@@ -58,16 +58,16 @@
             switch($session)
                 {
                     case 'Admin':
-                        include('AdminHeader.php');
+                        include('Headers/AdminHeader.php');
                         break;
                     case 'Department Chair':
-                        include('ChairSecHeader.php');
+                        include('Headers/ChairSecHeader.php');
                         break;
                     case 'Secretary':
-                        include('ChairSecHeader.php');
+                        include('Headers/ChairSecHeader.php');
                         break;
                     case 'Dean':
-                        include('DeanHeader.php');
+                        include('Headers/DeanHeader.php');
                         break;
                 }              
          ?>

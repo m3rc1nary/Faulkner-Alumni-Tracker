@@ -44,7 +44,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include('AdminHeader.php'); ?>
+        <?php include('Headers/AdminHeader.php'); ?>
         <div id="body">
             <h2>Edit User</h2>
             <form method='post' action='EditUserController.php?edit_user=<?php echo $employeeID ?>'>

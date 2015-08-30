@@ -36,10 +36,10 @@
             switch($session)
                 {
                     case 'Admin':
-                        include('AdminHeader.php');
+                        include('Headers/AdminHeader.php');
                         break;
                     case 'Dean':
-                        include('DeanHeader.php');
+                        include('Headers/DeanHeader.php');
                         break;
                 }              
          ?>

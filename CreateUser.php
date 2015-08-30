@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include ('AdminHeader.php'); ?>
+        <?php include ('Headers/AdminHeader.php'); ?>
         <div id="body">
             <h2>Create User</h2>
             <form method='post' action='CreateUserController.php'>

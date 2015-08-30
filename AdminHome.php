@@ -29,7 +29,7 @@
         <?php 
             if($_SESSION[role]=='Admin')
             {
-                include('AdminHeader.php');
+                include('Headers/AdminHeader.php');
             }
             ?>
         <div id="body">

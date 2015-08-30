@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include('AdminHeader.php'); ?>
+        <?php include('Headers/AdminHeader.php'); ?>
         <div id="body">
             <h2>Select User to Edit</h2>
             <p><a href="CreateUser.php"><button id="button" type="submit">Add User</button></a></p>
