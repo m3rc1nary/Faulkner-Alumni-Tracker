@@ -16,9 +16,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <img src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
-             Tracker" id="logo">
-        <div id="header"></div>
+        <?php include('Headers/PlainHeader.php'); ?>
         <div id="page">
             <div id="loginBox">
                 <form method="post" action="CheckLogin.php">

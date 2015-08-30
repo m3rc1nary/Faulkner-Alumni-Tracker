@@ -8,6 +8,7 @@
 
 session_start();
 session_destroy();
-echo 'You have been logged out. <a href="Login.php">Login Page</a>';
-
+include ('Headers/PlainHeader.php');
+echo '<br><br><br><br><br><br><br>';
+echo 'You have been logged out. <a href="Login.php"><font color="blue">Login Page</font></a>';
 ?>

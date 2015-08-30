@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include('DeanHeader.php'); ?>
+        <?php include('Headers/DeanHeader.php'); ?>
         <div id="body">
           <h2><?php session_start();
                     $fName = $_SESSION[fName];

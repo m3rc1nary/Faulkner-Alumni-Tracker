@@ -27,6 +27,8 @@
     </head>
     <body>
         <?php 
+        
+        session_start();
             if($_SESSION[role]=='Admin')
             {
                 include('Headers/AdminHeader.php');
