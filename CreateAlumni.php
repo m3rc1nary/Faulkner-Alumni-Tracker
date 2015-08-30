@@ -107,7 +107,6 @@
                                         $sql = "SELECT * FROM degree";
                                         $result = $pdo->query($sql);
                                         while ($val = $result->fetch()):
-                                        $degreeType = $val['Type'];
                                         $degreeName = $val['Major'];
                                         
                                         {
@@ -176,7 +175,10 @@
                                         </tr>
                                         <tr id="tablebody">
                                             <td></td>
-                                            <td></td>
+                                            <td><select name="InField">
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>

@@ -62,15 +62,16 @@
                 </table>
                 <div id='checkbox'>
                         <?php 
-                            $sql = "SELECT DeptName FROM department ORDER BY DeptName";
+                            $sql = "SELECT DepartmentID, DeptName FROM department ORDER BY DeptName";
                             $result = $pdo->query($sql);
 
                             while ($val = $result->fetch()):
 
+                            $deptID = $val['DepartmentID'];
                             $deptName = $val['DeptName'];  
 
                             {
-                                echo " <input type='checkbox' name='DeptName[]'>" . $deptName . "<br>";
+                                echo " <input type='checkbox' id='DeptList' name='DeptList[]' value='".$deptID."' >" . $deptName . "<br>";
                             }endwhile;
                             ?>
                 </div>

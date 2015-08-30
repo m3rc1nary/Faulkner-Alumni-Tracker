@@ -24,7 +24,6 @@
     $lastName = $_POST['LastName'];
     $email = $_POST['Email'];
     $role = $_POST['Role'];
-    $deptName = $_POST['DeptName'];
     $userName = $_POST['UserName'];
     $password = $_POST['Password'];
     
@@ -45,10 +44,30 @@
 
     //insert data into schoolemployee table    
     $sql2="INSERT INTO schoolemployee (FirstName,LastName, "
-          . " Email,Role, Login_LoginID) "
+          . " Email,Role,Login_LoginID) "
           . " VALUES ('".$firstName."', '".$lastName."', '".$email."', '".$role."', "
           ." '".$loginId."')"; 
     $pdo->query($sql2);  
+    
+//    $sql="SELECT EmployeeID FROM schoolemployee WHERE FirstName='".$firstName."' AND LastName='".$lastName."';";
+//    $result = $pdo->query($sql);
+//    $val=$result->fetch();
+//    
+//    $empID = $val['EmployeeID'];
+//    
+//    echo $empID;
+//    
+//    if( isset($_POST['DeptList']) && is_array($_POST['DeptList']) ) 
+//        {
+//            foreach($_POST['DeptList'] as $deptName) 
+//                {
+//                
+//                    $sql="INSERT INTO department_has_schoolemployee "
+//                            . "(Department_DepartmentID, SchoolEmployee_EmployeeID) "
+//                            . "VALUES('".$empID."','".$deptID."');";
+//                    $pdo->query($sql);
+//                }
+//        }
 
     header("Location: EditUser.php");
 ?>
