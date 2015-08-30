@@ -49,25 +49,5 @@
           ." '".$loginId."')"; 
     $pdo->query($sql2);  
     
-//    $sql="SELECT EmployeeID FROM schoolemployee WHERE FirstName='".$firstName."' AND LastName='".$lastName."';";
-//    $result = $pdo->query($sql);
-//    $val=$result->fetch();
-//    
-//    $empID = $val['EmployeeID'];
-//    
-//    echo $empID;
-//    
-//    if( isset($_POST['DeptList']) && is_array($_POST['DeptList']) ) 
-//        {
-//            foreach($_POST['DeptList'] as $deptName) 
-//                {
-//                
-//                    $sql="INSERT INTO department_has_schoolemployee "
-//                            . "(Department_DepartmentID, SchoolEmployee_EmployeeID) "
-//                            . "VALUES('".$empID."','".$deptID."');";
-//                    $pdo->query($sql);
-//                }
-//        }
-
     header("Location: EditUser.php");
 ?>

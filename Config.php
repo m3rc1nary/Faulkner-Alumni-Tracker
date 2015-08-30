@@ -9,7 +9,7 @@
     $user ="root";
     $pass ="root";
     
-     try
+    try
     { 
         $pdo = new PDO($connString, $user, $pass);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
