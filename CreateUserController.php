@@ -27,6 +27,12 @@
     $userName = $_POST['UserName'];
     $password = $_POST['Password'];
     
+    if(isset($_POST['submit']))
+    {
+        //in here you get games array
+        $myDept = $_POST['DeptList'];  
+    }
+    
     //post to login table
     $sql="INSERT INTO login (UserName, Password)
           VALUES ('".$userName."', '".$password."')";

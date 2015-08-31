@@ -37,22 +37,45 @@
                     $fName = $_SESSION[fName];
                     $lName = $_SESSION[lName];
                     echo 'Hello '. $fName .' '. $lName .','; ?></h2>
-          <p align="center">Department: 
-              <select name="DeptName">
-                  <option> </option>
-                    <?php 
-                        $sql = "SELECT DeptName FROM department ORDER BY DeptName";
-                        $result = $pdo->query($sql);
+            <form method='post' action="AdminHome.php">
+                <p align="center">Department: 
+                    <select name="DeptName">
+                        <option> </option>
+                          <?php 
+                              $sql = "SELECT DeptName FROM department ORDER BY DeptName";
+                              $result = $pdo->query($sql);
 
-                        while ($val = $result->fetch()):
+                              while ($val = $result->fetch()):
 
-                        $deptName = $val['DeptName'];    
-                        {
-                            echo "<option>" . $deptName . "</option>";
-                        }endwhile;
-                    ?>
-                    </select></p>
-              <p align="center">Last Name: <input type="text"></p>
+                              $deptName = $val['DeptName'];    
+                              {
+                                  echo "<option>" . $deptName . "</option>";
+                              }endwhile;
+                          ?>
+                          </select></p>
+                <p align="center">Last Name: <input type="text" name="LastName"></p>
+                <p align="center"><input type="submit" value="Search"></p>
+            </form>
+        </div>
+        <div>
+            <?php
+               if(isset($_POST['DeptName']) && !empty($_POST['DeptName']))
+               {
+                    if( empty($_POST['LastName']) ) 
+                    {
+                        $sql = "";
+                       
+                    }
+                    
+                    if( !empty($_POST['LastName']) ) 
+                    {}
+                   //select all from that department and order by last name
+                   //then something with last name
+                   //maybe if last name is null then only have dept as parameter
+                   //if last name is not null then has both as parameter
+                   //output as a table
+               }
+            ?>
         </div>
     </body>
 </html>
