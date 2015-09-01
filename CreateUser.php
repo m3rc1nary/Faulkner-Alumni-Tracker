@@ -30,7 +30,7 @@
         <?php include ('Headers/AdminHeader.php'); ?>
         <div id="body">
             <h2>Create User</h2>
-            <form method='post' action='CreateUserController.php'>
+            <form method='post' action='CreateUserController.php' name="CreateUser">
                 <table id="tablebody">
                     <tr>
                         <th>First Name:</th><th><input type="text" name="FirstName" required></th>
@@ -77,8 +77,7 @@
                 </div>
                 <br>
                 <input type="submit" value="Create User">
-            </form>
-            
+            </form> 
         </div>
     </body>
 </html>
