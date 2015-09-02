@@ -30,7 +30,7 @@
         <?php include ('Headers/AdminHeader.php'); ?>
         <div id="body">
             <h2>Create User</h2>
-            <form method='post' action='CreateUserController.php' name="CreateUser">
+            <form method='post' action='CreateUserController.php'>
                 <table id="tablebody">
                     <tr>
                         <th>First Name:</th><th><input type="text" name="FirstName" required></th>
@@ -71,7 +71,7 @@
                             $deptName = $val['DeptName'];  
 
                             {
-                                echo " <input type='checkbox' id='DeptList' name='DeptList[]' value='".$deptID."' >" . $deptName . "<br>";
+                                echo " <input type='checkbox' name='DeptList[]' value='".$deptID."' />" . $deptName . "<br>";
                             }endwhile;
                             ?>
                 </div>

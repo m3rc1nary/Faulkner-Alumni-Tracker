@@ -19,6 +19,10 @@
     }    
     include('Config.php');
     
+    echo "<pre>";
+    print_r($_POST);
+    echo "</pre>";
+    
     //data from create user form
     $firstName = $_POST['FirstName'];
     $lastName = $_POST['LastName'];
@@ -50,10 +54,20 @@
           ." '".$loginId."')"; 
     $pdo->query($sql2);  
     
-    //match foreign key from schoolemployee to department_has_schoolemployee
-    $fk = $pdo->prepare("SELECT EmployeeID FROM schoolemployee WHERE UserName=?");
-    $fk->execute(array($userName));
-    $empId = $fk->fetchColumn();
+    
+        //match foreign key from schoolemployee to department_has_schoolemployee
+        $fk = $pdo->prepare("SELECT EmployeeID FROM schoolemployee WHERE Email=?");
+        $fk->execute(array($email));
+        $empId = $fk->fetchColumn();
+        
+        
+    foreach ($_POST['DeptList'] as $dept)
+        {
+            $sql3 = "INSERT INTO department_has_schoolemployee (Department_DepartmentID, SchoolEmployee_EmployeeID)"
+                    . " VALUES ('".$dept."', '".$empId."') ";
+            $pdo->query($sql3);
+            echo 'It worked';
+            } 
     
     header("Location: EditUser.php");
 ?>
