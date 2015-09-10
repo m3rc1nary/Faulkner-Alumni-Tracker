@@ -69,30 +69,34 @@
             <h2>Select a University to Edit</h2>
             <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
             <table>
-                <tr id="tableHead">
-                    <td>University Name</td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <?php
-                    //get info from application
-                    
-                    $sql = "SELECT * FROM university ORDER BY UniName";
-                    $result = $pdo->query($sql);
-                    
-                    while($val=$result->fetch()):
-                         
-                    $uniId= $val['UniversityID'];
-                    $uniName= $val['UniName'];                  
-                ?>
-                <tr id="tablebody">
-                    <td><?php echo $uniName; ?></td>
-                    <td><a href="EditUniversityForm.php?edit_id=<?php echo $uniId ?>"><input type="submit" value="Edit"></a></td>
-                    <td><a href="EditUniversity.php?delete_id=<?php echo $uniId ?>" onclick="return confirm('Are you sure you want to delete this university?');"><input type="submit" value="Delete"></a></td>
+                <thead>
+                    <tr id="tableHead">
+                        <th>University Name</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
                     <?php
-                        endwhile;
+                        //get info from application
+
+                        $sql = "SELECT * FROM university ORDER BY UniName";
+                        $result = $pdo->query($sql);
+
+                        while($val=$result->fetch()):
+
+                        $uniId= $val['UniversityID'];
+                        $uniName= $val['UniName'];                  
                     ?>
-                </tr>
+                    <tr id="tablebody">
+                        <td><?php echo $uniName; ?></td>
+                        <td><a href="EditUniversityForm.php?edit_id=<?php echo $uniId ?>"><input type="submit" value="Edit"></a></td>
+                        <td><a href="EditUniversity.php?delete_id=<?php echo $uniId ?>" onclick="return confirm('Are you sure you want to delete this university?');"><input type="submit" value="Delete"></a></td>
+                        <?php
+                            endwhile;
+                        ?>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </body>
