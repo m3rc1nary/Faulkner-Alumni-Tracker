@@ -81,7 +81,11 @@
                     <td><?php echo $firstName; ?></td>
                     <td><?php echo $email; ?></td>
                     <td><?php echo $role; ?></td>
-                    <td><?php //echo $deptName; ?></td>
+                    <td> <select readonly>
+                            <option>dept</option>
+                            <option>dept</option>
+                        <?php 
+                        ?></td>
                     <td><?php echo $userName; ?></td>
                     <td><?php echo $password; ?></td>
                     <td><a href="EditUserForm.php?edit_id=<?php echo $employeeId ?>"><button type="button">Edit</button></a></td>
