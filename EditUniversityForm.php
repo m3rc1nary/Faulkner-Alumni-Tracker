@@ -71,7 +71,7 @@
         <div id="body">
             <h2>Edit University</h2>
             <form method='post' action='EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
-                <table id="tablebody">
+                <table>
                     <tr>
                         <td>University Name:</td>
                         <td><input type="text" name="uniName" value="<?php echo $uniName;?>"></td>

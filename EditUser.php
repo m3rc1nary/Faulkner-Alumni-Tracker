@@ -60,12 +60,16 @@
                 <tbody>
                     <?php
                         //get info from application
-                            $sql2 = "SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
-                                    . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password"
-                                    . " FROM schoolemployee "
-                                    . "JOIN login"
-                                    . " ON schoolemployee.Login_LoginID = login.LoginID "
-                                    . "ORDER BY LastName";
+                        $sql2 = "SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
+                                . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password, department_has_schoolemployee.SchoolEmployee_EmployeeID, department.DeptName"
+                                . " FROM schoolemployee "
+                                . "JOIN login"
+                                . " ON schoolemployee.Login_LoginID = login.LoginID "
+                                . "JOIN department_has_schoolemployee "
+                                . " ON schoolemployee.EmployeeID = department_has_schoolemployee.SchoolEmployee_EmployeeID "
+                                . "JOIN department "
+                                . " ON department_has_schoolemployee.Department_DepartmentID = department.DepartmentID "
+                                . "ORDER BY LastName";
 
                             $result = $pdo->query($sql2);
 
@@ -77,18 +81,24 @@
                         $email = $val['Email'];
                         $role = $val['Role'];
                         $userName = $val['UserName'];
-                        $password = $val['Password']; 
+                        $password = $val['Password'];
+                        $sEmpID = array($val['SchoolEmployee_EmployeeID']);
+                        //$deptID = $val['Department_DepartmentID'];
+                        $dept = array($val['DeptName']);
+                        
                     ?>
                     <tr>
                         <td><?php echo $lastName; ?></td>
                         <td><?php echo $firstName; ?></td>
                         <td><?php echo $email; ?></td>
                         <td><?php echo $role; ?></td>
-                        <td> <select readonly>
-                                <option>dept</option>
-                                <option>dept</option>
-                            <?php 
-                            ?></td>
+                        <td><select readonly>
+                                <?php 
+                                foreach($dept as $deptName)
+                                {
+                                    echo "<option>" . $deptName . "</option>";
+                                } ?>
+                            </select></td>
                         <td><?php echo $userName; ?></td>
                         <td><?php echo $password; ?></td>
                         <td><a href="EditUserForm.php?edit_id=<?php echo $employeeId ?>"><button type="button">Edit</button></a></td>
