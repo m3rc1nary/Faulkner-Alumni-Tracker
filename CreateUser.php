@@ -25,40 +25,45 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php include ('Headers/AdminHeader.php'); ?>
         <div id="body">
             <h2>Create User</h2>
             <form method='post' action='CreateUserController.php'>
-                <table id="tablebody">
+                <table>
                     <tr>
-                        <th>First Name:</th><th><input type="text" name="FirstName" required></th>
+                        <td>First Name:</td><td><input type="text" name="FirstName" required></td>
                     </tr>
                     <tr>
-                        <th>Last Name:</th><th><input type="text" name="LastName" required></th>
+                        <td>Last Name:</td><td><input type="text" name="LastName" required></td>
                     </tr>
                     <tr>
                         <th>Email:</th><th><input type="text" name="Email" required></th>
                     </tr>
                     <tr>
-                        <th>Role:</th> 
-                        <th><select name="Role">
+                        <td>Role:</td> 
+                        <td><select name="Role">
                                 <option>Admin</option>
                                 <option>Dean</option>
                                 <option>Department Chair</option>
                                 <option>Secretary</option>
-                            </select></th>
+                            </select></td>
                     </tr>
                     <tr>
-                        <th>User Name:</th><th><input type="text" name="UserName" required></th>
+                        <td>User Name:</td><td><input type="text" name="UserName" required></td>
                     </tr>
                     <tr>
-                        <th>Password:</th><th><input type="text" name="Password" required></th>
+                        <td>Password:</td><td><input type="text" name="Password" required></td>
                     </tr>
                     <tr>
-                        <th>Department:</th>
-                        </tr>
+                        <td>Department:</td>
+                    </tr>
                 </table>
                 <div id='checkbox'>
                         <?php 

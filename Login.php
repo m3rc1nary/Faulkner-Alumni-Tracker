@@ -23,12 +23,12 @@
                     <p id='loginHeader'>Enter User Name and Password to Login</p>
                     <table id="tablebody" align ='center'>
                         <tr>
-                            <th><p id="loginText">User Name:</th>
-                            <th><input type="text" name="UserName" required></th>
+                            <td style="border-color:white"><p id="loginText">User Name:</td>
+                            <td style="border-color:white"><input type="text" name="UserName" required /></td>
                         </tr>
-                        <tr>
-                            <th><p id="loginText">Password:</th>
-                            <th><input type="password" name="Password" required></th>
+                        <tr style="background-color : white">
+                            <td style="border-color:white"><p id="loginText">Password:</td>
+                            <td style="border-color:white"><input type="password" name="Password" required /></td>
                         </tr>
                     </table>
                     <p id="loginText"><input type="submit" value="Sign In"></p>    

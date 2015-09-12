@@ -35,6 +35,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php 
@@ -61,16 +66,16 @@
             <form method='post' action="CreateEmployerController.php">
                 <table id="tablebody">
                     <tr>
-                        <th>Employer Name:</th><th><input type="text" name="EmpName"></th>
+                        <td>Employer Name:</td><td><input type="text" name="EmpName"></td>
                     </tr>
                     <tr>
-                        <th>Employer Number:</th><th><input type="text" name="EmpNum" placeholder="123-456-7890"></th>
+                        <td>Employer Number:</td><td><input type="text" name="EmpNum" placeholder="123-456-7890"></td>
                     </tr>
                     <tr>
-                        <th>Employer Company:</th><th><input type="text" name="EmpComp"></th>
+                        <td>Employer Company:</td><td><input type="text" name="EmpComp"></td>
                     </tr>
                     <tr>
-                        <th>Employer email:</th><th><input type="email" name="EmpEmail"></th>
+                        <td>Employer email:</td><td><input type="email" name="EmpEmail"></td>
                     </tr>
                 </table>
                 <br>

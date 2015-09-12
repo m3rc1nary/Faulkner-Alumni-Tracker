@@ -36,6 +36,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php 
@@ -56,7 +61,7 @@
             <form method='post' action='EditDepartmentController.php?edit_dept=<?php echo $deptID ?>'>
                 <table id="tablebody">
                     <tr>
-                        <th>Department Name:</th><th><input type="text" name="DeptName" value="<?php echo $departmentName;?>"></th>
+                        <td>Department Name:</td><td><input type="text" name="DeptName" value="<?php echo $departmentName;?>"></td>
                     </tr>
                 </table>
                 <br>

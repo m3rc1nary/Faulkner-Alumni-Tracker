@@ -42,6 +42,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php include('Headers/AdminHeader.php'); ?>
@@ -50,27 +55,27 @@
             <form method='post' action='EditUserController.php?edit_user=<?php echo $employeeID ?>'>
                 <table id="tablebody">
                     <tr>
-                        <th>First Name:</th><th><input type="text" name="FirstName" value="<?php echo $firstName;?>"></th>
+                        <td>First Name:</td><td><input type="text" name="FirstName" value="<?php echo $firstName;?>"></td>
                     </tr>
                     <tr>
-                        <th>Last Name:</th><th><input type="text" name="LastName" value="<?php echo $lastName;?>"></th>
+                        <td>Last Name:</td><td><input type="text" name="LastName" value="<?php echo $lastName;?>"></td>
                     </tr>
                     <tr>
-                        <th>Email:</th><th><input type="text" name="Email" value="<?php echo $email;?>"></th>
+                        <td>Email:</td><td><input type="text" name="Email" value="<?php echo $email;?>"></td>
                     </tr>
                     <tr>
-                        <th>Role:</th> 
-                            <th><select name="Role">
+                        <td>Role:</td> 
+                            <td><select name="Role">
                                 <option><?php echo $role; ?></option>
                                 <option>Admin</option>
                                 <option>Dean</option>
                                 <option>Department Chair</option>
                                 <option>Secretary</option>
-                            </select></th>
+                            </select></td>
                     </tr>
                     <tr>
-                        <th>Department:</th> 
-                        <th><select name="DeptName">
+                        <td>Department:</td> 
+                        <td><select name="DeptName">
                                 <option><?php echo $dept; ?></option>
                                 <?php 
                                     $sql = "SELECT DeptName FROM department ORDER BY DeptName";
@@ -83,13 +88,13 @@
                                         echo "<option>" . $deptName . "</option>";
                                     }endwhile;
                                 ?>
-                            </select></th>
+                            </select></td>
                     </tr>
                     <tr>
-                        <th>User Name:</th><th><input type="text" name="UserName" value="<?php echo $userName ;?>"></th>
+                        <td>User Name:</td><td><input type="text" name="UserName" value="<?php echo $userName ;?>"></td>
                     </tr>
                     <tr>
-                        <th>Password:</th><th><input type="text" name="Password" value="<?php echo $password ;?>"></th>
+                        <td>Password:</td><td><input type="text" name="Password" value="<?php echo $password ;?>"></td>
                     </tr>
                 </table>
                 <br>

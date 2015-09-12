@@ -47,6 +47,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php 
@@ -69,20 +74,20 @@
                 }              
          ?>
         <div id="body">
-            <h2>Create Employer</h2>
+            <h2>Edit Employer</h2>
             <form method='post' action='EditEmployerController.php?edit_id=<?php echo $empID ?>'>
                 <table id="tablebody">
                     <tr>
-                        <th>Employer Name:</th><th><input type="text" name="EmpName" value="<?php echo $empName ?>"></th>
+                        <td>Employer Name:</td><td><input type="text" name="EmpName" value="<?php echo $empName ?>"></td>
                     </tr>
                     <tr>
-                        <th>Employer Number:</th><th><input type="text" name="EmpNum" value="<?php echo $empNum ?>"></th>
+                        <td>Employer Number:</td><td><input type="text" name="EmpNum" value="<?php echo $empNum ?>"></td>
                     </tr>
                     <tr>
-                        <th>Employer Company:</th><th><input type="text" name="EmpComp" value="<?php echo $empComp ?>"></th>
+                        <td>Employer Company:</td><td><input type="text" name="EmpComp" value="<?php echo $empComp ?>"></td>
                     </tr>
                     <tr>
-                        <th>Employer email:</th><th><input type="email" name="EmpEmail" value="<?php echo $employerEmail ?>"></th>
+                        <td>Employer email:</td><td><input type="email" name="EmpEmail" value="<?php echo $employerEmail ?>"></td>
                     </tr>
                 </table>
                 <br>

@@ -34,6 +34,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            #t tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php 
@@ -56,67 +61,112 @@
                 }              
          ?>
         <div id="body">
-            <h2>Create Alumni</h2>
+            <h2>Edit Alumni</h2>
             <form method='post' action="CreateAlumniController.php">
-                <table id="tablebody" id="alumniTable">
-                    <tr>
-                        <th>First Name:</th> <th><input type="text" name="FirstName"></th>
-                        <th>Middle Name:</th> <th><input type="text" name="MiddleName"></th>
-                        <th>Last Name:</th> <th><input type="text" name="LastName"></th>
-                   </tr>
-                   <tr id='other'>
-                        <th>Cell Number:</td> <th><input type="text" name="CellNum"></th>
-                        <th>Home Number:</th> <th><input type="text" name="HomeNum"></th>
-                        <th>Work Number:</th> <th><input type="text" name="WorkNum"></th>
+                <table id="t">
+                   <tr>
+                        <td>First Name:</td> <td><input type="text" name="FirstName"></td>
+                        <td>Middle Name:</td> <td><input type="text" name="MiddleName"></td>
+                        <td>Last Name:</td> <td><input type="text" name="LastName"></td>
                    </tr>
                    <tr>
-                        <th>Primary Email:</th> <th><input type="email" name="FirstEmail"></th>
-                        <th>Secondary Email:</td> <th><input type="email" name="SecondEmail"></th>
-                        <th>Tracked:</th>   
-                        <th><select name="Tracked">
+                        <td>Cell Number:</td> <td><input type="text" name="CellNum"></td>
+                        <td>Home Number:</td> <td><input type="text" name="HomeNum"></td>
+                        <td>Work Number:</td> <td><input type="text" name="WorkNum"></td>
+                   </tr>
+                   <tr>
+                        <td style=>Primary Email:</td> <td><input type="email" name="FirstEmail"></td>
+                        <td>Secondary Email:</td> <td><input type="email" name="SecondEmail"></td>
+                        <td>Tracked:</td>   
+                        <td><select name="Tracked">
                                 <option>Yes</option>
                                 <option>No</option>
-                            </select></th>
-                   </tr>
-                   <tr id='other'>
-                        <th>Street:</th> <th><input type="text" name="Street"></th>
-                        <th>City:</th> <th><input type="text" name="City"></th>
-                        <th>State:</th> <th><input type="text" name="State"></th>
+                            </select></td>
                    </tr>
                    <tr>
-                        <th>Country:</th> <th><input type="text" name="Country"></th>
-                        <th>Zip:</th> <th><input type="text" name="Zip"></th>
+                        <td>Street:</td> <td><input type="text" name="Street"></td>
+                        <td>City:</td> <td><input type="text" name="City"></td>
+                        <td>State:</td> <td><input type="text" name="State"></td>
                    </tr>
-                   <tr id='other'>
-                        <th>Degree Type:</th>
-                        <th><select name="DegreeType">
-                               <option>Associates</option>
-                               <option>Bachelors</option>
-                            </select></th>
-                        <th>Major:</th> 
-                        <th colspan="2"><select name="Major">
+                   <tr>
+                        <td>Country:</td> <td><input type="text" name="Country"></td>
+                        <td>Zip:</td> <td><input type="text" name="Zip"></td>
+                        <td></td><td></td>
+                   </tr>
+                   <tr>
+                       <td>Major Type:</td>
+                       <td><select name="MajorType">
                                 <?php 
-                                    $sql = "SELECT Major FROM degree";
-                                    $result = $pdo->query($sql);
-                                    while ($val = $result->fetch()):
-                                    $degreeName = $val['Major'];    
-                                    {
-                                        echo "<option>" . $degreeName . "</option>";
-                                    }endwhile;
-                                ?>
-                            </select></th>
+                                        $sql = "SELECT DISTINCT Type FROM degree ORDER BY Type";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeType . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></td>
+                        <td>Major:</td>
+                        <td><select name="Major">
+                                <?php 
+                                        $sql = "SELECT Major FROM degree ORDER BY Major";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeName = $val['Major'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeName  . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></td>
+                            <td></td><td></td>
                    </tr>
                    <tr>
-                        <th>Month Graduated:</th>
-                        <th><select name="MonthGrad">
+                       <td>Minor Type:</td>
+                       <td><select name="MinorType">
+                               <option> </option>
+                                <?php 
+                                        $sql = "SELECT DISTINCT Type FROM degree ORDER BY Type";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeType . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></td>
+                        <td>Minor:</td>
+                        <td><select name="Minor">
+                                <option> </option>
+                                <?php 
+                                        $sql = "SELECT Major FROM degree ORDER BY Major";
+                                        $result = $pdo->query($sql);
+                                        while ($val = $result->fetch()):
+                                        $degreeType = $val['Type'];
+                                        $degreeName = $val['Major'];
+                                        
+                                        {
+                                            echo "<option>" . $degreeName  . "</option>";
+                                        }endwhile;
+                                    ?>
+                            </select></td>
+                            <td></td><td style="border:white"></td>
+                   </tr>
+                   <tr>
+                        <td>Month Graduated:</td>
+                        <td><select name="MonthGrad">
                                 <option>January</option><option>February</option>
                                 <option>March</option><option>April</option>
                                 <option>May</option><option>June</option>
                                 <option>July</option><option>August</option>
                                 <option>September</option><option>October</option>
                                 <option>November</option><option>December</option>
-                            </select></th>
-                        <th>Year Graduated:</th> <th><input type="text" name="YearGrad"></th>
+                            </select></td>
+                        <td>Year Graduated:</td> <td><input type="text" name="YearGrad"></td>
+                        <td></td>
+                        <td></td>
                    </tr>
                 </table>
                 <div class="tabs">
@@ -125,20 +175,27 @@
                             <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
                                     <table>
-                                        <tr id="tableHead">
-                                            <td>Job Title</td>
-                                            <td>In Field</td>
-                                            <td>Employer Name</td>
-                                            <td>Employer Company</td>
-                                            <td>Employer Email</td>
-                                        </tr>
-                                        <tr id="tablebody">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <td>Job Title</td>
+                                                <td>In Field</td>
+                                                <td>Employer Name</td>
+                                                <td>Employer Company</td>
+                                                <td>Employer Email</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="tablebody">
+                                                <td></td>
+                                                <td><select>
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                    </select></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
                                     </table>
 <!--                                    <table id="tablebody" id="alumniTable">
                                         <tr>
@@ -164,20 +221,24 @@
                             <label for="tab-2"><b>Grad School</b></label> 
                                 <div class="content">
                                     <table>
-                                        <tr id="tableHead">
-                                            <td>Applied</td>
-                                            <td>Accepted</td>
-                                            <td>Status</td>
-                                            <td>School Name</td>
-                                            <td>Degree</td>
-                                        </tr>
-                                        <tr id="tablebody">
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                        <thead>
+                                            <tr>
+                                                <td>Applied</td>
+                                                <td>Accepted</td>
+                                                <td>Status</td>
+                                                <td>School Name</td>
+                                                <td>Degree</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
                                     </table>
 <!--                                    <table id="tablebody" id="alumniTable">
                                         <tr>

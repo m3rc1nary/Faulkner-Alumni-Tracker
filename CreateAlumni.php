@@ -34,6 +34,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php 
@@ -60,39 +65,39 @@
             <form method='post' action="CreateAlumniController.php">
                 <table>
                    <tr>
-                        <td style="border:white">First Name:</td> <td style="border:white"><input type="text" name="FirstName"></td>
-                        <td style="border:white">Middle Name:</td> <td style="border:white"><input type="text" name="MiddleName"></td>
-                        <td style="border:white">Last Name:</td> <td style="border:white"><input type="text" name="LastName"></td>
-                   </tr>
-                   <tr style="background-color : white">
-                        <td style="border:white">Cell Number:</td> <td style="border:white"><input type="text" name="CellNum"></td>
-                        <td style="border:white">Home Number:</td> <td style="border:white"><input type="text" name="HomeNum"></td>
-                        <td style="border:white">Work Number:</td> <td style="border:white"><input type="text" name="WorkNum"></td>
+                        <td>First Name:</td> <td><input type="text" name="FirstName"></td>
+                        <td>Middle Name:</td> <td><input type="text" name="MiddleName"></td>
+                        <td>Last Name:</td> <td><input type="text" name="LastName"></td>
                    </tr>
                    <tr>
-                        <td style="border:white">Primary Email:</td> <td style="border:white"><input type="email" name="FirstEmail"></td>
-                        <td style="border:white">Secondary Email:</td> <td style="border:white"><input type="email" name="SecondEmail"></td>
-                        <td style="border:white">Tracked:</td>   
-                        <td style="border:white"><select name="Tracked">
+                        <td>Cell Number:</td> <td><input type="text" name="CellNum"></td>
+                        <td>Home Number:</td> <td><input type="text" name="HomeNum"></td>
+                        <td>Work Number:</td> <td><input type="text" name="WorkNum"></td>
+                   </tr>
+                   <tr>
+                        <td style=>Primary Email:</td> <td><input type="email" name="FirstEmail"></td>
+                        <td>Secondary Email:</td> <td><input type="email" name="SecondEmail"></td>
+                        <td>Tracked:</td>   
+                        <td><select name="Tracked">
                                 <option>Yes</option>
                                 <option>No</option>
                             </select></td>
                    </tr>
-                   <tr style="background-color : white">
-                        <td style="border:white">Street:</td> <td style="border:white"><input type="text" name="Street"></td>
-                        <td style="border:white">City:</td> <td style="border:white"><input type="text" name="City"></td>
-                        <td style="border:white">State:</td> <td style="border:white"><input type="text" name="State"></td>
+                   <tr>
+                        <td>Street:</td> <td><input type="text" name="Street"></td>
+                        <td>City:</td> <td><input type="text" name="City"></td>
+                        <td>State:</td> <td><input type="text" name="State"></td>
                    </tr>
                    <tr>
-                        <td style="border:white">Country:</td> <td style="border:white"><input type="text" name="Country"></td>
-                        <td style="border:white">Zip:</td> <td style="border:white"><input type="text" name="Zip"></td>
-                        <td style="border:white"></td><td style="border:white"></td>
+                        <td>Country:</td> <td><input type="text" name="Country"></td>
+                        <td>Zip:</td> <td><input type="text" name="Zip"></td>
+                        <td></td><td></td>
                    </tr>
-                   <tr style="background-color : white">
-                       <td style="border:white">Major Type:</td>
-                       <td style="border:white"><select name="MajorType">
+                   <tr>
+                       <td>Major Type:</td>
+                       <td><select name="MajorType">
                                 <?php 
-                                        $sql = "SELECT DISTINCT Type FROM degree";
+                                        $sql = "SELECT DISTINCT Type FROM degree ORDER BY Type";
                                         $result = $pdo->query($sql);
                                         while ($val = $result->fetch()):
                                         $degreeType = $val['Type'];
@@ -102,10 +107,10 @@
                                         }endwhile;
                                     ?>
                             </select></td>
-                        <td style="border:white">Major:</td>
-                        <td style="border:white"><select name="Major">
+                        <td>Major:</td>
+                        <td><select name="Major">
                                 <?php 
-                                        $sql = "SELECT * FROM degree";
+                                        $sql = "SELECT Major FROM degree ORDER BY Major";
                                         $result = $pdo->query($sql);
                                         while ($val = $result->fetch()):
                                         $degreeName = $val['Major'];
@@ -115,14 +120,14 @@
                                         }endwhile;
                                     ?>
                             </select></td>
-                            <td style="border:white"></td><td style="border:white"></td>
+                            <td></td><td></td>
                    </tr>
                    <tr>
-                       <td style="border:white">Minor Type:</td>
-                       <td style="border:white"><select name="MinorType">
+                       <td>Minor Type:</td>
+                       <td><select name="MinorType">
                                <option> </option>
                                 <?php 
-                                        $sql = "SELECT DISTINCT Type FROM degree";
+                                        $sql = "SELECT DISTINCT Type FROM degree ORDER BY Type";
                                         $result = $pdo->query($sql);
                                         while ($val = $result->fetch()):
                                         $degreeType = $val['Type'];
@@ -132,11 +137,11 @@
                                         }endwhile;
                                     ?>
                             </select></td>
-                        <td style="border:white">Minor:</td>
-                        <td style="border:white"><select name="Minor">
+                        <td>Minor:</td>
+                        <td><select name="Minor">
                                 <option> </option>
                                 <?php 
-                                        $sql = "SELECT * FROM degree";
+                                        $sql = "SELECT Major FROM degree ORDER BY Major";
                                         $result = $pdo->query($sql);
                                         while ($val = $result->fetch()):
                                         $degreeType = $val['Type'];
@@ -147,11 +152,11 @@
                                         }endwhile;
                                     ?>
                             </select></td>
-                            <td style="border:white"></td><td style="border:white"></td>
+                            <td></td><td style="border:white"></td>
                    </tr>
-                   <tr style="background-color : white">
-                        <td style="border-color:white">Month Graduated:</td>
-                        <td style="border-color:white"><select name="MonthGrad">
+                   <tr>
+                        <td>Month Graduated:</td>
+                        <td><select name="MonthGrad">
                                 <option>January</option><option>February</option>
                                 <option>March</option><option>April</option>
                                 <option>May</option><option>June</option>
@@ -159,9 +164,9 @@
                                 <option>September</option><option>October</option>
                                 <option>November</option><option>December</option>
                             </select></td>
-                        <td style="border-color:white">Year Graduated:</td> <td style="border-color:white"><input type="text" name="YearGrad"></td>
-                        <td style="border-color:white"></td>
-                        <td style="border-color:white"></td>
+                        <td>Year Graduated:</td> <td><input type="text" name="YearGrad"></td>
+                        <td></td>
+                        <td></td>
                    </tr>
                 </table>
                 <div class="tabs">

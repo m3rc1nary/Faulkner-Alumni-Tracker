@@ -79,7 +79,7 @@
                         $userName = $val['UserName'];
                         $password = $val['Password']; 
                     ?>
-                    <tr id="tablebody">
+                    <tr>
                         <td><?php echo $lastName; ?></td>
                         <td><?php echo $firstName; ?></td>
                         <td><?php echo $email; ?></td>

@@ -35,6 +35,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
+        <style>
+            table tr td{
+                background-color: white;
+            }
+        </style>
     </head>
     <body>
         <?php 
@@ -61,22 +66,22 @@
             <form method='post' action="CreateMajorController.php">
                 <table id="tablebody">
                     <tr>
-                        <th>College:</th>
-                        <th><select name="College">
+                        <td>College:</td>
+                        <td><select name="College">
                                 <option>College of Arts and Sciences</option>
                                 <option>College of Business</option>
                             </select>
-                        </th>
+                        </td>
                     </tr>
                     <tr>
-                        <th>Type:</th><th><input type="text" name="Type" placeholder="Bachelors,etc."></th>
+                        <td>Type:</td><td><input type="text" name="Type" placeholder="Bachelors,etc."></td>
                     </tr>
                     <tr>
-                        <th>Degree:</th><th><input type="text" name="Degree" placeholder="Computer Science,etc."></th>
+                        <td>Degree:</td><td><input type="text" name="Degree" placeholder="Computer Science,etc."></td>
                     </tr>
                     <tr>
-                        <th>Department:</th>
-                        <th><select name="Dept">
+                        <td>Department:</td>
+                        <td><select name="Dept">
                                 <?php 
                                     $sql = "SELECT DeptName FROM department";
                                     $result = $pdo->query($sql);
@@ -88,7 +93,7 @@
                                         echo "<option>" . $deptName . "</option>";
                                     }endwhile;
                                 ?>
-                                </select></th>
+                                </select></td>
                     </tr>
                 </table>
                 <br>
