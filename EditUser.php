@@ -4,7 +4,6 @@
  *
  * @author Robert Vines
  */
-
     session_start();
     $session = $_SESSION[role];
     
@@ -23,7 +22,7 @@
     {               
         $employeeId = $_GET['delete_id'];
         
-        $sql="DELETE schoolemployee.*, login.* FROM schoolemployee "
+        $sql="DELETE schoolemployee.*, login.*, department_has_schoolemployee.* FROM schoolemployee "
                 . "JOIN login "
                 . "ON schoolemployee.Login_LoginID=login.LoginID WHERE EmployeeID=".$employeeId;
         $pdo->query($sql);
@@ -61,20 +60,20 @@
                     <?php
                         //get info from application
                         $sql2 = "SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
-                                . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password, department_has_schoolemployee.SchoolEmployee_EmployeeID, department.DeptName"
-                                . " FROM schoolemployee "
-                                . "JOIN login"
-                                . " ON schoolemployee.Login_LoginID = login.LoginID "
+                                . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password, department.DeptName "
+                                . "FROM schoolemployee "
+                                . "JOIN login "
+                                . "ON schoolemployee.Login_LoginID = login.LoginID "
                                 . "JOIN department_has_schoolemployee "
-                                . " ON schoolemployee.EmployeeID = department_has_schoolemployee.SchoolEmployee_EmployeeID "
+                                . "ON schoolemployee.EmployeeID = department_has_schoolemployee.SchoolEmployee_EmployeeID "
                                 . "JOIN department "
-                                . " ON department_has_schoolemployee.Department_DepartmentID = department.DepartmentID "
+                                . "ON department_has_schoolemployee.Department_DepartmentID = department.DepartmentID "
                                 . "ORDER BY LastName";
-
-                            $result = $pdo->query($sql2);
-
+                            
+                        $result = $pdo->query($sql2);
+                        
                         while($val=$result->fetch()):
-
+                        
                         $employeeId = $val['EmployeeID'];
                         $firstName = $val['FirstName'];
                         $lastName = $val['LastName'];
@@ -82,10 +81,9 @@
                         $role = $val['Role'];
                         $userName = $val['UserName'];
                         $password = $val['Password'];
-                        $sEmpID = array($val['SchoolEmployee_EmployeeID']);
-                        //$deptID = $val['Department_DepartmentID'];
+//                        $deptID = array($val['Department_DepartmentID']);
+//                        $deptID = $val['Department_DepartmentID'];
                         $dept = array($val['DeptName']);
-                        
                     ?>
                     <tr>
                         <td><?php echo $lastName; ?></td>
@@ -97,7 +95,7 @@
                                 foreach($dept as $deptName)
                                 {
                                     echo "<option>" . $deptName . "</option>";
-                                } ?>
+                                }?>
                             </select></td>
                         <td><?php echo $userName; ?></td>
                         <td><?php echo $password; ?></td>

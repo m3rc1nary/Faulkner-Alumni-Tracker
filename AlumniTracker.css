@@ -117,7 +117,8 @@ a:visited {
     float: left;
     font: 14px arial, sans-serif;
     }
-    
+
+/*Form table backgrounds to white*/
 #formTable{
     background-color: white;    
     }
@@ -130,16 +131,17 @@ thead {
     border-bottom: 2px solid black;
     padding-right: 3px;
     }
-    
+/*Table head rows text bold*/   
 thead th {
     font-weight: bold;
 }
-    
+ 
+/*Formatting text in body of tables*/
 tbody {
     font: 15px arial, san-serif; 
     }
   
-/* Table formating */
+/* Table body formating */
 tbody, td {
     border-collapse: collapse; 
     padding-top: 3px;

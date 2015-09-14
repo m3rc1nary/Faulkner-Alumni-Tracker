@@ -69,7 +69,7 @@
             else if($role == 'Dean')	 
                 { header( "location:DeanHome.php"); 	}
             else    
-                {   header( "location:Login.php");      }
+                { header( "location:Login.php");      }
     }
     else
     {
