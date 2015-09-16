@@ -14,14 +14,14 @@
 #header {
     position: absolute;
     top: 0;
-    left: 250px;
-    width: 81.7%;
+    width: 100%;
     height: 96px;
     background: #4F81BD;
     }
     
 /* Navigation bar */
 #nav ul {
+    z-index: 1;
     font: bold 16px arial, sans-serif;
     top: 42px;
     position: relative;
@@ -58,7 +58,7 @@ a:link {
 a:visited {
     color: #FFFFFF;
     }
-  
+    
 /* Navigation bar current link */
 #current { 
     color: #C0C0C0

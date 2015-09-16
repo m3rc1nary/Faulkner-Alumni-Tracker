@@ -91,7 +91,6 @@
                         . "JOIN department "
                         . "ON department_has_schoolemployee.Department_DepartmentID = department.DepartmentID WHERE EmployeeID='".$employeeId."' "
                         . "ORDER BY schoolemployee.LastName";
-                $pdo->query($sql3);
 
                 $result = $pdo->query($sql3);
 
@@ -104,11 +103,17 @@
                     $role = $val['Role'];
                     $userName = $val['UserName'];
                     $password = $val['Password'];
-                    $dept = array($val['DeptName']);
+//                    $dept = array($val['DeptName']);
                     
+                    
+//                    foreach($dept as $deptName)
+//                    {
+//                        echo "<option>" . $deptName . "</option>";
+//                    }
                     endwhile;
                     ?>
                     <table style="float:right; position: relative;">
+
                         <tr>
                             <td>Last Name: </td>
                             <td><?php echo $lastName; ?></td>
@@ -122,16 +127,27 @@
                             <td><?php echo $email; ?></td>
                         </tr>
                         <tr>
-                            <td>Role</td>
+                            <td>Role: </td>
                             <td><?php echo $role; ?></td>
                         </tr>
                         <tr>
                             <td>Department: </td>
                             <td><select><?php 
-                                foreach($dept as $deptName)
-                                {
-                                    echo "<option>" . $deptName . "</option>";
-                                    }?></select></td>
+//                                foreach($dept as $deptName)
+//                                {
+                            $sql4 = "SELECT DeptName FROM department "
+                                    . "JOIN department_has_schoolemployee "
+                                    . "ON department.DepartmentID = department_has_schoolemployee.Department_DepartmentID "
+                                    . "WHERE department_has_schoolemployee.SchoolEmployee_EmployeeID='".$employeeId."' "
+                                    . "ORDER BY DeptName";
+                            $result = $pdo->query($sql4);
+
+                            while($val=$result->fetch()):
+                                
+                                    echo "<option>" . $val['DeptName'] . "</option>";
+//                                    }
+                                    endwhile;
+                                    ?></select></td>
                         </tr>
                         <tr>
                             <td>Username: </td>
