@@ -132,7 +132,7 @@
                         </tr>
                         <tr>
                             <td>Department: </td>
-                            <td><select><?php 
+                            <td><?php 
 //                                foreach($dept as $deptName)
 //                                {
                             $sql4 = "SELECT DeptName FROM department "
@@ -144,10 +144,10 @@
 
                             while($val=$result->fetch()):
                                 
-                                    echo "<option>" . $val['DeptName'] . "</option>";
+                                    echo "<tr><td></td><td>" . $val['DeptName'] . "</td></tr>";
 //                                    }
                                     endwhile;
-                                    ?></select></td>
+                                    ?></td>
                         </tr>
                         <tr>
                             <td>Username: </td>
