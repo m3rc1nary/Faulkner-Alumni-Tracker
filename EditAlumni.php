@@ -73,7 +73,7 @@
             <p><a href="CreateAlumni.php"><button id="button" type="submit">Add Alumni</button></a></p>
             <table>
                 <thead>
-                    <tr id="tableHead">
+                    <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
@@ -109,7 +109,7 @@
     //                    $userName = $val['UserName'];
     //                    $password = $val['Password']; 
                     ?>
-                    <tr id="tablebody">
+                    <tr>
                         <td><?php //echo $firstName; ?></td>
                         <td><?php //echo $lastName; ?></td>
                         <td><?php //echo $email; ?></td>

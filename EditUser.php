@@ -133,8 +133,6 @@
                         <tr>
                             <td>Department: </td>
                             <td><?php 
-//                                foreach($dept as $deptName)
-//                                {
                             $sql4 = "SELECT DeptName FROM department "
                                     . "JOIN department_has_schoolemployee "
                                     . "ON department.DepartmentID = department_has_schoolemployee.Department_DepartmentID "
@@ -145,7 +143,6 @@
                             while($val=$result->fetch()):
                                 
                                     echo "<tr><td></td><td>" . $val['DeptName'] . "</td></tr>";
-//                                    }
                                     endwhile;
                                     ?></td>
                         </tr>
