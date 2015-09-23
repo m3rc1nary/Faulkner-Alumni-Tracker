@@ -4,18 +4,8 @@
  *
  * @author Robert Vines
  */
-    session_start();
-    $session = $_SESSION[role];
-    
-    switch($session)
-    {
-        case 'Admin':
-            include('UserSession_Admin.php');
-            break;
-        default :
-            header('location:Login.php');
-    }    
-    include('Config.php');
+   
+    include('Header.php');
 ?>
 <?php
     if(isset($_GET['delete_id']))
@@ -30,15 +20,7 @@
         header("Location: EditUser.php");
     }
 ?>
-<html>
-    <head>
-        <title>Edit User</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
-    </head>
-    <body>
-        <?php include('Headers/AdminHeader.php'); ?>
+
         <div id="body">
             <h2>Select User to Edit</h2>
             <p><a href="CreateUser.php"><button id="button" type="submit">Add User</button></a></p>

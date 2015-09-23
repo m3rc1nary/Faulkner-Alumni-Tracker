@@ -5,78 +5,25 @@
  * @author: Robert Vines
  */
 
-    session_start();
-    $session = $_SESSION[role];
-    
-    switch($session)
-    {
-        case 'Admin':
-            include('UserSession_Admin.php');
-            break;
-        case 'Department Chair':
-            include('UserSession_chair.php');
-            break;
-        case 'Secretary':
-            include('UserSession_sec.php');
-            break;
-        case 'Dean':
-            include('UserSession_Dean.php');
-            break;
-        default :
-            header('location:Login.php');
-   }    
-    include('Config.php');
+    include('Header.php');
 ?>
-
-<html>
-    <head>
-        <title>Create Alumni</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
-        <style>
-            table tr td{
-                background-color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <?php 
-            session_start();
-
-            switch($session)
-                {
-                    case 'Admin':
-                        include('Headers/AdminHeader.php');
-                        break;
-                    case 'Department Chair':
-                        include('Headers/ChairSecHeader.php');
-                        break;
-                    case 'Secretary':
-                        include('Headers/ChairSecHeader.php');
-                        break;
-                    case 'Dean':
-                        include('Headers/DeanHeader.php');
-                        break;
-                }              
-         ?>
         <div id="body">
             <h2>Create Alumni</h2>
             <form method='post' action="CreateAlumniController.php">
-                <table>
+                <table id="formTable">
                    <tr>
-                        <td>First Name:</td> <td><input type="text" name="FirstName"></td>
-                        <td>Middle Name:</td> <td><input type="text" name="MiddleName"></td>
-                        <td>Last Name:</td> <td><input type="text" name="LastName"></td>
+                        <td>First Name:</td> <td><input type="text" name="FirstName" /></td>
+                        <td>Middle Name:</td> <td><input type="text" name="MiddleName" /></td>
+                        <td>Last Name:</td> <td><input type="text" name="LastName" /></td>
                    </tr>
                    <tr>
-                        <td>Cell Number:</td> <td><input type="text" name="CellNum"></td>
-                        <td>Home Number:</td> <td><input type="text" name="HomeNum"></td>
-                        <td>Work Number:</td> <td><input type="text" name="WorkNum"></td>
+                        <td>Cell Number:</td> <td><input type="text" name="CellNum" /></td>
+                        <td>Home Number:</td> <td><input type="text" name="HomeNum" /></td>
+                        <td>Work Number:</td> <td><input type="text" name="WorkNum" /></td>
                    </tr>
                    <tr>
-                        <td style=>Primary Email:</td> <td><input type="email" name="FirstEmail"></td>
-                        <td>Secondary Email:</td> <td><input type="email" name="SecondEmail"></td>
+                        <td style=>Primary Email:</td> <td><input type="email" name="FirstEmail" /></td>
+                        <td>Secondary Email:</td> <td><input type="email" name="SecondEmail" /></td>
                         <td>Tracked:</td>   
                         <td><select name="Tracked">
                                 <option>Yes</option>
@@ -84,13 +31,13 @@
                             </select></td>
                    </tr>
                    <tr>
-                        <td>Street:</td> <td><input type="text" name="Street"></td>
-                        <td>City:</td> <td><input type="text" name="City"></td>
-                        <td>State:</td> <td><input type="text" name="State"></td>
+                        <td>Street:</td> <td><input type="text" name="Street" /></td>
+                        <td>City:</td> <td><input type="text" name="City" /></td>
+                        <td>State:</td> <td><input type="text" name="State" /></td>
                    </tr>
                    <tr>
-                        <td>Country:</td> <td><input type="text" name="Country"></td>
-                        <td>Zip:</td> <td><input type="text" name="Zip"></td>
+                        <td>Country:</td> <td><input type="text" name="Country" /></td>
+                        <td>Zip:</td> <td><input type="text" name="Zip" /></td>
                         <td></td><td></td>
                    </tr>
                    <tr>
@@ -164,7 +111,7 @@
                                 <option>September</option><option>October</option>
                                 <option>November</option><option>December</option>
                             </select></td>
-                        <td>Year Graduated:</td> <td><input type="text" name="YearGrad"></td>
+                        <td>Year Graduated:</td> <td><input type="text" name="YearGrad" /></td>
                         <td></td>
                         <td></td>
                    </tr>
@@ -187,15 +134,15 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td></td>
-                                                <td><select name="InField">
+                                                <td><input type="text" name="CurrentJob" readonly /></td>
+                                                <td><select name="Field">
                                                         <option>Yes</option>
                                                         <option>No</option>
                                                     </select></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td><input type="text" name="EmployerName" readonly /></td>
+                                                <td><input type="text" name="EmployerNum" readonly /></td>
+                                                <td><input type="text" name="EmployerComp" readonly /></td>
+                                                <td><input type="text" name="EmployerEmail" readonly /></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -217,18 +164,27 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <td><select name="Applied">
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                    </select>  
+                                                </td>
+                                                <td><select name="Accepted">
+                                                        <option>Yes</option>
+                                                        <option>No</option>
+                                                        <option>In Progress</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" name="EmployerName" readonly /></td>
+                                                <td><input type="text" name="EmployerName" readonly /></td>
+                                                <td><input type="text" name="EmployerName" readonly /></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div> 
                     </div>
                 </div>
-                <input type="submit" value="Create Alumni">
+                <input type="submit" value="Create Alumni" />
             </form>
         </div>
     </body>

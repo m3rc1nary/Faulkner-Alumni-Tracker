@@ -6,27 +6,7 @@
  * @author Robert Vines
  */
 
-    session_start();
-    $session = $_SESSION[role];
-    
-    switch($session)
-    {
-        case 'Admin':
-            include('UserSession_Admin.php');
-            break;
-        case 'Department Chair':
-            include('UserSession_chair.php');
-            break;
-        case 'Secretary':
-            include('UserSession_sec.php');
-            break;
-        case 'Dean':
-            include('UserSession_Dean.php');
-            break;
-        default :
-            header('location:Login.php');
-    }    
-    include('Config.php');
+    include('Header.php');
        
     $degreeID = $_GET['edit_id'];
     
@@ -43,43 +23,10 @@
     $deptName = $val['DeptName'];
     ?>
 
-
-<html>
-    <head>
-        <title>Edit Major</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
-        <style>
-            table tr td{
-                background-color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <?php 
-            session_start();
-
-            switch($session)
-                {
-                    case 'Admin':
-                        include('Headers/AdminHeader.php');
-                        break;
-                    case 'Department Chair':
-                        include('Headers/ChairSecHeader.php');
-                        break;
-                    case 'Secretary':
-                        include('Headers/ChairSecHeader.php');
-                        break;
-                    case 'Dean':
-                        include('Headers/DeanHeader.php');
-                        break;
-                }              
-         ?>
         <div id="body">
             <h2>Edit Major</h2>
             <form method='post' action='EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
-                <table id="tablebody">
+                <table id="formTable">
                     <tr>
                         <td>College:</td>
                         <td><select name="College">
@@ -90,10 +37,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Type:</td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>"></td>
+                        <td>Type:</td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>" /></td>
                     </tr>
                     <tr>
-                        <td>Major:</td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>"></td>
+                        <td>Major:</td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>" /></td>
                     </tr>
                     <tr>
                         <td>Department:</td>
@@ -114,7 +61,7 @@
                     </tr>
                 </table>
                 <br>
-                <input type="submit" value="Save Major">
+                <input type="submit" value="Save Major" />
             </form>
         </div>
     </body>

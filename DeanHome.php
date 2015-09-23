@@ -5,29 +5,9 @@
  * 
  * @author: Robert Vines
  */
-    session_start();
-    $session = $_SESSION[role];
-    
-    switch($session)
-    {
-        case 'Dean':
-            include('UserSession_Dean.php');
-            break;
-        default :
-            header('location:Login.php');
-    }    
-    include('Config.php');
+    include('Header.php');
 ?>
 
-<html>
-    <head>
-        <title>Home Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
-    </head>
-    <body>
-        <?php include('Headers/DeanHeader.php'); ?>
         <div id="body">
           <h2><?php session_start();
                     $fName = $_SESSION[fName];

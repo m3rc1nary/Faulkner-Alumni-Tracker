@@ -6,17 +6,6 @@
  * @author: Robert Vines
  */
 
-    session_start();
-    $session = $_SESSION[role];
-    
-    switch($session)
-    {
-        case 'Admin':
-            include('UserSession_Admin.php');
-            break;
-        default :
-            header('location:Login.php');
-    }    
     include('Config.php');
 
     $employeeId = $_GET['edit_user'];
