@@ -10,7 +10,7 @@
        
     $degreeID = $_GET['edit_id'];
     
-    $sql = "SELECT degree.DegreeID, degree.Type, degree.Major, degree.College, department.DeptName"
+    $sql = "SELECT degree.DegreeID, degree.Type, degree.Name, degree.College, department.DeptName"
             . " FROM degree "
             . "JOIN department "
             . "ON degree.Department_DepartmentID = department.DepartmentID WHERE DegreeID=".$degreeID;
@@ -18,7 +18,7 @@
     $val=$result->fetch();
     
     $degreeType = $val['Type'];
-    $degreeMajor = $val['Major'];
+    $degreeMajor = $val['Name'];
     $degreeCollege = $val['College'];
     $deptName = $val['DeptName'];
     ?>

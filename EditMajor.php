@@ -37,7 +37,7 @@
                 </thead>
                 <tbody>
                     <?php
-                        $sql2 = "SELECT degree.DegreeID, degree.Type, degree.Major, degree.College, department.DeptName"
+                        $sql2 = "SELECT degree.DegreeID, degree.Type, degree.Name, degree.College, department.DeptName"
                                 . " FROM degree "
                                 . "JOIN department "
                                 . "ON degree.Department_DepartmentID = department.DepartmentID ";
@@ -48,7 +48,7 @@
                         $degreeID = $val['DegreeID'];
                         $degreeCollege = $val['College'];
                         $degreeType = $val['Type'];
-                        $degreeMajor = $val['Major'];
+                        $degreeMajor = $val['Name'];
                         $deptName = $val['DeptName'];
                     ?>
                     <tr id="tablebody">

@@ -30,7 +30,7 @@
     }
    
     $sql2="UPDATE degree "
-            . "SET Type='".$type."', Major='".$major."', College='".$college."', Department_DepartmentID='".$deptID."' "
+            . "SET Type='".$type."', Name='".$major."', College='".$college."', Department_DepartmentID='".$deptID."' "
             . " WHERE DegreeID=".$degreeID;
     $pdo->query($sql2);
 

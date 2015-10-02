@@ -19,7 +19,7 @@
    
     $deptID = $val['DepartmentID'];
     
-    $sql2 = "INSERT INTO degree (Type, Major, College, Department_DepartmentID)
+    $sql2 = "INSERT INTO degree (Type, Name, College, Department_DepartmentID)
              VALUES ('".$type."','".$degree."','".$college."','".$deptID."')";
     
     $pdo->exec($sql2);

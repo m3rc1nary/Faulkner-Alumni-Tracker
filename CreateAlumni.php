@@ -57,10 +57,10 @@
                         <td>Major:</td>
                         <td><select name="Major">
                                 <?php 
-                                        $sql = "SELECT Major FROM degree ORDER BY Major";
-                                        $result = $pdo->query($sql);
-                                        while ($val = $result->fetch()):
-                                        $degreeName = $val['Major'];
+                                        $sql2 = "SELECT Name FROM degree ORDER BY Name";
+                                        $result2 = $pdo->query($sql2);
+                                        while ($val = $result2->fetch()):
+                                        $degreeName = $val['Name'];
                                         
                                         {
                                             echo "<option>" . $degreeName  . "</option>";
@@ -70,29 +70,15 @@
                             <td></td><td></td>
                    </tr>
                    <tr>
-                       <td>Minor Type:</td>
-                       <td><select name="MinorType">
-                               <option> </option>
-                                <?php 
-                                        $sql = "SELECT DISTINCT Type FROM degree ORDER BY Type";
-                                        $result = $pdo->query($sql);
-                                        while ($val = $result->fetch()):
-                                        $degreeType = $val['Type'];
-                                        
-                                        {
-                                            echo "<option>" . $degreeType . "</option>";
-                                        }endwhile;
-                                    ?>
-                            </select></td>
                         <td>Minor:</td>
                         <td><select name="Minor">
                                 <option> </option>
                                 <?php 
-                                        $sql = "SELECT Major FROM degree ORDER BY Major";
-                                        $result = $pdo->query($sql);
-                                        while ($val = $result->fetch()):
+                                        $sql4 = "SELECT Name FROM degree ORDER BY Name";
+                                        $result4 = $pdo->query($sql4);
+                                        while ($val = $result4->fetch()):
                                         $degreeType = $val['Type'];
-                                        $degreeName = $val['Major'];
+                                        $degreeName = $val['Name'];
                                         
                                         {
                                             echo "<option>" . $degreeName  . "</option>";
@@ -121,7 +107,8 @@
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
                             <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
-                                    <table>
+                                    <button id="button" type="submit" style="float: right;" onclick="javascript:void window.open('SelectEmployer.php','1443811554743','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" >Add Employer</button>
+                                    <table style="float: left;">
                                         <thead>
                                             <tr>
                                                 <th>Job Title</th>
@@ -134,15 +121,15 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><input type="text" name="CurrentJob" readonly /></td>
+                                                <td><input type="text" name="CurrentJob" value="N/A" readonly /></td>
                                                 <td><select name="Field">
                                                         <option>Yes</option>
                                                         <option>No</option>
                                                     </select></td>
-                                                <td><input type="text" name="EmployerName" readonly /></td>
-                                                <td><input type="text" name="EmployerNum" readonly /></td>
-                                                <td><input type="text" name="EmployerComp" readonly /></td>
-                                                <td><input type="text" name="EmployerEmail" readonly /></td>
+                                                <td><input type="text" name="EmployerName" value="N/A" readonly /></td>
+                                                <td><input type="text" name="EmployerNum" value="000-000-0000" readonly /></td>
+                                                <td><input type="text" name="EmployerComp" value="N/A" readonly /></td>
+                                                <td><input type="text" name="EmployerEmail" readonly value="N/A@none.com" /></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -152,7 +139,8 @@
                         <input type="radio" id="tab-2" name="tab-group-1">
                             <label for="tab-2"><b>Grad School</b></label> 
                                 <div class="content">
-                                    <table>
+                                    <a href="CreateAlumni.php"><button id="button" type="submit" style="float: right;">Add Grad School</button></a>
+                                    <table style="float: left;">
                                         <thead>
                                             <tr>
                                                 <th>Applied</th>
@@ -175,9 +163,9 @@
                                                         <option>In Progress</option>
                                                     </select>
                                                 </td>
-                                                <td><input type="text" name="EmployerName" readonly /></td>
-                                                <td><input type="text" name="EmployerName" readonly /></td>
-                                                <td><input type="text" name="EmployerName" readonly /></td>
+                                                <td><input type="text" name="Status" value="N/A" readonly /></td>
+                                                <td><input type="text" name="SchoolName" value="None" readonly /></td>
+                                                <td><input type="text" name="Degree" value="N/A" readonly /></td>
                                             </tr>
                                         </tbody>
                                     </table>
