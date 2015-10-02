@@ -68,12 +68,9 @@
                     }
                     
                     if( !empty($_POST['LastName']) ) 
-                    {}
-                   //select all from that department and order by last name
-                   //then something with last name
-                   //maybe if last name is null then only have dept as parameter
-                   //if last name is not null then has both as parameter
-                   //output as a table
+                    {
+                        
+                    }
                }
             ?>
         </div>

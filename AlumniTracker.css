@@ -50,6 +50,7 @@
     color: #FFFFFF;
     }
 
+/* Change color of link */
 a:link {
     color:#FFFFFF;        
     }
@@ -131,11 +132,7 @@ thead {
     border-bottom: 2px solid black;
     padding-right: 3px;
     }
-/*Table head rows text bold*/   
-thead th {
-    font-weight: bold;
-}
- 
+    
 /*Formatting text in body of tables*/
 tbody {
     font: 15px arial, san-serif; 
@@ -152,7 +149,7 @@ tbody, td {
 
 /*format table in create alumni*/
 table, th {
-    font-weight: normal;
+    font-weight: bold;
     text-align: right;
     border-collapse: collapse;
     border: 0px;  
@@ -162,10 +159,12 @@ table, th {
     padding-left: 7px;  
     }
     
+/* Change color of every other row in tables */
 tbody tr:nth-child(even){
     background-color: #E0E0E0;
     }
 
+/* Align dropdown boxes in tables*/
 table, th, select {
     text-align: left;
     }
@@ -233,10 +232,12 @@ table, th, select {
     text-decoration: none;
     }
     
+/* Changes button color when hovering over add buttons */
 #button:hover {
     background: #4F81BD;
     }
     
+/* Columns for Create/Edit user department checkboxes */   
 #checkbox {
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
