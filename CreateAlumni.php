@@ -12,9 +12,9 @@
             <form method='post' action="CreateAlumniController.php">
                 <table id="formTable">
                    <tr>
-                        <td>First Name:</td> <td><input type="text" name="FirstName" /></td>
-                        <td>Middle Name:</td> <td><input type="text" name="MiddleName" /></td>
-                        <td>Last Name:</td> <td><input type="text" name="LastName" /></td>
+                       <td>First Name:</td> <td><input type="text" name="FirstName" required />*</td>
+                       <td>Middle Name:</td> <td><input type="text" name="MiddleName" /></td>
+                       <td>Last Name:</td> <td><input type="text" name="LastName" required />*</td>
                    </tr>
                    <tr>
                         <td>Cell Number:</td> <td><input type="text" name="CellNum" /></td>
@@ -42,7 +42,7 @@
                    </tr>
                    <tr>
                        <td>Major Type:</td>
-                       <td><select name="MajorType">
+                       <td><select name="MajorType" required>
                                 <?php 
                                         $sql = "SELECT DISTINCT Type FROM degree ORDER BY Type";
                                         $result = $pdo->query($sql);
@@ -53,9 +53,9 @@
                                             echo "<option>" . $degreeType . "</option>";
                                         }endwhile;
                                     ?>
-                            </select></td>
+                            </select>*</td>
                         <td>Major:</td>
-                        <td><select name="Major">
+                        <td><select name="Major" required>
                                 <?php 
                                         $sql2 = "SELECT Name FROM degree ORDER BY Name";
                                         $result2 = $pdo->query($sql2);
@@ -66,7 +66,7 @@
                                             echo "<option>" . $degreeName  . "</option>";
                                         }endwhile;
                                     ?>
-                            </select></td>
+                            </select>*</td>
                             <td></td><td></td>
                    </tr>
                    <tr>
@@ -89,14 +89,14 @@
                    </tr>
                    <tr>
                         <td>Month Graduated:</td>
-                        <td><select name="MonthGrad">
+                        <td><select name="MonthGrad" required>
                                 <option>January</option><option>February</option>
                                 <option>March</option><option>April</option>
                                 <option>May</option><option>June</option>
                                 <option>July</option><option>August</option>
                                 <option>September</option><option>October</option>
                                 <option>November</option><option>December</option>
-                            </select></td>
+                            </select>*</td>
                         <td>Year Graduated:</td> <td><input type="text" name="YearGrad" /></td>
                         <td></td>
                         <td></td>
@@ -127,8 +127,8 @@
                                                         <option>No</option>
                                                     </select></td>
                                                 <td><input type="text" name="EmployerName" value="N/A" readonly /></td>
-                                                <td><input type="text" name="EmployerNum" value="000-000-0000" readonly /></td>
                                                 <td><input type="text" name="EmployerComp" value="N/A" readonly /></td>
+                                                <td><input type="text" name="EmployerNum" value="000-000-0000" readonly /></td>
                                                 <td><input type="text" name="EmployerEmail" readonly value="N/A@none.com" /></td>
                                             </tr>
                                         </tbody>
