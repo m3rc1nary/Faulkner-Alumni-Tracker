@@ -19,7 +19,7 @@
 
         <div id="body">
             <h2>Edit Department</h2>
-            <form method='post' action='EditDepartmentController.php?edit_dept=<?php echo $deptID ?>'>
+            <form method='post' action='EditDepartmentFormController.php?edit_dept=<?php echo $deptID ?>'>
                 <table id="formTable">
                     <tr>
                         <td>Department Name:</td><td><input type="text" name="DeptName" value="<?php echo $departmentName;?>" /></td>

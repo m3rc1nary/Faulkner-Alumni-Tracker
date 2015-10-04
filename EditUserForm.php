@@ -28,7 +28,7 @@
 
         <div id="body">
             <h2>Edit User</h2>
-            <form method='post' action='EditUserController.php?edit_user=<?php echo $employeeID ?>'>
+            <form method='post' action='EditUserFormController.php?edit_user=<?php echo $employeeID ?>'>
                 <table id="formTable">
                     <tr>
                         <td>First Name:</td><td><input type="text" name="FirstName" value="<?php echo $firstName;?>" /></td>

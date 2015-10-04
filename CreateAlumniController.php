@@ -42,7 +42,6 @@
     $accepted = $_POST['Accepted'];
     $status = $_POST['Status'];
     $schoolName = $_POST['SchoolName'];
-
     
     //post to person table
     $sql= "INSERT INTO person (FirstName, MiddleName, LastName, PrimaryEmail, SecondEmail, Tracked) "

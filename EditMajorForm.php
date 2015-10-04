@@ -25,7 +25,7 @@
 
         <div id="body">
             <h2>Edit Major</h2>
-            <form method='post' action='EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
+            <form method='post' action='EditMajorFormController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="formTable">
                     <tr>
                         <td>College:</td>

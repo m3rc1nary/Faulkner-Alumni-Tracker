@@ -19,7 +19,7 @@
 
         <div id="body">
             <h2>Edit University</h2>
-            <form method='post' action='EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
+            <form method='post' action='EditUniversityFormController.php?edit_id=<?php echo $uniId ?>'>
                 <table id="formTable">
                     <tr>
                         <td>University Name:</td>

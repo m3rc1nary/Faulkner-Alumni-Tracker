@@ -24,7 +24,7 @@
     
 //    $deptID = $val['DepartmentID'];
     
-    $sql2="Update schoolemployee, login "
+    $sql2="UPDATE schoolemployee, login "
             . "SET schoolemployee.FirstName='".$firstName."', schoolemployee.LastName='".$lastName."', "
             . "schoolemployee.Email='".$email."', schoolemployee.Role='".$role."', "
             . "login.UserName='".$userName."', "

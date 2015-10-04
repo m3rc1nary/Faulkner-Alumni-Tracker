@@ -23,7 +23,7 @@
 
         <div id="body">
             <h2>Edit Employer</h2>
-            <form method='post' action='EditEmployerController.php?edit_id=<?php echo $empID ?>'>
+            <form method='post' action='EditEmployerFormController.php?edit_id=<?php echo $empID ?>'>
                 <table id="formTable">
                     <tr>
                         <td>Employer Name:</td><td><input type="text" name="EmpName" value="<?php echo $empName ?>" /></td>
