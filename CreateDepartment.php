@@ -6,9 +6,9 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Create Department</h2>
             <form method='post' action="CreateDepartmentController.php">
@@ -21,5 +21,6 @@
                 <input type="submit" value="Create Department" />
             </form>
         </div>
+</div>
     </body>
 </html>

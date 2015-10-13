@@ -95,5 +95,5 @@
             . "VALUES ('".$currentJob."', '".$inField."', '".$personId."', '".$empName."' )";
     $pdo->query($sql);
     
-     header("Location: EditAlumni.php");
+    header("Location: EditAlumni.php");
 ?>

@@ -5,9 +5,9 @@
  * @author: Robert Vines
  */
 
-    include('Header.php'); 
+    include('Headers/Header.php'); 
 ?>
-
+<div id='page'>
         <div id="body">
             <?php
                 if(isset($_GET['delete_id']))
@@ -53,5 +53,6 @@
                 </tbody>
             </table>
         </div>
+</div>
     </body>
 </html>

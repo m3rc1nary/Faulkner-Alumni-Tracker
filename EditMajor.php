@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
  
-    include('Header.php');
+    include('Headers/Header.php');
 ?>
 
 <?php
@@ -20,7 +20,7 @@
         header("Location: EditMajor.php");
     }
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Select Major to Edit</h2>
             <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
@@ -65,5 +65,6 @@
                 </tbody>
             </table>
         </div>
+</div>
     </body>
 </html>

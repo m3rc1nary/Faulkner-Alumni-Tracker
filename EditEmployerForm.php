@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
     
     $employerID = $_GET['edit_id'];
     
@@ -20,7 +20,7 @@
     $empComp = $val['EmployerComp'];
     $employerEmail = $val['EmployerEmail'];
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Edit Employer</h2>
             <form method='post' action='EditEmployerFormController.php?edit_id=<?php echo $empID ?>'>
@@ -42,5 +42,6 @@
                 <input type="submit" value="Save Employer" />
             </form>
         </div>
+</div>
     </body>
 </html>

@@ -5,7 +5,7 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');   
+    include('Headers/Header.php');   
 
     $deptID = $_GET['edit_id'];
     
@@ -16,7 +16,7 @@
     $departmentId = $val['DepartmentID'];
     $departmentName = $val['DeptName'];
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Edit Department</h2>
             <form method='post' action='EditDepartmentFormController.php?edit_dept=<?php echo $deptID ?>'>
@@ -29,5 +29,6 @@
                 <input type="submit" value="Save Department" />
             </form>
         </div>
+</div>
     </body>
 </html>

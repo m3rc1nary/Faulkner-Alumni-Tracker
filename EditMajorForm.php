@@ -6,7 +6,7 @@
  * @author Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
        
     $degreeID = $_GET['edit_id'];
     
@@ -22,7 +22,7 @@
     $degreeCollege = $val['College'];
     $deptName = $val['DeptName'];
     ?>
-
+<div id='page'>
         <div id="body">
             <h2>Edit Major</h2>
             <form method='post' action='EditMajorFormController.php?edit_major=<?php echo $degreeID ?>'>
@@ -64,5 +64,6 @@
                 <input type="submit" value="Save Major" />
             </form>
         </div>
+</div>
     </body>
 </html>

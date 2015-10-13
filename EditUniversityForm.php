@@ -5,7 +5,7 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
 
     $uniID = $_GET['edit_id'];
     
@@ -16,7 +16,7 @@
     $uniId = $val['UniversityID'];
     $uniName = $val['UniName'];
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Edit University</h2>
             <form method='post' action='EditUniversityFormController.php?edit_id=<?php echo $uniId ?>'>
@@ -30,5 +30,6 @@
                 <input type="submit" value="Save University" />
             </form>
         </div>
+</div>
     </body>
 </html>

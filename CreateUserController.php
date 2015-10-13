@@ -8,9 +8,9 @@
 
     include('Config.php');
     
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($_POST);
+//    echo "</pre>";
     
     //data from create user form
     $firstName = $_POST['FirstName'];
@@ -31,7 +31,7 @@
           VALUES ('".$userName."', '".$password."')";
     $pdo->query($sql);
 
-        //match foreign key from login to school employee
+        //security for sql statments
         $fk = $pdo->prepare("SELECT LoginID FROM login WHERE UserName=?");
         $fk->execute(array($userName));
         $loginId = $fk->fetchColumn();
@@ -44,7 +44,7 @@
     $pdo->query($sql2);  
     
     
-        //match foreign key from schoolemployee to department_has_schoolemployee
+        //security for sql statments
         $fk = $pdo->prepare("SELECT EmployeeID FROM schoolemployee WHERE Email=?");
         $fk->execute(array($email));
         $empId = $fk->fetchColumn();

@@ -6,32 +6,36 @@
 /* Image for logo */
 #logo { 
     position: absolute;
+    width: 250px;
+    height: 72px;
     top: 0px;
     left: 0px;
     }
 
 /* Blue rectangle for rest of logo */
-#header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 96px;
-    background: #4F81BD;
-    }
+hr {
+    height: 11px;
+    background-color: #295190;
+    border: none;
+    position: relative;
+    top: 64px;
+    margin-left: -8;
+    margin-right: -8;
+   }
     
 /* Navigation bar */
 #nav ul {
     z-index: 1;
-    font: bold 16px arial, sans-serif;
-    top: 42px;
-    position: relative;
+    font: bold 17px palatino linotype, serif;
+    top: 30px;
+    position: absolute;
     float: left;
     overflow: hidden;
     list-style: none;
     margin: 0;
     padding: 0;
-    color:white;
-    }
+    color: #295190;
+    }  
 
 /* Navigation bar */
 #nav li {
@@ -43,11 +47,11 @@
 /* Navigation bar link */
 #nav a {
     float: left;
-    height: 36px;
+    height: 38px;
     line-height: 36px;
     padding: 0 15px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #295190;
     }
 
 /* Change color of link */
@@ -70,24 +74,25 @@ a:visited {
     text-indent: 260px;
     }
 
-/* Login page, grey */
+/* Every page, grey */
 #page {
-    position: absolute;
-    top: 96px;
+    position: relative;
+    top: 83px;
     left:0;
-    background: none repeat scroll 0 0 #C0C0C0;
+    background: none repeat 0 0 #E8E8E8;
     height: 90%;
     margin-left: auto;
     margin-right: auto;
     position: fixed;
     text-align: left;
     width: 100%;   
+    overflow-y: scroll;
     }
   
 /* Login page, white box */
 #loginBox {
     position: relative;
-    top: 80;
+    top: 80px;
     margin: auto;
     width: 45%;
     height: 250px;
@@ -98,44 +103,37 @@ a:visited {
 /* Login page, bold text */
 #loginHeader {
     padding-top: 15px;
-    font: bold 17px arial, sans-serif; 
+    font: bold 17px palatino linotype, serif; 
     text-align: center;
     }
 
 /* Login page, textbox text */
 #loginText {
     padding-left: 15px;
-    font: 14px arial, sans-serif; 
+    font: 14px palatino linotype, serif; 
     text-align: center;
     }
  
 /* Postion body of each page */
 #body {
-    padding: 15;
-    top: 35;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 25px;
     position: relative;
     width: 90%;
     float: left;
-    font: 14px arial, sans-serif;
+    font: 14px palatino linotype, serif;
+    background: none repeat scroll 0 0 #E8E8E8;
     }
 
 /*Form table backgrounds to white*/
 #formTable td{
-    background-color: white;    
-    }
-  
-/* Top row of tables */
-thead {
-    color: white;
-    background-color: #4F81BD;
-    font: bold 15px arial, san-serif;
-    border-bottom: 2px solid black;
-    padding-right: 3px;
+    background-color: #E8E8E8;    
     }
     
 /*Formatting text in body of tables*/
 tbody {
-    font: 15px arial, san-serif; 
+    font: 15px palatino linotype, serif; 
     }
   
 /* Table body formating */
@@ -148,9 +146,14 @@ tbody, td {
     }
 
 /*format table in create alumni*/
-table, th {
+th {
+    color: white;
+    background-color: #295190;
+    font: bold 15px palatino linotype, serif;
+    border-bottom: 2px solid black;
+    padding-right: 3px;
     font-weight: bold;
-    text-align: right;
+    text-align: center;
     border-collapse: collapse;
     border: 0px;  
     padding-top: 3px;
@@ -161,12 +164,16 @@ table, th {
     
 /* Change color of every other row in tables */
 tbody tr:nth-child(even){
-    background-color: #E0E0E0;
+    background-color: #DEE8F5;
+    }
+
+tbody tr:nth-child(odd){
+    background-color: white;
     }
 
 /* Align dropdown boxes in tables*/
-table, th, select {
-    text-align: left;
+table {
+    border-collapse: collapse;
     }
   
 /*tab box formatting*/
@@ -202,7 +209,7 @@ table, th, select {
     position: absolute;
     top: 28px;
     left: 0;
-    background: white;
+    background: #E8E8E8;
     right: 0;
     bottom: 0;
     padding: 20px;
@@ -224,9 +231,9 @@ table, th, select {
 /*Buttons*/
 #button {
     border-radius: 5px;
-    font-family: Arial;
+    font-family: serif;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 14px;
     background: #4d5052;
     padding: 4px 6px 4px 6px;
     text-decoration: none;

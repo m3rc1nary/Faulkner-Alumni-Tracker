@@ -16,5 +16,5 @@
         <header>
             <img style="float:left; z-index: 1" src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
                      Tracker" id="logo">
-            <div id="header"></div>
+            <hr noshade />
         </header>

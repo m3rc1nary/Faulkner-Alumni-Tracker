@@ -5,8 +5,9 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
 ?>
+<div id='page'>
         <div id="body">
             <h2>Create Alumni</h2>
             <form method='post' action="CreateAlumniController.php">
@@ -22,7 +23,7 @@
                         <td>Work Number:</td> <td><input type="text" name="WorkNum" /></td>
                    </tr>
                    <tr>
-                        <td style=>Primary Email:</td> <td><input type="email" name="FirstEmail" /></td>
+                        <td>Primary Email:</td> <td><input type="email" name="FirstEmail" /></td>
                         <td>Secondary Email:</td> <td><input type="email" name="SecondEmail" /></td>
                         <td>Tracked:</td>   
                         <td><select name="Tracked">
@@ -175,5 +176,6 @@
                 <input type="submit" value="Create Alumni" />
             </form>
         </div>
+</div>
     </body>
 </html>

@@ -5,7 +5,7 @@
  * @author Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
     
     $employeeID = $_GET['edit_id'];
     
@@ -25,7 +25,7 @@
     $userName = $val['UserName'];
     $password = $val['Password'];
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Edit User</h2>
             <form method='post' action='EditUserFormController.php?edit_user=<?php echo $employeeID ?>'>
@@ -79,5 +79,6 @@
                 <input type="submit" value="Save User" />
             </form>
         </div>
+</div>
     </body>
 </html>

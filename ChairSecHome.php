@@ -43,6 +43,7 @@
                         break;
                 }              
          ?>
+        <div id='page'>
         <div id="body">
           <h2><?php session_start();
                     $fName = $_SESSION[fName];
@@ -50,12 +51,14 @@
                     echo 'Hello '. $fName .' '. $lName .','; ?></h2>
           <p><a href="CreateAlumni.php"><button id="button">Add Alumni</button></a></p>
             <table>
-                <tr id="tableHead">
+                <thead>
+                <tr>
                     <td>Last Name</td>
                     <td>First Name</td>
                     <td>Month Graduated</td>
                     <td>Year Graduated</td>
                 </tr>
+                </thead>
                 <?php
                     //get info from application
 //                    $pdo = new PDO($connString, $user, $pass);
@@ -69,7 +72,8 @@
 //                    $deptId= $val['DepartmentID'];
 //                    $deptName= $val['DeptName'];                  
                 ?>
-                <tr id="tablebody">
+                <tbody>
+                <tr>
                     <td>Vines</td>
                     <td>Robert</td>
                     <td>December</td>
@@ -78,7 +82,9 @@
 //                        endwhile;
                     ?>
                 </tr>
+                </tbody>
             </table>
+        </div>
         </div>
     </body>
 </html>

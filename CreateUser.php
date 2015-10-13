@@ -5,8 +5,9 @@
  * @author Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
 ?>
+<div id='page'>
         <div id="body">
             <h2>Create User</h2>
             <form method='post' action='CreateUserController.php'>
@@ -18,7 +19,7 @@
                         <td>Last Name:</td><td><input type="text" name="LastName" required /></td>
                     </tr>
                     <tr>
-                        <th>Email:</th><th><input type="text" name="Email" required /></th>
+                        <td>Email:</td><td><input type="text" name="Email" required /></td>
                     </tr>
                     <tr>
                         <td>Role:</td> 
@@ -58,5 +59,6 @@
                 <input type="submit" value="Create User" />
             </form> 
         </div>
+</div>
     </body>
 </html>

@@ -6,9 +6,9 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');  
+    include('Headers/Header.php');  
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Create Employer</h2>
             <form method='post' action="CreateEmployerController.php">
@@ -30,5 +30,6 @@
                 <input type="submit" value="Create Employer" />
             </form>
         </div>
+</div>
     </body>
 </html>

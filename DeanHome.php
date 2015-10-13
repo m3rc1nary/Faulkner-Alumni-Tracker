@@ -5,9 +5,9 @@
  * 
  * @author: Robert Vines
  */
-    include('Header.php');
+    include('Headers/Header.php');
 ?>
-
+<div id='page'>
         <div id="body">
           <h2><?php session_start();
                     $fName = $_SESSION[fName];
@@ -19,5 +19,6 @@
               </select></p>
               <p align="center">Last Name: <input type="text"></p>
         </div>
+</div>
     </body>
 </html>

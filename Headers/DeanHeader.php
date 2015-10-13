@@ -19,7 +19,6 @@
     <header>
         <img style="float:left; z-index: 1" src="Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
              Tracker" id="logo">
-        <div id="header"></div>
         <div id="nav">
             <ul>
                 <li><a id="user" href="DeanHome.php">Home</a></li>
@@ -31,4 +30,5 @@
                 <li><a id="user" href="Logout.php">Log out</a></li>
             </ul>
         </div>
+        <hr noshade />
     </header>

@@ -5,7 +5,7 @@
  * @author: Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
     
     if(isset($_GET['edit_id']))
     {               
@@ -60,6 +60,7 @@
             endwhile;
     }
 ?>
+<div id='page'>
         <div id="body">
             <h2>Edit Alumni</h2>
             <form method='post' action="EditAlumniFormController.php">
@@ -94,7 +95,7 @@
                             </select></td>
                    </tr>
                    <tr>
-                        <td>Street:</td> <td><input type="text" name="Street" value="<?php echo $street; ?>" /></td>
+                        <td>Street:</td> <td><input type="text" name="Street" value="<?php echo $streetAdd; ?>" /></td>
                         <td>City:</td> <td><input type="text" name="City" value="<?php echo $city; ?>" /></td>
                         <td>State:</td> <td><input type="text" name="State" value="<?php echo $state; ?>" /></td>
                    </tr>
@@ -265,5 +266,6 @@
                 <input type="submit" value="Save Alumni" />
             </form>
         </div>
+</div>
     </body>
 </html>

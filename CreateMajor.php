@@ -6,9 +6,9 @@
  * @author Robert Vines
  */
 
-    include('Header.php');
+    include('Headers/Header.php');
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Create Major</h2>
             <form method='post' action="CreateMajorController.php">
@@ -48,5 +48,6 @@
             <input type="submit" value="Create Major" />
             </form>
         </div>
+</div>
     </body>
 </html>

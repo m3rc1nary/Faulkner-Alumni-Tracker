@@ -40,9 +40,23 @@ include('Config.php');
 
     //get id associated with major type and name
     $sql = "SELECT ";
+//    $result = $pdo->query($sql);
+//        while ($val = $result->fetch()):
+//        $degreeType = $val['Type'];
+//
+//        {
+//            echo "<option>" . $degreeType . "</option>";
+//        }endwhile;
     
     //get id associated with minor name
     $sql2 = "SELECT ";
+//    $result = $pdo->query($sql);
+//        while ($val = $result->fetch()):
+//        $degreeType = $val['Type'];
+//
+//        {
+//            echo "<option>" . $degreeType . "</option>";
+//        }endwhile;
     
     //update person, address, gradschool, graduated, and employment tables
     $sql3 = "UPDATE person, address, gradschool, graduated, employment "

@@ -5,7 +5,7 @@
  * @author Robert Vines
  */
 
-    include('Header.php');
+    include ('Headers/Header.php');
 ?>
 <?php
 //    if(isset($_GET['delete_id']))
@@ -20,7 +20,7 @@
 //        header("Location: EditUser.php");
 //    }
 ?>
-
+<div id='page'>
         <div id="body">
             <h2>Select Alumni to Edit</h2>
             <p><a href="CreateAlumni.php"><button id="button" type="submit">Add Alumni</button></a></p>
@@ -116,7 +116,7 @@
                     <table style="float:right; position: relative;">
                         
                         <tr>
-                            <td style="background-color: #4F81BD; text-align: center; font-weight: bold; color:white;" colspan="2">Personal Info</td>
+                            <th colspan="2">Personal Info</td>
                         </tr>
                         <tr>
                             <td>First Name: </td>
@@ -153,7 +153,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="background-color: #4F81BD; text-align: center; font-weight: bold; color:white;" colspan="2">Address</td>
+                            <th colspan="2">Address</th>
                         </tr>
                         <tr>
                             <td>Street:</td>
@@ -176,7 +176,7 @@
                             <td><?php echo $zip; ?></td>
                         </tr>
                         <tr>
-                            <td style="background-color: #4F81BD; text-align: center; font-weight: bold; color:white;" colspan="2">Phone Numbers</td>
+                            <th colspan="2">Phone Numbers</th>
                         </tr>
                         <tr>
                             <td>Cell:</td>
@@ -191,7 +191,7 @@
                             <td><?php echo $home; ?></td>
                         </tr>
                         <tr>
-                            <td style="background-color: #4F81BD; text-align: center; font-weight: bold; color:white;" colspan="2">Degrees</td>
+                            <th colspan="2">Degrees</th>
                         </tr>
                         <tr>
                             <td>Major Type:</td>
@@ -251,7 +251,7 @@
                             <td><?php echo $yearGrad; ?></td>
                         </tr>
                         <tr>
-                            <td style="background-color: #4F81BD; text-align: center; font-weight: bold; color:white;" colspan="2">Graduate School</td>
+                            <th colspan="2">Graduate School</th>
                         </tr>
                         <tr>
                             <td>Applied:</td>
@@ -293,7 +293,7 @@
                                 ?></td>
                         </tr>
                         <tr>
-                            <td style="background-color: #4F81BD; text-align: center; font-weight: bold; color:white;" colspan="2">Employment</td>
+                            <th colspan="2">Employment</th>
                         </tr>
                         <tr>
                             <td>Job Title:</td>
@@ -385,5 +385,6 @@
             }//end if(isset($_GET['view']))
             ?>
         </div>
+</div>
     </body>
 </html>
