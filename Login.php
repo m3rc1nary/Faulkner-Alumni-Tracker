@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
     </head>
     <body>
-        <?php include('Headers/PlainHeader.php'); ?>
+        <?php include('PlainHeader.php'); ?>
         <div id="page">
             <div id="loginBox">
                 <form method="post" action="CheckLogin.php">
