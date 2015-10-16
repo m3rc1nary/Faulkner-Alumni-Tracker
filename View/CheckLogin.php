@@ -10,7 +10,7 @@
     ob_start();    
     session_start();
     // include config file for php connection
-    include("Config.php");
+    include("/Database/Config.php");
     // memebers table name
     $tbl_name="login";
     

@@ -27,6 +27,6 @@
             header('location:Login.php');
             exit();
     }    
-    include('Config.php');
+    include('/Database/Config.php');
 
 ?>
