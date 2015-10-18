@@ -5,7 +5,7 @@
  * 
  * @author: Robert Vines
  */
-include('Config.php');
+include('/Config.php');
 
     //get information from EditAlumniForm.php form
     $firstName = $_POST['FirstName'];

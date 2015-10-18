@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
         
-    include('Config.php');    
+    include('/Config.php');    
            
     $uniId = $_GET['edit_id'];
     $uniName = $_POST['uniName'];

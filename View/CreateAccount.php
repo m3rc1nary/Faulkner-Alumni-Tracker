@@ -1,6 +1,6 @@
 <?php
 /*
- * Form to create a new user.
+ * Form to create a new Account.
  * 
  * @author Robert Vines
  */
@@ -9,8 +9,8 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Create User</h2>
-            <form method='post' action='/AlumniTracker/Controller/CreateUserController.php'>
+            <h2>Create Account</h2>
+            <form method='post' action='/AlumniTracker/Controller/CreateAccountController.php'>
                 <table id="formTable">
                     <tr>
                         <td>First Name:</td><td><input type="text" name="FirstName" required /></td>
@@ -31,7 +31,7 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td>User Name:</td><td><input type="text" name="UserName" required /></td>
+                        <td>Username:</td><td><input type="text" name="UserName" required /></td>
                     </tr>
                     <tr>
                         <td>Password:</td><td><input type="text" name="Password" required /></td>
@@ -56,7 +56,7 @@
                             ?>
                 </div>
                 <br>
-                <input type="submit" value="Create User" />
+                <input type="submit" value="Create Account" />
             </form> 
         </div>
 </div>

@@ -1,18 +1,18 @@
 <?php
 
 /* 
- * User controller to store information in the database.
+ * Account controller to store information in the database.
  * 
  * @author: Robert Vines
  */
 
-    include('Config.php');
+    include('/Config.php');
     
 //    echo "<pre>";
 //    print_r($_POST);
 //    echo "</pre>";
     
-    //data from create user form
+    //data from create account form
     $firstName = $_POST['FirstName'];
     $lastName = $_POST['LastName'];
     $email = $_POST['Email'];
@@ -58,5 +58,5 @@
             echo 'It worked';
             } 
     
-    header("Location: /AlumniTracker/View/EditUser.php");
+    header("Location: /AlumniTracker/View/EditAccount.php");
 ?>

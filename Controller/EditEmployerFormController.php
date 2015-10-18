@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('Config.php');
+    include('/Config.php');
            
     $empID = $_GET['edit_id'];
 

@@ -24,7 +24,7 @@
         <div id="body">
             <h2>Select Alumni to Edit</h2>
             <p><a href="CreateAlumni.php"><button id="button" type="submit">Add Alumni</button></a></p>
-            <table style="float: left;">
+            <table class="column1">
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -113,7 +113,7 @@
 
                     endwhile;
                     ?>
-                    <table style="float:right; position: relative;">
+            <table class="column2">
                         
                         <tr>
                             <th colspan="2">Personal Info</td>

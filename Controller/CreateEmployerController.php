@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('Config.php');
+    include('/Config.php');
         
      //data from CreateDepartment form
     $empName = $_POST['EmpName'];

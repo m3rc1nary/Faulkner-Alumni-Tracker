@@ -1,13 +1,13 @@
 <?php
 /*
- * To change or delete a user.
+ * To change or delete an account.
  *
  * @author Robert Vines
  */
 
     include('Header.php');
     
-    $employeeID = $_GET['edit_id'];
+    $employeeID = $_GET['edit_account'];
     
     $sql="SELECT schoolemployee.EmployeeID, schoolemployee.FirstName, schoolemployee.LastName,"
           . "schoolemployee.Email, schoolemployee.Role, login.UserName, login.Password"
@@ -27,8 +27,8 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Edit User</h2>
-            <form method='post' action='/AlumniTracker/Controller/EditUserFormController.php?edit_user=<?php echo $employeeID ?>'>
+            <h2>Edit Account</h2>
+            <form method='post' action='/AlumniTracker/Controller/EditAccountFormController.php?edit_account=<?php echo $employeeID ?>'>
                 <table id="formTable">
                     <tr>
                         <td>First Name:</td><td><input type="text" name="FirstName" value="<?php echo $firstName;?>" /></td>
@@ -50,7 +50,7 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td>User Name:</td><td><input type="text" name="UserName" value="<?php echo $userName ;?>" /></td>
+                        <td>Username:</td><td><input type="text" name="UserName" value="<?php echo $userName ;?>" /></td>
                     </tr>
                     <tr>
                         <td>Password:</td><td><input type="text" name="Password" value="<?php echo $password ;?>" /></td>
@@ -76,7 +76,7 @@
                 </div>
                 <br>
                 
-                <input type="submit" value="Save User" />
+                <input type="submit" value="Save Account" />
             </form>
         </div>
 </div>

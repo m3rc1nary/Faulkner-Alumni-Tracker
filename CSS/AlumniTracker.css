@@ -3,6 +3,15 @@
     Author     : Robert Vines
 */
 
+.column1{
+    float: left;
+}
+
+.column2{
+    left: 40px;
+    position: relative;
+}
+
 /* Image for logo */
 #logo { 
     position: absolute;
@@ -126,14 +135,13 @@ a:visited {
     background: none repeat scroll 0 0 #E8E8E8;
     }
 
+table{
+    border-collapse: collapse;
+    }
+    
 /*Form table backgrounds to white*/
 #formTable td{
     background-color: #E8E8E8;    
-    }
-    
-/*Formatting text in body of tables*/
-tbody {
-    font: 15px palatino linotype, serif; 
     }
   
 /* Table body formating */
@@ -169,11 +177,6 @@ tbody tr:nth-child(even){
 
 tbody tr:nth-child(odd){
     background-color: white;
-    }
-
-/* Align dropdown boxes in tables*/
-table {
-    border-collapse: collapse;
     }
   
 /*tab box formatting*/

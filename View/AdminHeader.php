@@ -20,7 +20,7 @@
         <div id="nav">
             <ul>
                 <li><a id="user" href="AdminHome.php">Home</a></li>
-                <li><a href="EditUser.php">User</a></li>
+                <li><a href="EditAccount.php">Accounts</a></li>
                 <li><a href="EditMajor.php">Major</a></li>
                 <li><a href="EditDepartment.php">Department</a></li>
                 <li><a href="EditEmployer.php">Employer</a></li>

@@ -1,14 +1,14 @@
 <?php
 
 /* 
- * sql information to change information about a user.
+ * sql information to change information about account.
  * 
  * @author: Robert Vines
  */
 
-    include('Config.php');
+    include('/Config.php');
 
-    $employeeId = $_GET['edit_user'];
+    $employeeId = $_GET['edit_account'];
     $firstName = $_POST['FirstName'];
     $lastName = $_POST['LastName'];
     $email = $_POST['Email'];
@@ -32,5 +32,5 @@
             . "WHERE schoolemployee.Login_LoginID = login.LoginID AND EmployeeID='".$employeeId."';";
     $pdo->query($sql2);
 
-    header("Location: /AlumniTracker/View/EditUser.php");
+    header("Location: /AlumniTracker/View/EditAccount.php");
 ?>

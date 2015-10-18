@@ -10,7 +10,7 @@
 //    print_r($_POST);
 //    echo "</pre>";
 
-    include('Config.php');
+    include('/Config.php');
 
     //Store form information in variables
     $firstName = $_POST['FirstName'];

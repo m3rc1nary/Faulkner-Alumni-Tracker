@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
     
-    include('Config.php');  
+    include('/Config.php');  
            
     $dept = $_GET['edit_dept'];
 

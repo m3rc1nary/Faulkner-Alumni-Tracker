@@ -1,6 +1,6 @@
 <?php
 /*
- * Display Users to edit and delete them.
+ * Display Accounts to edit and delete them.
  *
  * @author Robert Vines
  */
@@ -8,9 +8,9 @@
     include('Header.php');
 ?>
 <?php
-    if(isset($_GET['delete_id']))
+    if(isset($_GET['delete_account']))
     {               
-        $employeeId = $_GET['delete_id'];
+        $employeeId = $_GET['delete_account'];
         
         $sql="DELETE FROM schoolemployee, login, department_has_schoolemployee "
                 . "JOIN department_has_schoolemployee "
@@ -20,14 +20,14 @@
                 . "WHERE schoolemployee.EmployeeID = '".$employeeId."'; ";
         $pdo->query($sql);
         
-        header("Location: EditUser.php");
+        header("Location: EditAccount.php");
     }
 ?>
 <div id='page'>
-        <div id="body" style="float: left; width: 30%;">
-            <h2>Select User to Edit</h2>
-            <p><a href="CreateUser.php"><button id="button" type="submit">Add User</button></a></p>
-            <table>
+        <div id="body">
+            <h2>Select Account to Edit</h2>
+            <p><a href="CreateAccount.php"><button id="button" type="submit">Add Account</button></a></p>
+            <table class="column1">
                 <thead>
                     <tr>
                         <th>Last Name</th>
@@ -54,15 +54,14 @@
                     <tr>
                         <td><?php echo $lastName; ?></td>
                         <td><?php echo $firstName; ?></td>
-                        <td><a href="EditUser.php?view=<?php echo $employeeId ?>"><button type="button">View</button></a></td>
+                        <td><a href="EditAccount.php?view=<?php echo $employeeId ?>"><button type="button">View</button></a></td>
                     </tr>
                     <?php
                         endwhile;
                     ?>
                 </tbody>
             </table>
-        </div>
-        <div id="body" style="width: 30%;">
+        <div>
            <?php
             if(isset($_GET['view']))
             {               
@@ -93,8 +92,8 @@
 
                     endwhile;
                     ?>
-            <br /><br /><br /><br /><br /><br />
-                    <table>
+            
+            <table class="column2">
 
                         <tr>
                             <th colspan="2">Personal Info</th>
@@ -144,13 +143,14 @@
                             <td>Password: </td>
                             <td><?php echo $password; ?></td>
                         </tr>
-                        <tr><td><a href="EditUserForm.php?edit_id=<?php echo $empID ?>"><button type="button">Edit</button></a></td>
-                            <td><a href="EditUser.php?delete_id=<?php echo $empID ?>" onclick="return confirm('Are you sure you want to delete this user?');"><button type="button">Delete</button></a></td></tr>
+                        <tr><td><a href="EditAccountForm.php?edit_account=<?php echo $empID ?>"><button type="button">Edit</button></a></td>
+                            <td><a href="EditAccount.php?delete_account=<?php echo $empID ?>" onclick="return confirm('Are you sure you want to delete this Account?');"><button type="button">Delete</button></a></td></tr>
                     </table>          
 
                     <?php  
             }//end if(isset($_GET['view']))
             ?>
+        </div>
         </div>
 </div>
     </body>
