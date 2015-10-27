@@ -10,7 +10,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Create University</h2>
+            <h1>Create A University</h1>
             <form method='post' action="/AlumniTracker/Controller/CreateUniversityController.php">
                 <table id="formTable">
                     <tr>

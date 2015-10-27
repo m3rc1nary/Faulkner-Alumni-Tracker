@@ -22,7 +22,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Select Alumni to Edit</h2>
+            <h1>Alumni</h1>
             <p><a href="CreateAlumni.php"><button id="button" type="submit">Add Alumni</button></a></p>
             <table class="column1">
                 <thead>

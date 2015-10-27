@@ -22,7 +22,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Edit Employer</h2>
+            <h1>Edit Employer</h1>
             <form method='post' action='/AlumniTracker/Controller/EditEmployerFormController.php?edit_id=<?php echo $empID ?>'>
                 <table id="formTable">
                     <tr>

@@ -19,7 +19,7 @@
                     header("Location: EditUniversity.php");
                 }
             ?>
-            <h2>Select a University to Edit</h2>
+            <h1>University</h1>
             <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
             <table>
                 <thead>

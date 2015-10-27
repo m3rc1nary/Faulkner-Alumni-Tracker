@@ -18,7 +18,7 @@
                     header("Location: EditDepartment.php");
                 }
             ?>
-            <h2>Select Department to Edit</h2>
+            <h1>Department</h1>
             <p><a href="CreateDepartment.php"><button id="button">Add Department</button></a></p>
             <table>
                 <thead>

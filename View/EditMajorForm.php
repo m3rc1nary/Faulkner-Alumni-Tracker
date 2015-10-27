@@ -24,7 +24,7 @@
     ?>
 <div id='page'>
         <div id="body">
-            <h2>Edit Major</h2>
+            <h1>Edit Major</h1>
             <form method='post' action='/AlumniTracker/Controller/EditMajorFormController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="formTable">
                     <tr>

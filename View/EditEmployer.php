@@ -18,7 +18,7 @@
                     header("Location: EditEmployer.php");
                 }
             ?>
-            <h2>Select Employer to Edit</h2>
+            <h1>Employer</h1>
             <p><a href="CreateEmployer.php"><button id="button">Add Employer</button></a></p>
             <table>
                 <thead>

@@ -10,7 +10,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Create Employer</h2>
+            <h1>Create An Employer</h1>
             <form method='post' action="/AlumniTracker/Controller/CreateEmployerController.php">
                 <table id="formTable">
                     <tr>

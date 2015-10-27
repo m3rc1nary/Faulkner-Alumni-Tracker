@@ -9,7 +9,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Create Alumni</h2>
+            <h1>Create An Alumni</h1>
             <form method='post' action="/AlumniTracker/Controller/CreateAlumniController.php">
                 <table id="formTable">
                    <tr>

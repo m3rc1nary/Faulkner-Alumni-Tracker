@@ -25,7 +25,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Select Account to Edit</h2>
+            <h1>Account</h1>
             <p><a href="CreateAccount.php"><button id="button" type="submit">Add Account</button></a></p>
             <table class="column1">
                 <thead>

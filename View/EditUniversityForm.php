@@ -18,7 +18,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Edit University</h2>
+            <h1>Edit A University</h1>
             <form method='post' action='/AlumniTracker/Controller/EditUniversityFormController.php?edit_id=<?php echo $uniId ?>'>
                 <table id="formTable">
                     <tr>

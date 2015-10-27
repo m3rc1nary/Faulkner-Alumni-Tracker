@@ -3,6 +3,13 @@
     Author     : Robert Vines
 */
 
+h1 {
+    font-size: 32px;
+    font-family: palatino linotype, serif;
+    font-weight: bold;
+    display:inline-block;
+}
+
 .column1{
     float: left;
 }

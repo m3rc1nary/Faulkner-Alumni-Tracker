@@ -9,7 +9,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Create Account</h2>
+            <h1>Create An Account</h1>
             <form method='post' action='/AlumniTracker/Controller/CreateAccountController.php'>
                 <table id="formTable">
                     <tr>

@@ -27,7 +27,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Edit Account</h2>
+            <h1>Edit Account</h1>
             <form method='post' action='/AlumniTracker/Controller/EditAccountFormController.php?edit_account=<?php echo $employeeID ?>'>
                 <table id="formTable">
                     <tr>

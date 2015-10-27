@@ -10,7 +10,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Create Major</h2>
+            <h1>Create A Major</h1>
             <form method='post' action="/AlumniTracker/Controller/CreateMajorController.php">
                 <table id="formTable">
                     <tr>

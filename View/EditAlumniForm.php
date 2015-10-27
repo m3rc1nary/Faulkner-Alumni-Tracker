@@ -62,7 +62,7 @@
 ?>
 <div id='page'>
         <div id="body">
-            <h2>Edit Alumni</h2>
+            <h1>Edit Alumni</h1>
             <form method='post' action="/AlumniTracker/Controller/EditAlumniFormController.php">
                 <table id="formTable">
                    <tr>

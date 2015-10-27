@@ -9,10 +9,10 @@
 ?>
 <div id='page'>
         <div id="body">
-          <h2><?php session_start();
+          <h1><?php session_start();
                     $fName = $_SESSION[fName];
                     $lName = $_SESSION[lName];
-                    echo 'Hello '. $fName .' '. $lName .','; ?></h2>
+                    echo 'Hello '. $fName .' '. $lName .','; ?></h1>
           <p align="center">Department: 
               <select>
                   <option>CSIS</option>
