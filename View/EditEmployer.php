@@ -1,66 +1,46 @@
 <?php
+
 /* 
- * Choose an employer to edit or delete.
+ * For to edit an employer.
  * 
  * @author: Robert Vines
  */
 
-    include('Header.php'); 
+    include('Header.php');
+    
+    $employerID = $_GET['edit_id'];
+    
+    $sql="SELECT * FROM employer WHERE EmployerID=".$employerID;
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+    
+    $empID = $val['EmployerID'];
+    $empName = $val['EmployerName'];    
+    $empNum = $val['EmployerNum'];
+    $empComp = $val['EmployerComp'];
+    $employerEmail = $val['EmployerEmail'];
 ?>
 <div id='page'>
-    <h1>EMPLOYER</h1>
-        <div id="body">
-            <?php
-                if(isset($_GET['delete_id']))
-                {               
-                    $sql="DELETE FROM employer WHERE EmployerID=".$_GET['delete_id'];
-                    $result = $pdo->query($sql);           
-
-                    header("Location: EditEmployer.php");
-                }
-            ?>
-            <p><a href="CreateEmployer.php"><button id="button">Add Employer</button></a></p>
-            <table>
-                <thead>
+    <h1>EDIT EMPLOYER</h1>
+        <div id="body">   
+            <form method='post' action='/AlumniTracker/Controller/EditEmployerController.php?edit_id=<?php echo $empID ?>'>
+                <table id="formTable">
                     <tr>
-                        <th>Employer Name</th>
-                        <th>Employer Number</th>
-                        <th>Employer Company</th>
-                        <th>Employer Email</th>
-                        <th> </th>
-                        <th> </th>
+                        <td>Employer Name:</td><td><input type="text" name="EmpName" value="<?php echo $empName ?>" /></td>
                     </tr>
-                </theah>
-                <tbody>
-                    <?php
-                        //get info from application
-                        $pdo = new PDO($connString, $user, $pass);
-                        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                        $sql = "SELECT * FROM employer ORDER BY EmployerName";
-                        $result = $pdo->query($sql);
-
-                        while($val=$result->fetch()):
-
-                        $empID = $val['EmployerID'];
-                        $empName = $val['EmployerName'];    
-                        $empNum = $val['EmployerNum'];
-                        $empComp = $val['EmployerComp'];
-                        $employerEmail = $val['EmployerEmail'];
-                    ?>
                     <tr>
-                        <td><?php echo $empName; ?></td>
-                        <td><?php echo $empNum; ?></td>
-                        <td><?php echo $empComp; ?></td>
-                        <td><?php echo $employerEmail; ?></td>
-                        <td><a href="EditEmployerForm.php?edit_id=<?php echo $empID ?>"><input type="submit" value="Edit"></a></td>
-                        <td><a href="EditEmployer.php?delete_id=<?php echo $empID ?>" onclick="return confirm('Are you sure you want to delete this employer?');"><input type="submit" value="Delete"></a></td>
-                        <?php
-                            endwhile;
-                        ?>
+                        <td>Employer Number:</td><td><input type="text" name="EmpNum" value="<?php echo $empNum ?>" /></td>
                     </tr>
-                </tbody>
-            </table>
+                    <tr>
+                        <td>Employer Company:</td><td><input type="text" name="EmpComp" value="<?php echo $empComp ?>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Employer email:</td><td><input type="email" name="EmpEmail" value="<?php echo $employerEmail ?>" /></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Save Employer" />
+            </form>
         </div>
 </div>
     </body>

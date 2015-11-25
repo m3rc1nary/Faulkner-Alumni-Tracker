@@ -1,69 +1,68 @@
- <?php
-
-/* 
- * Show major information to be edited or deleted
- * 
- * @author: Robert Vines
- */
- 
-    include('Header.php');
-?>
-
 <?php
-    if(isset($_GET['delete_id']))
-    {               
-        $degreeID = $_GET['delete_id'];
-        
-        $sql= "DELETE FROM degree WHERE DegreeID=".$degreeID;
-        $pdo->query($sql);
- 
-        header("Location: EditMajor.php");
-    }
-?>
+
+/*
+ * Form to edit a major.
+ *
+ * @author Robert Vines
+ */
+
+    include('Header.php');
+       
+    $degreeID = $_GET['edit_id'];
+    
+    $sql = "SELECT degree.DegreeID, degree.Type, degree.Name, degree.College, department.DeptName"
+            . " FROM degree "
+            . "JOIN department "
+            . "ON degree.Department_DepartmentID = department.DepartmentID WHERE DegreeID=".$degreeID;
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+    
+    $degreeType = $val['Type'];
+    $degreeMajor = $val['Name'];
+    $degreeCollege = $val['College'];
+    $deptName = $val['DeptName'];
+    ?>
 <div id='page'>
-    <h1>MAJOR</h1>
+    <h1>EDIT MAJOR</h1>
         <div id="body">
-            <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
-            <table>
-                <thead>
-                    <tr id="tableHead">
-                        <th>College</th>
-                        <th>Type</th>
-                        <th>Major</th>
-                        <th>Department</th>
-                        <th> </th>
-                        <th> </th>
+            <form method='post' action='/AlumniTracker/Controller/EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
+                <table id="formTable">
+                    <tr>
+                        <td>College:</td>
+                        <td><select name="College">
+                                <option><?php echo $degreeCollege; ?></option>
+                                <option>College of Arts and Sciences</option>
+                                <option>College of Business</option>
+                            </select>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        $sql2 = "SELECT degree.DegreeID, degree.Type, degree.Name, degree.College, department.DeptName"
-                                . " FROM degree "
-                                . "JOIN department "
-                                . "ON degree.Department_DepartmentID = department.DepartmentID ";
-                        $result = $pdo->query($sql2);
-
-                        while($val=$result->fetch()):
-
-                        $degreeID = $val['DegreeID'];
-                        $degreeCollege = $val['College'];
-                        $degreeType = $val['Type'];
-                        $degreeMajor = $val['Name'];
-                        $deptName = $val['DeptName'];
-                    ?>
-                    <tr id="tablebody">
-                        <td><?php echo $degreeCollege; ?></td>
-                        <td><?php echo $degreeType; ?></td>
-                        <td><?php echo $degreeMajor; ?></td>
-                        <td><?php echo $deptName; ?></td>
-                        <td><a href="EditMajorForm.php?edit_id=<?php echo $degreeID ?>"><button type="button">Edit</button></a></td>
-                        <td><a href="EditMajor.php?delete_id=<?php echo $degreeID ?>" onclick="return confirm('Are you sure you want to delete this major?');"><input type="submit" value="Delete"></td>
+                    <tr>
+                        <td>Type:</td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>" /></td>
                     </tr>
-                    <?php
-                        endwhile;
-                    ?>
-                </tbody>
-            </table>
+                    <tr>
+                        <td>Major:</td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Department:</td>
+                            <td><select name="Dept">
+                                <option><?php echo $deptName; ?></option>
+                                <?php 
+                                    $sql = "SELECT DeptName FROM department";
+                                    $result = $pdo->query($sql);
+
+                                    while ($val = $result->fetch()):
+
+                                    $deptName = $val['DeptName'];    
+                                    {
+                                        echo "<option>" . $deptName . "</option>";
+                                    }endwhile;
+                                ?>
+                            </select></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" value="Save Major" />
+            </form>
         </div>
 </div>
     </body>

@@ -1,57 +1,33 @@
 <?php
 /* 
- * Choose a department name to edit or delete.
+ * Create a department name for dropbox
  * 
  * @author: Robert Vines
  */
 
-    include('Header.php'); 
+    include('Header.php');   
+
+    $deptID = $_GET['edit_id'];
+    
+    $sql="SELECT * FROM department WHERE DepartmentID=".$deptID;
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+    
+    $departmentId = $val['DepartmentID'];
+    $departmentName = $val['DeptName'];
 ?>
 <div id='page'>
-    <h1>DEPARTMENT</h1>
-        <div id="body">
-            <?php
-                if(isset($_POST['delete_id']))
-                {               
-                    $sql="DELETE FROM department WHERE DepartmentID=".$_POST['delete_id'];
-                    $result = $pdo->query($sql);           
-
-                    header("Location: EditDepartment.php");
-                }
-            ?>
-            <p><a href="CreateDepartment.php"><button id="button">Add Department</button></a></p>
-            <table>
-                <thead>
+    <h1>EDIT DEPARTMENT</h1>
+        <div id="body"> 
+            <form method='post' action='/AlumniTracker/Controller/EditDepartmentController.php?edit_dept=<?php echo $deptID ?>'>
+                <table id="formTable">
                     <tr>
-                        <th>Department Name</th>
-                        <th> </th>
-                        <th> </th>
+                        <td>Department Name:</td><td><input type="text" name="DeptName" value="<?php echo $departmentName;?>" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                <?php
-                    //get info from application
-                    $pdo = new PDO($connString, $user, $pass);
-                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    
-                    $sql = "SELECT * FROM department ORDER BY DeptName";
-                    $result = $pdo->query($sql);
-                    
-                    while($val=$result->fetch()):
-                         
-                    $deptId= $val['DepartmentID'];
-                    $deptName= $val['DeptName'];                  
-                ?>
-                    <tr>
-                        <td><?php echo $deptName; ?></td>
-                        <td><a href="EditDepartmentForm.php?edit_id=<?php echo $deptId ?>"><input type="submit" value="Edit"></a></td>
-                        <td><a href="EditDepartment.php?delete_id=<?php echo $deptId ?>" onclick="return confirm('Are you sure you want to delete this department?');"><input type="submit" value="Delete"></a></td>
-                        <?php
-                            endwhile;
-                        ?>
-                    </tr>
-                </tbody>
-            </table>
+                </table>
+                <br>
+                <input type="submit" value="Save Department" />
+            </form>
         </div>
 </div>
     </body>

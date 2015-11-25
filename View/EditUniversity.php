@@ -1,56 +1,34 @@
 <?php
-
 /* 
- * Display user information to update and delete.
+ * Editing a university name
  * 
  * @author: Robert Vines
  */
 
     include('Header.php');
+
+    $uniID = $_GET['edit_id'];
+    
+    $sql="SELECT * FROM university WHERE UniversityID=".$uniID;
+    $result = $pdo->query($sql);
+    $val=$result->fetch();
+    
+    $uniId = $val['UniversityID'];
+    $uniName = $val['UniName'];
 ?>
 <div id='page'>
-    <h1>UNIVERSITY</h1>
+    <h1>EDIT UNIVERSITY</h1>
         <div id="body">
-            <?php
-                if(isset($_GET['delete_id']))
-                {               
-                    $sql="DELETE FROM university WHERE UniversityID=".$_GET['delete_id'];
-                    $pdo->query($sql);           
-
-                    header("Location: EditUniversity.php");
-                }
-            ?>
-            <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
-            <table>
-                <thead>
-                    <tr id="tableHead">
-                        <th>University Name</th>
-                        <th> </th>
-                        <th> </th>
+            <form method='post' action='/AlumniTracker/Controller/EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
+                <table id="formTable">
+                    <tr>
+                        <td><b>University Name:</b></td>
+                        <td><input type="text" name="uniName" value="<?php echo $uniName;?>" /></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <?php
-                        //get info from application
-
-                        $sql = "SELECT * FROM university ORDER BY UniName";
-                        $result = $pdo->query($sql);
-
-                        while($val=$result->fetch()):
-
-                        $uniId= $val['UniversityID'];
-                        $uniName= $val['UniName'];                  
-                    ?>
-                    <tr id="tablebody">
-                        <td><?php echo $uniName; ?></td>
-                        <td><a href="EditUniversityForm.php?edit_id=<?php echo $uniId ?>"><input type="submit" value="Edit"></a></td>
-                        <td><a href="EditUniversity.php?delete_id=<?php echo $uniId ?>" onclick="return confirm('Are you sure you want to delete this university?');"><input type="submit" value="Delete"></a></td>
-                        <?php
-                            endwhile;
-                        ?>
-                    </tr>
-                </tbody>
-            </table>
+                </table>
+                <br>
+                <input type="submit" value="Save University" />
+            </form>
         </div>
 </div>
     </body>

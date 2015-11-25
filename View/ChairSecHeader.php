@@ -20,10 +20,10 @@
         <div id="nav">
             <ul>
                 <li><a href="ChairSecHome.php">Home</a></li>
-                <li><a href="EditMajor.php">Major</a></li>
-                <li><a href="EditEmployer.php">Employer</a></li>
-                <li><a href="EditUniversity.php">University</a></li>
-                <li><a href="EditAlumni.php">Alumni</a></li>
+                <li><a href="Major.php">Major</a></li>
+                <li><a href="Employer.php">Employer</a></li>
+                <li><a href="University.php">University</a></li>
+                <li><a href="Alumni.php">Alumni</a></li>
                 <li><a style="padding-left: 110px;" href="Logout.php">Log out</a></li>
             </ul>
         </div>
