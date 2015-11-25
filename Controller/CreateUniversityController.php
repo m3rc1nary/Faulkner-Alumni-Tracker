@@ -5,7 +5,7 @@
  * @author: Robert Vines
  */
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     
      //data from CreateDepartment form
     $uniName = $_POST['UniName'];
@@ -22,5 +22,5 @@
         echo "Connection Failed: " . $ex->getMessage();
     }
     
-    header("Location: /AlumniTracker/View/EditUniversity.php");
+    header("Location: /AlumniTracker/View/University.php");
 ?>

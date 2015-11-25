@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     
     $degreeID = $_GET['edit_major'];
 
@@ -34,5 +34,5 @@
             . " WHERE DegreeID=".$degreeID;
     $pdo->query($sql2);
 
-    header("Location: /AlumniTracker/View/EditMajor.php");
+    header("Location: /AlumniTracker/View/Major.php");
 ?>

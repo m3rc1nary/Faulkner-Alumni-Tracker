@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
     
-    include('/Config.php');  
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');  
            
     $dept = $_GET['edit_dept'];
 
@@ -16,5 +16,5 @@
             . "SET DeptName= '".$name."' WHERE DepartmentID=".$dept;
     $pdo->query($sql);           
 
-    header("Location: /AlumniTracker/View/EditDepartment.php");
+    header("Location: /AlumniTracker/View/Department.php");
 ?>

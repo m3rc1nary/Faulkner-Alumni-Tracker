@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
            
     $empID = $_GET['edit_id'];
 
@@ -21,5 +21,5 @@
             . "WHERE EmployerID='".$empID."';";
     $pdo->query($sql);           
 
-    header("Location: /AlumniTracker/View/EditEmployer.php");
+    header("Location: /AlumniTracker/View/Employer.php");
 ?>

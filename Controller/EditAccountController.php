@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 
     $employeeId = $_GET['edit_account'];
     $firstName = $_POST['FirstName'];
@@ -32,5 +32,5 @@
             . "WHERE schoolemployee.Login_LoginID = login.LoginID AND EmployeeID='".$employeeId."';";
     $pdo->query($sql2);
 
-    header("Location: /AlumniTracker/View/EditAccount.php");
+    header("Location: /AlumniTracker/View/Account.php");
 ?>

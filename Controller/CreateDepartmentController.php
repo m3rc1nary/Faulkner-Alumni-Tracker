@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('/Config.php');  
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');  
     
      //data from CreateDepartment form
     $deptName = $_POST['DeptName'];
@@ -16,5 +16,5 @@
     
     $pdo->exec($sql);
     
-    header("Location: /AlumniTracker/View/EditDepartment.php");
+    header("Location: /AlumniTracker/View/Department.php");
 ?>

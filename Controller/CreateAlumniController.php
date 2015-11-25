@@ -10,7 +10,7 @@
 //    print_r($_POST);
 //    echo "</pre>";
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 
     //Store form information in variables
     $firstName = $_POST['FirstName'];
@@ -95,5 +95,5 @@
             . "VALUES ('".$currentJob."', '".$inField."', '".$personId."', '".$empName."' )";
     $pdo->query($sql);
     
-    header("Location: /AlumniTracker/View/EditAlumni.php");
+    header("Location: /AlumniTracker/View/Alumni.php");
 ?>

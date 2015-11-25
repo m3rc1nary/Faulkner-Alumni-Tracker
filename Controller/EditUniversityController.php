@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
         
-    include('/Config.php');    
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');    
            
     $uniId = $_GET['edit_id'];
     $uniName = $_POST['uniName'];
@@ -15,5 +15,5 @@
          . "SET UniName= '".$uniName."' WHERE UniversityID=".$uniId;
     $pdo->query($sql);           
 
-    header("Location: /AlumniTracker/View/EditUniversity.php");
+    header("Location: /AlumniTracker/View/University.php");
 ?>

@@ -5,7 +5,7 @@
  * 
  * @author: Robert Vines
  */
-include('/Config.php');
+include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 
     //get information from EditAlumniForm.php form
     $firstName = $_POST['FirstName'];
@@ -73,5 +73,5 @@ include('/Config.php');
 //    $pdo->query($sql4);
 
     //After sql return to EditAlumni.php with updated information
-    header("Location: /AlumniTracker/View/EditAlumni.php");
+    header("Location: /AlumniTracker/View/Alumni.php");
 ?>

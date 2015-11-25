@@ -6,7 +6,7 @@
  * @author Robert Vines
  */
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     
     $deptName = $_POST['Dept'];
     $college = $_POST['College'];
@@ -24,5 +24,5 @@
     
     $pdo->exec($sql2);
     
-    header("Location: /AlumniTracker/View/EditMajor.php");
+    header("Location: /AlumniTracker/View/Major.php");
 ?>

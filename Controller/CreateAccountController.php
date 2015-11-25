@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-    include('/Config.php');
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     
 //    echo "<pre>";
 //    print_r($_POST);
@@ -58,5 +58,5 @@
             echo 'It worked';
             } 
     
-    header("Location: /AlumniTracker/View/EditAccount.php");
+    header("Location: /AlumniTracker/View/Account.php");
 ?>
