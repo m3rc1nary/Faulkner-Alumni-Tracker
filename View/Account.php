@@ -35,7 +35,7 @@
     <div id="body">
         <p><a href="CreateAccount.php"><button id="button" type="submit">Add Account</button></a></p>
         
-        <!------ Show Selected Employee Information ----------------------------------->
+<!------ Show Selected Employee Information ----------------------------------->
         <?php
         if(isset($_GET['view']))
         {               
@@ -49,8 +49,7 @@
                     . "JOIN department_has_schoolemployee "
                     . "ON schoolemployee.EmployeeID = department_has_schoolemployee.SchoolEmployee_EmployeeID "
                     . "JOIN department "
-                    . "ON department_has_schoolemployee.Department_DepartmentID = department.DepartmentID WHERE EmployeeID='".$employeeId."' "
-                    . "ORDER BY schoolemployee.LastName";
+                    . "ON department_has_schoolemployee.Department_DepartmentID = department.DepartmentID WHERE EmployeeID='".$employeeId."' ";
 
             $result = $pdo->query($sql3);
 
@@ -68,15 +67,15 @@
                 ?>
             <table id="information">
                 <tr>
-                    <th>Last Name</th>
                     <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Email</th>
                     <th>Role</th>
                     <th>Username</th>
                 </tr>
                 <tr>
-                    <td><?php echo $lastName; ?></td>
                     <td><?php echo $firstName; ?></td>
+                    <td><?php echo $lastName; ?></td>
                     <td><?php echo $email; ?></td>
                     <td><?php echo $role; ?></td>
                     <td><?php echo $userName; ?></td>
@@ -110,8 +109,8 @@
         <table>
             <thead>
                 <tr>
-                    <th>Last Name</th>
                     <th>First Name</th>
+                    <th>Last Name</th>
                     <th> </th>
                 </tr>
             </thead>
@@ -120,7 +119,7 @@
                     //get info from application
                     $sql2 = "SELECT EmployeeID, FirstName, LastName "
                             . "FROM schoolemployee "
-                            . "ORDER BY LastName";
+                            . "ORDER BY FirstName, LastName";
 
                     $result = $pdo->query($sql2);
 
@@ -132,8 +131,8 @@
 
                 ?>
                 <tr>
-                    <td><?php echo $lastName; ?></td>
                     <td><?php echo $firstName; ?></td>
+                    <td><?php echo $lastName; ?></td>
                     <td><a href="Account.php?view=<?php echo $employeeId ?>"><button type="button">View</button></a></td>
                 </tr>
                 <?php

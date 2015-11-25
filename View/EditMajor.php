@@ -28,7 +28,7 @@
             <form method='post' action='/AlumniTracker/Controller/EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="formTable">
                     <tr>
-                        <td>College:</td>
+                        <td><b>College:</b></td>
                         <td><select name="College">
                                 <option><?php echo $degreeCollege; ?></option>
                                 <option>College of Arts and Sciences</option>
@@ -37,13 +37,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Type:</td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>" /></td>
+                        <td><b>Type:</b></td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>" /></td>
                     </tr>
                     <tr>
-                        <td>Major:</td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>" /></td>
+                        <td><b>Major:</b></td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>" /></td>
                     </tr>
                     <tr>
-                        <td>Department:</td>
+                        <td><b>Department:</b></td>
                             <td><select name="Dept">
                                 <option><?php echo $deptName; ?></option>
                                 <?php 

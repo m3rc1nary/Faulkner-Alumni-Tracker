@@ -53,7 +53,7 @@
                         <td><?php echo $firstName; ?></td>
                         <td><?php echo $lastName; ?></td>
                         <td><?php echo $primEmail; ?></td>
-                        <td><a href="EditAlumni.php?view=<?php echo $personId ?>"><button type="button">View</button></a></td>
+                        <td><a href="Alumni.php?view=<?php echo $personId ?>"><button type="button">View</button></a></td>
                     </tr>
                     <?php
                         endwhile;

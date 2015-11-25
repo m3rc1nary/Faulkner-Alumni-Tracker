@@ -11,9 +11,11 @@
     <h1>DEPARTMENT</h1>
         <div id="body">
             <?php
-                if(isset($_POST['delete_id']))
+                if(isset($_GET['delete_dept']))
                 {               
-                    $sql="DELETE FROM department WHERE DepartmentID=".$_POST['delete_id'];
+                    $dept = $_GET['delete_dept'];
+                    
+                    $sql="DELETE FROM department WHERE DepartmentID = ".$dept;
                     $result = $pdo->query($sql);           
 
                     header("Location: Department.php");
@@ -45,7 +47,7 @@
                     <tr>
                         <td><?php echo $deptName; ?></td>
                         <td><a href="EditDepartment.php?edit_id=<?php echo $deptId ?>"><input type="submit" value="Edit"></a></td>
-                        <td><a href="Department.php?delete_id=<?php echo $deptId ?>" onclick="return confirm('Are you sure you want to delete this department?');"><input type="submit" value="Delete"></a></td>
+                        <td><a href="Department.php?delete_dept=<?php echo $deptId ?>" onclick="return confirm('Are you sure you want to delete this department?');"><input type="submit" value="Delete"></a></td>
                         <?php
                             endwhile;
                         ?>
