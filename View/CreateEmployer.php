@@ -9,8 +9,8 @@
     include('Header.php');  
 ?>
 <div id='page'>
+    <h1>CREATE EMPLOYER</h1>
         <div id="body">
-            <h1>Create An Employer</h1>
             <form method='post' action="/AlumniTracker/Controller/CreateEmployerController.php">
                 <table id="formTable">
                     <tr>

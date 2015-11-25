@@ -10,7 +10,7 @@
     ob_start();    
     session_start();
     // include config file for php connection
-    include("/Config.php");
+    include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     // memebers table name
     $tbl_name="login";
     

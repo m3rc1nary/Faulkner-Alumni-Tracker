@@ -9,6 +9,7 @@
     include('Header.php');
 ?>
 <div id='page'>
+    <h1>UNIVERSITY</h1>
         <div id="body">
             <?php
                 if(isset($_GET['delete_id']))
@@ -19,7 +20,6 @@
                     header("Location: EditUniversity.php");
                 }
             ?>
-            <h1>University</h1>
             <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
             <table>
                 <thead>

@@ -8,6 +8,7 @@
     include('Header.php'); 
 ?>
 <div id='page'>
+    <h1>EMPLOYER</h1>
         <div id="body">
             <?php
                 if(isset($_GET['delete_id']))
@@ -18,7 +19,6 @@
                     header("Location: EditEmployer.php");
                 }
             ?>
-            <h1>Employer</h1>
             <p><a href="CreateEmployer.php"><button id="button">Add Employer</button></a></p>
             <table>
                 <thead>

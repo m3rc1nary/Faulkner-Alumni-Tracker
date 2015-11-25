@@ -3,53 +3,38 @@
     Author     : Robert Vines
 */
 
-h1 {
-    font-size: 32px;
-    font-family: palatino linotype, serif;
-    font-weight: bold;
-    display:inline-block;
-}
+/**** Header ******************************************************************/
 
-.column1{
-    float: left;
-}
-
-.column2{
-    left: 40px;
-    position: relative;
-}
-
-/* Image for logo */
+/* Image for header */
 #logo { 
     position: absolute;
-    width: 250px;
-    height: 72px;
+    width: 247px;
+    height: 63px;
     top: 0px;
     left: 0px;
     }
 
-/* Blue rectangle for rest of logo */
+/* Blue line at the top of every page */
 hr {
-    height: 11px;
+    height: 6px;
     background-color: #295190;
     border: none;
     position: relative;
-    top: 64px;
+    top: 55px;
     margin-left: -8;
     margin-right: -8;
    }
-    
+   
 /* Navigation bar */
 #nav ul {
     z-index: 1;
     font: bold 17px palatino linotype, serif;
-    top: 30px;
+    top: 13px;
     position: absolute;
     float: left;
     overflow: hidden;
+    padding-left: 235px;
     list-style: none;
-    margin: 0;
-    padding: 0;
     color: #295190;
     }  
 
@@ -69,34 +54,17 @@ hr {
     text-decoration: none;
     color: #295190;
     }
-
-/* Change color of link */
-a:link {
-    color:#FFFFFF;        
-    }
-
-/* Navigation bar link to white */
-a:visited {
-    color: #FFFFFF;
-    }
     
-/* Navigation bar current link */
-#current { 
-    color: #C0C0C0
-    }
+/**** Page Setup **************************************************************/
 
-/* Position navigation bar link */
-#user {
-    text-indent: 260px;
-    }
-
-/* Every page, grey */
+/* Every page background */
 #page {
-    position: relative;
-    top: 83px;
+    position: absolute;
+    top: 69px;
     left:0;
-    background: none repeat 0 0 #E8E8E8;
+    background: none repeat 0 0 #D0D0D0;
     height: 90%;
+    padding-left: 20px;
     margin-left: auto;
     margin-right: auto;
     position: fixed;
@@ -104,7 +72,39 @@ a:visited {
     width: 100%;   
     overflow-y: scroll;
     }
+    
+/* Postion body of each page */
+#body {
+    padding-left: 30px;
+    padding-bottom: 25px;
+    position: relative;
+    width: 90%;
+    float: left;
+    font: 14px palatino linotype, serif;
+    background: none repeat scroll 0 0 #D0D0D0;
+    }
+
+/* Title for the top of every page */
+h1 {
+    font-size: 30px;
+    font-family: palatino linotype, serif;
+    font-weight: bold;
+    display:inline-block;
+}
+
+/* Left column of pages */
+.column1{
+    float: left;
+}
+
+/* right column of pages */
+.column2{
+    left: 40px;
+    position: relative;
+}
   
+/**** Login Page **************************************************************/
+
 /* Login page, white box */
 #loginBox {
     position: relative;
@@ -129,52 +129,41 @@ a:visited {
     font: 14px palatino linotype, serif; 
     text-align: center;
     }
- 
-/* Postion body of each page */
-#body {
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 25px;
-    position: relative;
-    width: 90%;
-    float: left;
-    font: 14px palatino linotype, serif;
-    background: none repeat scroll 0 0 #E8E8E8;
-    }
 
+/**** Tables ******************************************************************/   
+    
 table{
     border-collapse: collapse;
     }
     
 /*Form table backgrounds to white*/
 #formTable td{
-    background-color: #E8E8E8;    
+    background-color: #D0D0D0;    
+    }
+    
+/*Formatting text in body of tables*/
+tbody {
+    font: 14px palatino linotype, serif; 
     }
   
 /* Table body formating */
-tbody, td {
+td {
     border-collapse: collapse; 
-    padding-top: 3px;
-    padding-right: 15px;
-    padding-bottom: 3px;
-    padding-left: 5px;
+    padding: 3px 15px 3px 5px;
     }
 
 /*format table in create alumni*/
 th {
     color: white;
     background-color: #295190;
-    font: bold 15px palatino linotype, serif;
+    font-size: 16px;
     border-bottom: 2px solid black;
     padding-right: 3px;
     font-weight: bold;
     text-align: center;
     border-collapse: collapse;
     border: 0px;  
-    padding-top: 3px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 7px;  
+    padding: 3px 5px 5px 7px; 
     }
     
 /* Change color of every other row in tables */
@@ -186,6 +175,8 @@ tbody tr:nth-child(odd){
     background-color: white;
     }
   
+/**** Alumni ******************************************************************/    
+    
 /*tab box formatting*/
 .tabs {
     position: relative;   
@@ -238,6 +229,8 @@ tbody tr:nth-child(odd){
     z-index: 1;
     }   
     
+/**** Buttons *****************************************************************/
+
 /*Buttons*/
 #button {
     border-radius: 5px;
@@ -253,8 +246,10 @@ tbody tr:nth-child(odd){
 #button:hover {
     background: #4F81BD;
     }
+
+/**** Account Pages ***********************************************************/    
     
-/* Columns for Create/Edit user department checkboxes */   
+/* Columns for Create/Edit account department checkboxes */   
 #checkbox {
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */

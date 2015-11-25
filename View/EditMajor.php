@@ -21,8 +21,8 @@
     }
 ?>
 <div id='page'>
+    <h1>MAJOR</h1>
         <div id="body">
-            <h1>Major</h1>
             <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
             <table>
                 <thead>

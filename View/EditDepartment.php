@@ -8,17 +8,17 @@
     include('Header.php'); 
 ?>
 <div id='page'>
+    <h1>DEPARTMENT</h1>
         <div id="body">
             <?php
-                if(isset($_GET['delete_id']))
+                if(isset($_POST['delete_id']))
                 {               
-                    $sql="DELETE FROM department WHERE DepartmentID=".$_GET['delete_id'];
+                    $sql="DELETE FROM department WHERE DepartmentID=".$_POST['delete_id'];
                     $result = $pdo->query($sql);           
 
                     header("Location: EditDepartment.php");
                 }
             ?>
-            <h1>Department</h1>
             <p><a href="CreateDepartment.php"><button id="button">Add Department</button></a></p>
             <table>
                 <thead>

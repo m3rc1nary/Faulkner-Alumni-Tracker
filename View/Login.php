@@ -8,14 +8,6 @@
 
 ?>
 
-<html>
-    <head>
-        <title>Login</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="AlumniTracker.css" type="text/css"/>
-    </head>
-    <body>
         <?php include('PlainHeader.php'); ?>
         <div id="page">
             <div id="loginBox">
@@ -33,6 +25,9 @@
                     </table>
                     <p id="loginText"><input type="submit" value="Sign In"></p>    
                 </form>
+                <div style="float:right; padding-right: 15px;">
+                    <a href="ForgotLogin.php"><button>Forgot Login?</button></a>
+                </div>
             </div>
         </div>
     </body>

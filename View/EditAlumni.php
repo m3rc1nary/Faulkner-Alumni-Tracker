@@ -21,8 +21,8 @@
 //    }
 ?>
 <div id='page'>
+    <h1>ALUMNI</h1>
         <div id="body">
-            <h1>Alumni</h1>
             <p><a href="CreateAlumni.php"><button id="button" type="submit">Add Alumni</button></a></p>
             <table class="column1">
                 <thead>

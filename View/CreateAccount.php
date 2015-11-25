@@ -8,21 +8,21 @@
     include('Header.php');
 ?>
 <div id='page'>
-        <div id="body">
-            <h1>Create An Account</h1>
+    <h1>CREATE ACCOUNT</h1>
+        <div id="body"> 
             <form method='post' action='/AlumniTracker/Controller/CreateAccountController.php'>
                 <table id="formTable">
                     <tr>
-                        <td>First Name:</td><td><input type="text" name="FirstName" required /></td>
+                        <td><b>First Name:</b></td><td><input type="text" name="FirstName" required /></td>
                     </tr>
                     <tr>
-                        <td>Last Name:</td><td><input type="text" name="LastName" required /></td>
+                        <td><b>Last Name:</b></td><td><input type="text" name="LastName" required /></td>
                     </tr>
                     <tr>
-                        <td>Email:</td><td><input type="text" name="Email" required /></td>
+                        <td><b>Email:</b></td><td><input type="text" name="Email" required /></td>
                     </tr>
                     <tr>
-                        <td>Role:</td> 
+                        <td><b>Role:</b></td> 
                         <td><select name="Role">
                                 <option>Admin</option>
                                 <option>Dean</option>
@@ -31,13 +31,13 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td>Username:</td><td><input type="text" name="UserName" required /></td>
+                        <td><b>Username:</b></td><td><input type="text" name="UserName" required /></td>
                     </tr>
                     <tr>
-                        <td>Password:</td><td><input type="text" name="Password" required /></td>
+                        <td><b>Password:</b></td><td><input type="text" name="Password" required /></td>
                     </tr>
                     <tr>
-                        <td>Department:</td>
+                        <td><b>Department:</b></td>
                     </tr>
                 </table>
                 <div id='checkbox'>
@@ -51,7 +51,7 @@
                             $deptName = $val['DeptName'];  
 
                             {
-                                echo " <input type='checkbox' name='DeptList[]' value='".$deptID."' />" . $deptName . "<br>";
+                                echo " <b><input type='checkbox' name='DeptList[]' value='".$deptID."' />" . $deptName . "<br></b>";
                             }endwhile;
                             ?>
                 </div>
@@ -60,5 +60,5 @@
             </form> 
         </div>
 </div>
-    </body>
+</body>
 </html>

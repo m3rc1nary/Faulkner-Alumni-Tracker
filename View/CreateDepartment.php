@@ -9,8 +9,8 @@
     include('Header.php');
 ?>
 <div id='page'>
+    <h1>CREATE DEPARTMENT</h1>
         <div id="body">
-            <h1>Create A Department</h1>
             <form method='post' action="/AlumniTracker/Controller/CreateDepartmentController.php">
                 <table id="formTable">
                     <tr>
