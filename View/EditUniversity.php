@@ -1,6 +1,6 @@
 <?php
 /* 
- * Editing a university name
+ * Form to edit a university.
  * 
  * @author: Robert Vines
  */

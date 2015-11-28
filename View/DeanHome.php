@@ -29,7 +29,7 @@
                       ?>
               </select></p>
               <p><b>Last Name: </b><input type="text"></p>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

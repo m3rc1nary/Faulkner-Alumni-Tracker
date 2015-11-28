@@ -5,6 +5,7 @@
  * 
  * @author: Robert Vines
  */
+
 include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 
     //get information from EditAlumniForm.php form

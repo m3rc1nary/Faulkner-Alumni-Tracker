@@ -41,7 +41,7 @@
                 <br>
                 <input type="submit" value="Save Employer" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

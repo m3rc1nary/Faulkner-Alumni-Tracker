@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * 
+ * Page to add a certain header based on role.
  * 
  * @author: Robert Vines 
  */

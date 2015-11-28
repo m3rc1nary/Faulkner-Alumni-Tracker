@@ -10,6 +10,7 @@
 ?>
 
 <?php
+    //delete specific degree
     if(isset($_GET['delete_id']))
     {               
         $degreeID = $_GET['delete_id'];
@@ -64,7 +65,7 @@
                     ?>
                 </tbody>
             </table>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

@@ -12,6 +12,7 @@
     <h1>UNIVERSITY</h1>
         <div id="body">
             <?php
+                //delete specific university
                 if(isset($_GET['delete_id']))
                 {               
                     $sql="DELETE FROM university WHERE UniversityID=".$_GET['delete_id'];
@@ -51,7 +52,7 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

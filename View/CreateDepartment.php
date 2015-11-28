@@ -20,7 +20,7 @@
                 <br>
                 <input type="submit" value="Create Department" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

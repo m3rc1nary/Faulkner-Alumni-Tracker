@@ -1,14 +1,13 @@
 <?php
 
 /*
- * Login page
+ * Page to login, sending input to check login.
  * 
  * @author Robert Vines
  */
-
-?>
-
-        <?php include('PlainHeader.php'); ?>
+    
+    include('PlainHeader.php'); 
+ ?>
         <div id="page">
             <div id="loginBox">
                 <form method="post" action="CheckLogin.php">

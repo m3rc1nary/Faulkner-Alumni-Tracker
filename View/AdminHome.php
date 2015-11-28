@@ -8,26 +8,28 @@
     include ('Header.php');
 ?>
 <div id="page">
+    <p>
     <h1><?php session_start();
             $fName = $_SESSION[fName];
             $lName = $_SESSION[lName];
             echo 'Hello '. $fName .' '. $lName .','; 
-        ?></h1>
+            ?></h1>
+    </p>
     <div id='body' style=" float:left; width: 40%;">
 
 <!-------- Show Accounts ------------------------------------------------------>
-        <h3>Search Accounts</h3>
+    <h3>Search Accounts</h3>
         <form method='post' action="AdminHome.php">
-            <p><b>Department: </b>
-                <select name="DeptName">
+            <p><b>Role: </b>
+                <select name="role">
                     <option> </option>
                       <?php 
-                          $sql = "SELECT DeptName FROM department ORDER BY DeptName";
+                          $sql = "SELECT DISTINCT Role FROM schoolemployee ORDER BY Role";
                           $result = $pdo->query($sql);
 
                           while ($val = $result->fetch()):
 
-                          $deptName = $val['DeptName'];    
+                          $deptName = $val['Role'];    
                           {
                               echo "<option>" . $deptName . "</option>";
                           }endwhile;
@@ -36,13 +38,12 @@
             <p><b>Last Name: </b><input type="text" name="LastName"></p>
             <p><input type="submit" value="Search"></p>
         </form>
-        
         <table id = "adminHomeUserTable">
             <thead>
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
-                    <th>Department</th>
+                    <th>Role</th>
                 </tr>
             </thead>
             <tbody>
@@ -69,25 +70,11 @@
         </table>
         </div>
         <div id="body" style=" width: 40%;">
-            <br /><br /><br />
+            
 <!---------- Show Alumni ------------------------------------------------------>
             <h3>Search Alumni</h3>
             <form method='post' action="AdminHome.php">
-                <p><b>Department: </b>
-                    <select name="DeptName">
-                        <option> </option>
-                          <?php 
-                              $sql = "SELECT DeptName FROM department ORDER BY DeptName";
-                              $result = $pdo->query($sql);
-
-                              while ($val = $result->fetch()):
-
-                              $deptName = $val['DeptName'];    
-                              {
-                                  echo "<option>" . $deptName . "</option>";
-                              }endwhile;
-                          ?>
-                          </select></p>
+                <p><b>First Name: </b> <input type="text" name="FirstName" /></p>
                 <p><b>Last Name: </b><input type="text" name="LastName"></p>
                 <p><input type="submit" value="Search"></p>
             </form>
@@ -122,7 +109,7 @@
             <?php
 
             ?>
-        </div>
     </div>
-    </body>
+</div>
+</body>
 </html>

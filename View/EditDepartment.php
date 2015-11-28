@@ -28,7 +28,7 @@
                 <br>
                 <input type="submit" value="Save Department" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

@@ -63,7 +63,7 @@
                 <br>
                 <input type="submit" value="Save Major" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

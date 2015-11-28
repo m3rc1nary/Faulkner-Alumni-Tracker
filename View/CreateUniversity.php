@@ -20,7 +20,7 @@
                 <br>
                 <input type="submit" value="Create University">
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

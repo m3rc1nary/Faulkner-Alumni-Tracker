@@ -29,7 +29,7 @@
                 <br>
                 <input type="submit" value="Create Employer" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

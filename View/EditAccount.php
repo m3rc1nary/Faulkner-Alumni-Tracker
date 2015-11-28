@@ -78,7 +78,7 @@
                 
                 <input type="submit" value="Save Account" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

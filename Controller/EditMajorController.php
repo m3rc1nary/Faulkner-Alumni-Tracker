@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * sql to change the information about a major.
+ * MySQl to change the information about a major.
  * 
  * @author: Robert Vines
  */

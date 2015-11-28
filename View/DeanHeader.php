@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * Header/Nav bar for dean
+ * Header/Nav bar for dean.
  * 
  * @author: Robert Vines
  */

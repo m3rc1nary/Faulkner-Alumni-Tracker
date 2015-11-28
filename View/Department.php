@@ -1,6 +1,6 @@
 <?php
 /* 
- * Choose a department name to edit or delete.
+ * Show information, ability to edit or delete.
  * 
  * @author: Robert Vines
  */
@@ -54,7 +54,7 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

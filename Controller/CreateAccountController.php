@@ -8,10 +8,6 @@
 
     include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     
-//    echo "<pre>";
-//    print_r($_POST);
-//    echo "</pre>";
-    
     //data from create account form
     $firstName = $_POST['FirstName'];
     $lastName = $_POST['LastName'];
@@ -22,7 +18,7 @@
     
     if(isset($_POST['submit']))
     {
-        //in here you get games array
+        //get array of departments
         $myDept = $_POST['DeptList'];  
     }
     
@@ -31,7 +27,7 @@
           VALUES ('".$userName."', '".$password."')";
     $pdo->query($sql);
 
-        //security for sql statments
+        //prepare foreign key
         $fk = $pdo->prepare("SELECT LoginID FROM login WHERE UserName=?");
         $fk->execute(array($userName));
         $loginId = $fk->fetchColumn();
@@ -44,12 +40,12 @@
     $pdo->query($sql2);  
     
     
-        //security for sql statments
+        //prepare foreign key
         $fk = $pdo->prepare("SELECT EmployeeID FROM schoolemployee WHERE Email=?");
         $fk->execute(array($email));
         $empId = $fk->fetchColumn();
         
-        
+    //put each value from the departement array into department_has_schoolemployee
     foreach ($_POST['DeptList'] as $dept)
         {
             $sql3 = "INSERT INTO department_has_schoolemployee (Department_DepartmentID, SchoolEmployee_EmployeeID)"
@@ -58,5 +54,6 @@
             echo 'It worked';
             } 
     
+    //automatically send to new page
     header("Location: /AlumniTracker/View/Account.php");
 ?>

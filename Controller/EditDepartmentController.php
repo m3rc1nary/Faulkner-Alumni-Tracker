@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * sql to edit a specific department. 
+ * MySQL to edit a specific department. 
  * 
  * @author: Robert Vines
  */

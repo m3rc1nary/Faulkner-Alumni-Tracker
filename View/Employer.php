@@ -11,6 +11,7 @@
     <h1>EMPLOYER</h1>
         <div id="body">
             <?php
+                //delete specific employer
                 if(isset($_GET['delete_id']))
                 {               
                     $sql="DELETE FROM employer WHERE EmployerID=".$_GET['delete_id'];
@@ -61,7 +62,7 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

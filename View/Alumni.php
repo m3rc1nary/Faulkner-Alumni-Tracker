@@ -1,6 +1,6 @@
 <?php
 /*
- * Display Users to edit and delete them.
+ * Display Users to edit or delete them.
  *
  * @author Robert Vines
  */
@@ -384,7 +384,7 @@
                     <?php  
             }//end if(isset($_GET['view']))
             ?>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

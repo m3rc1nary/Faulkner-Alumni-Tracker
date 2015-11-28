@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * sql to edit the information for an employer.
+ * MySQL to edit the information for an employer.
  * 
  * @author: Robert Vines
  */

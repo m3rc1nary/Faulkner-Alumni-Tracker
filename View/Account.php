@@ -11,10 +11,14 @@
     $(document).ready(function ()) 
         {
             $('#information').hide();
+            
+            $('#view').scrollTop(0);
+            
        });
 </script>
 
 <?php
+    //delete specific account
     if(isset($_GET['delete_account']))
     {               
         $employeeId = $_GET['delete_account'];
@@ -133,7 +137,7 @@
                 <tr>
                     <td><?php echo $firstName; ?></td>
                     <td><?php echo $lastName; ?></td>
-                    <td><a href="Account.php?view=<?php echo $employeeId ?>"><button type="button">View</button></a></td>
+                    <td><a href="Account.php?view=<?php echo $employeeId ?>"><button type="button" id="view">View</button></a></td>
                 </tr>
                 <?php
                     endwhile;

@@ -47,7 +47,7 @@
                 <br>
             <input type="submit" value="Create Major" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

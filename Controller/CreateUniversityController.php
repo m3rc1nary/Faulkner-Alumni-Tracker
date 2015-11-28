@@ -1,6 +1,6 @@
 <?php
 /* 
- * Send university name to database.
+ * MySQL to input information into university table
  * 
  * @author: Robert Vines
  */

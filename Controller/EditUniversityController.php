@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * sql to edit information about a university.
+ * MySQL to edit information about a university.
  * 
  * @author: Robert Vines
  */

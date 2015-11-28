@@ -265,7 +265,7 @@
                 </div>
                 <input type="submit" value="Save Alumni" />
             </form>
-        </div>
+    </div>
 </div>
-    </body>
+</body>
 </html>

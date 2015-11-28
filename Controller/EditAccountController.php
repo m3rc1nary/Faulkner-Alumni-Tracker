@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * sql information to change information about account.
+ * MySQL to change information about account.
  * 
  * @author: Robert Vines
  */
