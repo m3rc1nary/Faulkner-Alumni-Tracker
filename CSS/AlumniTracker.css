@@ -19,48 +19,54 @@ hr {
     height: 6px;
     background-color: #295190;
     border: none;
-    position: relative;
-    top: 55px;
+    /*position: relative;*/
+    top: 50px;
     margin-left: -8;
     margin-right: -8;
    }
    
 /* Navigation bar */
 #nav ul {
-    z-index: 1;
-    font: bold 17px palatino linotype, serif;
-    top: 13px;
-    position: absolute;
-    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: #FFF;
+    font: bold 17px palatino linotype, serif;
     padding-left: 235px;
-    list-style: none;
-    color: #295190;
+    padding-top: 5px;
     }  
 
 /* Navigation bar */
 #nav li {
     float: left;
-    margin: 0;
-    padding: 0;
+    border-right:1px solid #bbb;
     }
+    
+#nav li:last-child {
+    border-right: none;
+    float: right;
+}
 
 /* Navigation bar link */
-#nav a {
-    float: left;
-    height: 38px;
-    line-height: 36px;
-    padding: 0 15px;
-    text-decoration: none;
+#nav li a {
+    display: block;
     color: #295190;
-    }
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #D0D0D0;
+}
     
 /**** Page Setup **************************************************************/
 
 /* Every page background */
 #page {
     position: absolute;
-    top: 69px;
+    top: 70px;
     left:0;
     background: none repeat 0 0 #D0D0D0;
     height: 90%;

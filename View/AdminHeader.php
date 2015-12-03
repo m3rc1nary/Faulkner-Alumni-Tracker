@@ -26,7 +26,9 @@
                 <li><a href="Employer.php">Employer</a></li>
                 <li><a href="University.php">University</a></li>
                 <li><a href="Alumni.php">Alumni</a></li>
-                <li><a style="padding-left: 110px;" href="Logout.php">Log out</a></li>
+                <ul style="float:right; list-style-type:none;">
+                    <li><a  href="Logout.php">Log out</a></li>
+                </ul>
             </ul>    
         </div>
         <hr noshade />

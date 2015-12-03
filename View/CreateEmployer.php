@@ -17,7 +17,7 @@
                         <td>Employer Name:</td><td><input type="text" name="EmpName" /></td>
                     </tr>
                     <tr>
-                        <td>Employer Number:</td><td><input type="text" name="EmpNum" placeholder="123-456-7890" /></td>
+                        <td>Phone Number:</td><td><input type="text" name="EmpNum" placeholder="123-456-7890" /></td>
                     </tr>
                     <tr>
                         <td>Employer Company:</td><td><input type="text" name="EmpComp" /></td>

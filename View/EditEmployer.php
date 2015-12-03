@@ -29,7 +29,7 @@
                         <td>Employer Name:</td><td><input type="text" name="EmpName" value="<?php echo $empName ?>" /></td>
                     </tr>
                     <tr>
-                        <td>Employer Number:</td><td><input type="text" name="EmpNum" value="<?php echo $empNum ?>" /></td>
+                        <td>Phone Number:</td><td><input type="text" name="EmpNum" value="<?php echo $empNum ?>" /></td>
                     </tr>
                     <tr>
                         <td>Employer Company:</td><td><input type="text" name="EmpComp" value="<?php echo $empComp ?>" /></td>

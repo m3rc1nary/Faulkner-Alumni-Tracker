@@ -27,6 +27,6 @@
             header('location:Login.php');
             exit();
     }    
+    
     include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
-
 ?>
