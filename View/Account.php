@@ -8,6 +8,7 @@
     include('Header.php');
 ?>
 <script type="text/javascript">
+//    javascript to show/hide information table
     $(document).ready(function ()) 
         {
             $('#information').hide();
@@ -57,6 +58,7 @@
 
             $result = $pdo->query($sql3);
 
+            //loop though and values from specific tables for an employee
             while($val=$result->fetch()):
 
                 $empID = $val['EmployeeID'];
@@ -93,7 +95,7 @@
                                     . "WHERE department_has_schoolemployee.SchoolEmployee_EmployeeID='".$employeeId."' "
                                     . "ORDER BY DeptName";
                             $result = $pdo->query($sql4);
-
+                            //show all departments for a specific person
                             while($val=$result->fetch()):
 
                                 echo $val['DeptName'] . ", ";
@@ -126,7 +128,8 @@
                             . "ORDER BY FirstName, LastName";
 
                     $result = $pdo->query($sql2);
-
+                    
+                    //show all values from schoolemployee and echo them in a table  
                     while($val=$result->fetch()):
 
                     $employeeId = $val['EmployeeID'];

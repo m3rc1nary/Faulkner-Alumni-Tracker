@@ -15,7 +15,6 @@
     $sql = "INSERT INTO university (UniName) VALUES ('".$uniName."')";
     
     $pdo->exec($sql);
-    echo 'yay';
     } 
     catch (Exception $ex) 
     {

@@ -7,13 +7,14 @@
  */
 
 ?>
+
 <style>
-    hr {
+hr {
     height: 11px;
     background-color: #0F6746;
     border: none;
     position: relative;
-    top: 55px;
+    top: 58px;
     margin-left: -8;
     margin-right: -8;
    }

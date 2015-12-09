@@ -8,7 +8,7 @@
 
     include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
         
-     //data from CreateDepartment form
+     //data from CreateEmployer form
     $empName = $_POST['EmpName'];
     $empNum = $_POST['EmpNum'];
     $empComp = $_POST['EmpComp'];

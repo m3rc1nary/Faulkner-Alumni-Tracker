@@ -8,6 +8,7 @@
 
     include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
     
+    /*Post from CreateMajor form*/
     $deptName = $_POST['Dept'];
     $college = $_POST['College'];
     $type = $_POST['Type'];

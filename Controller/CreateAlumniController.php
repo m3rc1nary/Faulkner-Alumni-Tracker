@@ -6,6 +6,7 @@
  * @author: Robert Vines
  */
 
+/*Show all values in post array*/
 //    echo "<pre>";
 //    print_r($_POST);
 //    echo "</pre>";
@@ -72,6 +73,7 @@
         $fk3->execute(array($major));
         $majorId = $fk3->fetchColumn();
 
+        /*get degreeID from degree table to insert into another table*/
         $sql = "SELECT DegreeID FROM degree WHERE Name = '".$minor."' ";
         $pdo->query($sql);
 
@@ -95,5 +97,6 @@
             . "VALUES ('".$currentJob."', '".$inField."', '".$personId."', '".$empName."' )";
     $pdo->query($sql);
     
+    //send page back to Alumni.php
     header("Location: /AlumniTracker/View/Alumni.php");
 ?>

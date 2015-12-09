@@ -17,13 +17,6 @@
     $userName = $_POST['UserName'];
     $password = $_POST['Password'];
     
-    
-//    $sql = "SELECT DepartmentID FROM department WHERE DeptName='".$deptName."'";
-//    $result = $pdo->query($sql);
-//    $val=$result->fetch();
-    
-//    $deptID = $val['DepartmentID'];
-    
     $sql2="UPDATE schoolemployee, login "
             . "SET schoolemployee.FirstName='".$firstName."', schoolemployee.LastName='".$lastName."', "
             . "schoolemployee.Email='".$email."', schoolemployee.Role='".$role."', "

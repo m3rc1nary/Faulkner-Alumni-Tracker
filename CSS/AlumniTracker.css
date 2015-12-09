@@ -42,6 +42,7 @@ hr {
     border-right:1px solid #bbb;
     }
     
+/* Remove line and position login*/
 #nav li:last-child {
     border-right: none;
     float: right;
@@ -56,6 +57,7 @@ hr {
     text-decoration: none;
 }
 
+/*grey box when hovering over button*/
 li a:hover:not(.active) {
     background-color: #D0D0D0;
 }
@@ -136,7 +138,8 @@ h1 {
     }
 
 /**** Tables ******************************************************************/   
-    
+   
+/*Reomve border on tables*/
 table{ 
     border-collapse: collapse;
     }
