@@ -6,6 +6,7 @@
  */
 
     include('Header.php');
+    //include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 ?>
 <div id='page'>
     <h1>CREATE ACCOUNT</h1>
