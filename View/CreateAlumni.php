@@ -108,6 +108,7 @@
                         <input type="radio" id="tab-1" name="tab-group-1" checked>
                             <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
+                                    <!-- javascript creates a popup of the SelectEmployer.php page !-->
                                     <button id="button" type="submit" style="float: right;" onclick="javascript:void window.open('SelectEmployer.php','1443811554743','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" >Add Employer</button>
                                     <table style="float: left;">
                                         <thead>
