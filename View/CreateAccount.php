@@ -9,7 +9,7 @@
     //include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 ?>
 <div id='page'>
-    <h1>CREATE ACCOUNT</h1>
+    <h1>Create Account</h1>
         <div id="body"> 
             <form method='post' action='/AlumniTracker/Controller/CreateAccountController.php'>
                 <table id="formTable">

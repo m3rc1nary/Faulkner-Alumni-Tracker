@@ -21,8 +21,8 @@
         header("Location: Major.php");
     }
 ?>
-<div id='page'>
-    <h1>MAJOR</h1>
+<div id="page">
+    <h1>Major</h1>
         <div id="body">
             <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
             <table>

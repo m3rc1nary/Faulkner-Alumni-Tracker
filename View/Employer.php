@@ -8,7 +8,7 @@
     include('Header.php'); 
 ?>
 <div id='page'>
-    <h1>EMPLOYER</h1>
+    <h1>Employer</h1>
         <div id="body">
             <?php
                 //delete specific employer

@@ -11,7 +11,7 @@ include ('Config.php');
 
 <html>
     <head>
-        <title>Login</title>
+        <title>Faulkner Alumni Tracker</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/AlumniTracker/CSS/AlumniTracker.css" type="text/css"/>

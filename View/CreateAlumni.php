@@ -8,7 +8,7 @@
     include('Header.php');
 ?>
 <div id='page'>
-    <h1>CREATE ALUMNI</h1>
+    <h1>Create Alumni</h1>
         <div id="body">
             <form method='post' action="/AlumniTracker/Controller/CreateAlumniController.php">
                 <table id="formTable">

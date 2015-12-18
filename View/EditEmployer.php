@@ -21,7 +21,7 @@
     $employerEmail = $val['EmployerEmail'];
 ?>
 <div id='page'>
-    <h1>EDIT EMPLOYER</h1>
+    <h1>Edit Employer</h1>
         <div id="body">   
             <form method='post' action='/AlumniTracker/Controller/EditEmployerController.php?edit_id=<?php echo $empID ?>'>
                 <table id="formTable">

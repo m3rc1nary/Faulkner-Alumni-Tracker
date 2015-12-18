@@ -17,7 +17,7 @@
     $uniName = $val['UniName'];
 ?>
 <div id='page'>
-    <h1>EDIT UNIVERSITY</h1>
+    <h1>Edit University</h1>
         <div id="body">
             <form method='post' action='/AlumniTracker/Controller/EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
                 <table id="formTable">

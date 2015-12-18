@@ -7,82 +7,114 @@
 
 /* Image for header */
 #logo { 
-    position: absolute;
-    width: 247px;
-    height: 63px;
+    position: fixed;
+    float: left;
+    width: 240px;
+    height: 58px;
     top: 0px;
     left: 0px;
     }
+    
+#logout {
+    font: bold 17px palatino linotype, serif;
+    float: right;
+    position: absolute;
+    top: 15px;
+    left: 92%;
+}
+
+#logout a {
+    text-decoration: none; 
+    float: right;
+}
 
 /* Blue line at the top of every page */
 hr {
     background-color: #295190;
     border: none;
-    /*position: relative;*/
-    padding-top: 50px;
+    position: relative;
+    padding-top: 6px;
+    margin-top: 60px;
     margin-left: -8;
     margin-right: -8;
    }
    
 /* Navigation bar */
-#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #FFF;
-    font: bold 17px palatino linotype, serif;
-    padding-left: 235px;
-    padding-top: 5px;
-    }  
 
 /* Navigation bar */
-#nav li {
-    float: left;
-    border-right:1px solid #bbb;
-    }
     
 /* Remove line and position login*/
-#nav li:last-child {
-    border-right: none;
-    float: right;
-}
 
 /* Navigation bar link */
-#nav li a {
-    display: block;
-    color: #295190;
-    text-align: center;
-    padding: 8px 16px;
-    text-decoration: none;
-}
 
 /*grey box when hovering over button*/
 li a:hover:not(.active) {
-    background-color: #D0D0D0;
+    background-color: #B0B0B0;
 }
-    
+
+#navigation {
+    top: 60px;
+    left: 0px;
+    position: fixed;
+    width: 14%;
+    height: 100%;
+    background-color: #295190;
+}
+
+#navigation ul {
+    font: bold 17px palatino linotype, serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #295190;
+    font: bold 17px palatino linotype, serif;
+}
+
+#navigation li {
+    border-bottom:1px solid #bbb;
+    padding-bottom: 5px;
+}
+
+#navigation a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
 /**** Page Setup **************************************************************/
+
+#loginPage {
+    top: 66px;
+    left:0;
+    background: none repeat 0 0 #D0D0D0;
+    width: 100%;   
+    height: 90%;
+    position: fixed;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Every page background */
 #page {
-    position: absolute;
-    top: 70px;
-    left:0;
+    top: 66px;
+    left: 0px;
     background: none repeat 0 0 #D0D0D0;
     height: 90%;
     padding-left: 20px;
-    margin-left: auto;
+    margin-left: 14%;
     margin-right: auto;
     position: fixed;
     text-align: left;
-    width: 100%;   
+    width: 90%;   
     overflow-y: scroll;
     }
     
 /* Postion body of each page */
 #body {
-    padding-left: 30px;
+    padding-left: 25px;
     padding-bottom: 25px;
     position: relative;
     width: 90%;

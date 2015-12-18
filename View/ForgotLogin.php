@@ -9,7 +9,7 @@
     include('PlainHeader.php');
 ?>
 
-<div id="page">
+<div id="loginPage">
             <div id="loginBox">
                 <form method="post" action="/AlumniTracker/Controller/ForgotLoginController.php">
                     <p id='loginHeader'>Forgot Username or Password?</p>

@@ -1,7 +1,7 @@
 <?php
 
 /* 
- * Display user information to update and delete.
+ * Display a university to update and delete. Also, navigate to add a university.
  * 
  * @author: Robert Vines
  */
@@ -9,7 +9,7 @@
     include('Header.php');
 ?>
 <div id='page'>
-    <h1>UNIVERSITY</h1>
+    <h1>University</h1>
         <div id="body">
             <?php
                 //delete specific university

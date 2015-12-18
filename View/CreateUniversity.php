@@ -9,7 +9,7 @@
     include('Header.php');
 ?>
 <div id='page'>
-    <h1>CREATE UNIVERSITY</h1>
+    <h1>Create University</h1>
         <div id="body">
             <form method='post' action="/AlumniTracker/Controller/CreateUniversityController.php">
                 <table id="formTable">

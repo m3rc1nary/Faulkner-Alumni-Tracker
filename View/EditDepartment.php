@@ -17,7 +17,7 @@
     $departmentName = $val['DeptName'];
 ?>
 <div id='page'>
-    <h1>EDIT DEPARTMENT</h1>
+    <h1>Edit Department</h1>
         <div id="body"> 
             <form method='post' action='/AlumniTracker/Controller/EditDepartmentController.php?edit_dept=<?php echo $deptID ?>'>
                 <table id="formTable">

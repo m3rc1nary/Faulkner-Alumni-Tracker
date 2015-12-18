@@ -8,7 +8,7 @@
     
     include('PlainHeader.php'); 
  ?>
-        <div id="page">
+        <div id="loginPage">
             <div id="loginBox">
                 <form method="post" action="CheckLogin.php">
                     <p id='loginHeader'>Enter User Name and Password to Login</p>

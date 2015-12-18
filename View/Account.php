@@ -36,7 +36,7 @@
     }
 ?>
 <div id='page'>
-    <h1>ACCOUNT</h1>  
+    <h1>Accounts</h1>  
     <div id="body">
         <p><a href="CreateAccount.php"><button id="button" type="submit">Add Account</button></a></p>
         

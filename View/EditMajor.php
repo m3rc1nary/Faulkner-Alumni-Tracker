@@ -23,7 +23,7 @@
     $deptName = $val['DeptName'];
     ?>
 <div id='page'>
-    <h1>EDIT MAJOR</h1>
+    <h1>Edit Major</h1>
         <div id="body">
             <form method='post' action='/AlumniTracker/Controller/EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="formTable">

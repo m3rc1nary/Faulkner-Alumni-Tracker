@@ -8,7 +8,7 @@
     include('Header.php'); 
 ?>
 <div id='page'>
-    <h1>DEPARTMENT</h1>
+    <h1>Department</h1>
         <div id="body">
             <?php
                 if(isset($_GET['delete_dept']))

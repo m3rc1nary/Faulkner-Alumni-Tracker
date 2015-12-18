@@ -26,7 +26,7 @@
     $password = $val['Password'];
 ?>
 <div id='page'>
-    <h1>EDIT ACCOUNT</h1>
+    <h1>Edit Account</h1>
         <div id="body">            
             <form method='post' action='/AlumniTracker/Controller/EditAccountController.php?edit_account=<?php echo $employeeID ?>'>
                 <table id="formTable">
