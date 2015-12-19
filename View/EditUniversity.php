@@ -16,13 +16,19 @@
     $uniId = $val['UniversityID'];
     $uniName = $val['UniName'];
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Edit University</h1>
         <div id="body">
             <form method='post' action='/AlumniTracker/Controller/EditUniversityController.php?edit_id=<?php echo $uniId ?>'>
                 <table id="formTable">
                     <tr>
-                        <td><b>University Name:</b></td>
+                        <td>University Name:</td>
                         <td><input type="text" name="uniName" value="<?php echo $uniName;?>" /></td>
                     </tr>
                 </table>

@@ -8,6 +8,12 @@
 
     include('Header.php');
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Create Department</h1>
         <div id="body">

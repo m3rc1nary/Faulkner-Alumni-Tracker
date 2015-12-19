@@ -22,7 +22,7 @@
         <form method='post' action="AdminHome.php">
             <p><b>Role: </b>
                 <select name="role">
-                    <option> </option>
+                    <option></option>
                       <?php 
                           $sql = "SELECT DISTINCT Role FROM schoolemployee ORDER BY Role";
                           $result = $pdo->query($sql);

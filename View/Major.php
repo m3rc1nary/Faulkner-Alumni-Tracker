@@ -8,7 +8,6 @@
  
     include('Header.php');
 ?>
-
 <?php
     //delete specific degree
     if(isset($_GET['delete_id']))
@@ -21,13 +20,13 @@
         header("Location: Major.php");
     }
 ?>
-<div id="page">
-    <h1>Major</h1>
+<div id='page'>
+    <h1>List of Majors</h1>
         <div id="body">
             <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
             <table>
                 <thead>
-                    <tr id="tableHead">
+                    <tr>
                         <th>College</th>
                         <th>Type</th>
                         <th>Major</th>
@@ -52,7 +51,7 @@
                         $degreeMajor = $val['Name'];
                         $deptName = $val['DeptName'];
                     ?>
-                    <tr id="tablebody">
+                    <tr>
                         <td><?php echo $degreeCollege; ?></td>
                         <td><?php echo $degreeType; ?></td>
                         <td><?php echo $degreeMajor; ?></td>

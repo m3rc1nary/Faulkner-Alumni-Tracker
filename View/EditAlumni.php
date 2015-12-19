@@ -60,6 +60,12 @@
             endwhile;
     }
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Edit Alumni</h1>
         <div id="body">

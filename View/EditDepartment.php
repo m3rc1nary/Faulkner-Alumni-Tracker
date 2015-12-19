@@ -16,6 +16,12 @@
     $departmentId = $val['DepartmentID'];
     $departmentName = $val['DeptName'];
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Edit Department</h1>
         <div id="body"> 

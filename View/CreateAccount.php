@@ -8,22 +8,28 @@
     include('Header.php');
     //include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Create Account</h1>
         <div id="body"> 
             <form method='post' action='/AlumniTracker/Controller/CreateAccountController.php'>
                 <table id="formTable">
                     <tr>
-                        <td><b>First Name:</b></td><td><input type="text" name="FirstName" required /></td>
+                        <td>First Name:</td><td><input type="text" name="FirstName" required /></td>
                     </tr>
                     <tr>
-                        <td><b>Last Name:</b></td><td><input type="text" name="LastName" required /></td>
+                        <td>Last Name:</td><td><input type="text" name="LastName" required /></td>
                     </tr>
                     <tr>
-                        <td><b>Email:</b></td><td><input type="text" name="Email" required /></td>
+                        <td>Email:</td><td><input type="text" name="Email" required /></td>
                     </tr>
                     <tr>
-                        <td><b>Role:</b></td> 
+                        <td>Role:</td> 
                         <td><select name="Role">
                                 <option>Admin</option>
                                 <option>Dean</option>
@@ -32,13 +38,13 @@
                             </select></td>
                     </tr>
                     <tr>
-                        <td><b>Username:</b></td><td><input type="text" name="UserName" required /></td>
+                        <td>Username:</td><td><input type="text" name="UserName" required /></td>
                     </tr>
                     <tr>
-                        <td><b>Password:</b></td><td><input type="text" name="Password" required /></td>
+                        <td>Password:</td><td><input type="text" name="Password" required /></td>
                     </tr>
                     <tr>
-                        <td><b>Department:</b></td>
+                        <td>Department:</td>
                     </tr>
                 </table>
                 <div id='checkbox'>

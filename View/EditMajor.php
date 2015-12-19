@@ -22,13 +22,19 @@
     $degreeCollege = $val['College'];
     $deptName = $val['DeptName'];
     ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Edit Major</h1>
         <div id="body">
             <form method='post' action='/AlumniTracker/Controller/EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="formTable">
                     <tr>
-                        <td><b>College:</b></td>
+                        <td>College:</td>
                         <td><select name="College">
                                 <option><?php echo $degreeCollege; ?></option>
                                 <option>College of Arts and Sciences</option>
@@ -37,13 +43,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><b>Type:</b></td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>" /></td>
+                        <td>Type:</td><td><input type="text" name="Type" value="<?php echo $degreeType; ?>" /></td>
                     </tr>
                     <tr>
-                        <td><b>Major:</b></td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>" /></td>
+                        <td>Major:</td><td><input type="text" name="Major" value="<?php echo $degreeMajor; ?>" /></td>
                     </tr>
                     <tr>
-                        <td><b>Department:</b></td>
+                        <td>Department:</td>
                             <td><select name="Dept">
                                 <option><?php echo $deptName; ?></option>
                                 <?php 

@@ -20,6 +20,12 @@
     $empComp = $val['EmployerComp'];
     $employerEmail = $val['EmployerEmail'];
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Edit Employer</h1>
         <div id="body">   

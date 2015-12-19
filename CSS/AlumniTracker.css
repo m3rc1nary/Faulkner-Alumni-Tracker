@@ -15,6 +15,7 @@
     left: 0px;
     }
     
+/* Layout for logout link on every page*/    
 #logout {
     font: bold 17px palatino linotype, serif;
     float: right;
@@ -23,9 +24,9 @@
     left: 92%;
 }
 
+/* Remove logout link's hyperlink setup  */
 #logout a {
     text-decoration: none; 
-    float: right;
 }
 
 /* Blue line at the top of every page */
@@ -38,44 +39,34 @@ hr {
     margin-left: -8;
     margin-right: -8;
    }
-   
-/* Navigation bar */
 
-/* Navigation bar */
-    
-/* Remove line and position login*/
-
-/* Navigation bar link */
-
-/*grey box when hovering over button*/
-li a:hover:not(.active) {
-    background-color: #B0B0B0;
-}
-
+/* Blue background for navigation section */
 #navigation {
     top: 60px;
     left: 0px;
     position: fixed;
-    width: 14%;
+    width: 13%;
     height: 100%;
     background-color: #295190;
 }
 
+/* Remove ul stlying and positioning list for nav bar */
 #navigation ul {
-    font: bold 17px palatino linotype, serif;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
     list-style-type: none;
     overflow: hidden;
     background-color: #295190;
-    font: bold 17px palatino linotype, serif;
+    font: bold 16px palatino linotype, serif;
 }
 
+/* Adding bottom border and padding for nav bar */
 #navigation li {
     border-bottom:1px solid #bbb;
     padding-bottom: 5px;
 }
 
+/* Remove hyperlink styling, color test */
 #navigation a {
     text-decoration: none;
     display: block;
@@ -83,8 +74,14 @@ li a:hover:not(.active) {
     text-decoration: none;
 }
 
+/*grey box when hovering over button*/
+li a:hover:not(.active) {
+    background-color: #B0B0B0;
+}
+
 /**** Page Setup **************************************************************/
 
+/* Set up grey backgroung for login page */
 #loginPage {
     top: 66px;
     left:0;
@@ -97,22 +94,21 @@ li a:hover:not(.active) {
     margin-right: auto;
 }
 
-/* Every page background */
+/* Every page grey background */
 #page {
     top: 66px;
     left: 0px;
     background: none repeat 0 0 #D0D0D0;
     height: 90%;
     padding-left: 20px;
-    margin-left: 14%;
+    margin-left: 13%;
     margin-right: auto;
     position: fixed;
-    text-align: left;
     width: 90%;   
     overflow-y: scroll;
     }
     
-/* Postion body of each page */
+/* Postion body(text portion) of each page */
 #body {
     padding-left: 25px;
     padding-bottom: 25px;
@@ -127,7 +123,6 @@ li a:hover:not(.active) {
 h1 {
     font-size: 30px;
     font-family: palatino linotype, serif;
-    font-weight: bold;
     display:inline-block;
 }
 
@@ -189,7 +184,7 @@ tbody {
 /* Table body formating */
 td {
     border-collapse: collapse; 
-    padding: 3px 15px 3px 5px;
+    padding: 4px 4px 4px 3px;
     }
 
 /*format table in create alumni*/
@@ -197,13 +192,12 @@ th {
     color: white;
     background-color: #295190;
     font-size: 16px;
-    border-bottom: 2px solid black;
     padding-right: 3px;
     font-weight: bold;
-    text-align: center;
     border-collapse: collapse;
     border: 0px;  
-    padding: 3px 5px 5px 7px; 
+    /*top, right, bottom, left*/
+    padding: 3px 4px 3px 3px; 
     }
     
 /* Change color of every other row in tables */
@@ -211,6 +205,7 @@ tbody tr:nth-child(even){
     background-color: #DEE8F5;
     }
 
+/* Every odd table row is white */
 tbody tr:nth-child(odd){
     background-color: white;
     }
@@ -237,7 +232,7 @@ tbody tr:nth-child(odd){
     border: 1px solid #ccc; 
     margin-left: -1px; 
     position: relative;
-    left: 1px; 
+    left: 0px; 
     }
 
 /*remove radio button format*/
@@ -245,7 +240,7 @@ tbody tr:nth-child(odd){
     display: none;   
     }
 
-/*formattin tab box*/
+/*formatting tab box*/
 .content {
     position: absolute;
     top: 28px;
@@ -255,6 +250,7 @@ tbody tr:nth-child(odd){
     bottom: 0;
     padding: 20px;
     border: 1px solid #808080; 
+    width: 90%;
     }
 
 /*box 2 checked*/
@@ -294,5 +290,5 @@ tbody tr:nth-child(odd){
     -webkit-column-count: 4; /* Chrome, Safari, Opera */
     -moz-column-count: 4; /* Firefox */
     column-count: 4;
-    width: 50%;
+    width: 60%;
     }

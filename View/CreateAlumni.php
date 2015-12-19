@@ -7,15 +7,21 @@
 
     include('Header.php');
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Create Alumni</h1>
         <div id="body">
             <form method='post' action="/AlumniTracker/Controller/CreateAlumniController.php">
                 <table id="formTable">
                    <tr>
-                       <td>First Name:</td> <td><input type="text" name="FirstName" required />*</td>
+                       <td>First Name:</td> <td><input type="text" name="FirstName" required /></td>
                        <td>Middle Name:</td> <td><input type="text" name="MiddleName" /></td>
-                       <td>Last Name:</td> <td><input type="text" name="LastName" required />*</td>
+                       <td>Last Name:</td> <td><input type="text" name="LastName" required /></td>
                    </tr>
                    <tr>
                         <td>Cell Number:</td> <td><input type="text" name="CellNum" /></td>
@@ -109,7 +115,7 @@
                             <label for="tab-1"><b>Employment</b></label>
                                 <div class="content">
                                     <!-- javascript creates a popup of the SelectEmployer.php page !-->
-                                    <button id="button" type="submit" style="float: right;" onclick="javascript:void window.open('SelectEmployer.php','1443811554743','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" >Add Employer</button>
+                                    <p><button id="button" type="submit" onclick="javascript:void window.open('SelectEmployer.php','1443811554743','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" >Add Employer</button></p>
                                     <table style="float: left;">
                                         <thead>
                                             <tr>
@@ -141,7 +147,7 @@
                         <input type="radio" id="tab-2" name="tab-group-1">
                             <label for="tab-2"><b>Grad School</b></label> 
                                 <div class="content">
-                                    <a href="CreateAlumni.php"><button id="button" type="submit" style="float: right;">Add Grad School</button></a>
+                                    <p><button id="button" type="submit">Add Grad School</button></p>
                                     <table style="float: left;">
                                         <thead>
                                             <tr>

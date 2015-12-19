@@ -25,6 +25,12 @@
     $userName = $val['UserName'];
     $password = $val['Password'];
 ?>
+<style>
+    td {
+        font-weight: bold;
+    }
+</style>
+
 <div id='page'>
     <h1>Edit Account</h1>
         <div id="body">            
@@ -70,7 +76,7 @@
                             $deptName = $val['DeptName'];  
 
                             {
-                                echo " <input type='checkbox' name='DeptList[]' value='".$deptID."' />" . $deptName . "<br>";
+                                echo " <b><input type='checkbox' name='DeptList[]' value='".$deptID."' />" . $deptName . "<br></b>";
                             }endwhile;
                             ?>
                 </div>

@@ -13,8 +13,7 @@
         {
             $('#information').hide();
             
-            $('#view').scrollTop(0);
-            
+            $('#view').scrollTop(0);  
        });
 </script>
 
@@ -41,6 +40,7 @@
         <p><a href="CreateAccount.php"><button id="button" type="submit">Add Account</button></a></p>
         
 <!------ Show Selected Employee Information ----------------------------------->
+    <div id="information">    
         <?php
         if(isset($_GET['view']))
         {               
@@ -71,7 +71,7 @@
 
                 endwhile;
                 ?>
-            <table id="information">
+        <table style="width: 60%; ">
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -86,6 +86,7 @@
                     <td><?php echo $role; ?></td>
                     <td><?php echo $userName; ?></td>
                 </tr>
+                <tr>
                 <td><b>Departments: </b></td>
                     <td colspan="5" rowspan=""> 
                         <?php 
@@ -101,14 +102,18 @@
                                 echo $val['DeptName'] . ", ";
                                 endwhile;
                                 ?></td>
-                        
-            </table> 
-            <a href="EditAccount.php?edit_account=<?php echo $empID ?>"><button type="button">Edit</button></a>
-            <a href="Account.php?delete_account=<?php echo $empID ?>" onclick="return confirm('Are you sure you want to delete this Account?');"><button type="button">Delete</button></a>
+                </tr>
+                <tr>
+                    <td><a href="EditAccount.php?edit_account=<?php echo $empID ?>"><button type="button">Edit</button></a></td>
+                    <td><a href="Account.php?delete_account=<?php echo $empID ?>" onclick="return confirm('Are you sure you want to delete this Account?');"><button type="button">Delete</button></a></td>
+                    <td></td><td></td><td></td>
+                </tr>
+            </table>           
             <br>
             <?php  
             }//end if(isset($_GET['view']))
             ?>
+    </div>
             <br>
     
 <!-------- Show all Accounts -------------------------------------------------->  
