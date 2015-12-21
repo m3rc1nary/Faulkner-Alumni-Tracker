@@ -48,15 +48,11 @@
         $lName = $val['LastName'];
         $role = $val['Role'];
         //$deptName = $val['DeptName'];
-        $userName = $val['UserName'];
-        $password = $val['Password'];
             
             $_SESSION[fName]=$fName;
             $_SESSION[lName]=$lName;
             $_SESSION[role]=$role;
             //$_SESSION[deptName]=$deptName;
-            $_SESSION[userName]=$userName;
-            $_SESSION[password]=$password;
 
             echo $_SESSION['role'];
     //Depending on type of user we will redirect to various pages		
@@ -73,7 +69,7 @@
     }
     else
     {
-            header("location:Login.php");
+            header("location:Login.php?msg=failed");
     }
     
     ob_end_flush();

@@ -5,7 +5,7 @@
  * 
  * @author Robert Vines
  */
-    
+
     include('PlainHeader.php'); 
  ?>
         <div id="loginPage">
@@ -14,8 +14,16 @@
                     <p id='loginHeader'>Enter User Name and Password to Login</p>
                     <table id="tablebody" align ='center'>
                         <tr>
-                            <td style="border-color:white"><p id="loginText">User Name:</td>
-                            <td style="border-color:white"><input type="text" name="UserName" required /></td>
+                            <td colspan="2" style="color:red;"> 
+                                <!--gets failed password or username message and shows text-->
+                                <?php if (isset($_GET["msg"]) && $_GET["msg"] == 'failed') {
+                                echo "Wrong Username / Password";
+                                } ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-color:white; background-color: white;"><p id="loginText">User Name:</td>
+                            <td style="border-color:white; background-color: white;"><input type="text" name="UserName" required /></td>
                         </tr>
                         <tr style="background-color : white">
                             <td style="border-color:white"><p id="loginText">Password:</td>

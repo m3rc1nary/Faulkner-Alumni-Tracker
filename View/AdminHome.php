@@ -38,7 +38,7 @@
             <p><b>Last Name: </b><input type="text" name="LastName"></p>
             <p><input type="submit" value="Search"></p>
         </form>
-        <table id = "adminHomeUserTable">
+        <table>
             <thead>
                 <tr>
                     <th>First Name</th>

@@ -8,6 +8,7 @@
 
     include('Header.php');  
 ?>
+
 <style>
     td {
         font-weight: bold;
@@ -23,7 +24,7 @@
                         <td>Employer Name:</td><td><input type="text" name="EmpName" /></td>
                     </tr>
                     <tr>
-                        <td>Phone Number:</td><td><input type="text" name="EmpNum" placeholder="123-456-7890" /></td>
+                        <td>Phone Number:</td><td><input type="text" name="EmpNum" placeholder="999-999-9999" /></td>
                     </tr>
                     <tr>
                         <td>Employer Company:</td><td><input type="text" name="EmpComp" /></td>

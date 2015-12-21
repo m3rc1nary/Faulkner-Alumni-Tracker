@@ -6,7 +6,7 @@
  * @author: Robert Vines
  */
 
-include ('Config.php');
+include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 ?>
 
 <html>
