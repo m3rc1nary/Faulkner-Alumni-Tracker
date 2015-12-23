@@ -22,6 +22,7 @@
     #group {
         font-weight: bold;
         font-size: 15px;
+        border-bottom: 2px solid #9D9D9D;
     }
     
     #box {
@@ -123,7 +124,22 @@
                     <td><b>Cell:</b></td>
                     <td id='border'><?php echo $cell; ?></td>
                     <td><b>Major Type:</b></td>
-                    <td><?php echo $majorId ?></td>
+                    <td>
+                        <?php 
+                            $sql2 = "SELECT Type FROM degree "
+                                    . "WHERE DegreeID = ".$majorId;
+                            
+                            $result2=$pdo->query($sql2);
+
+                            while($val=$result2->fetch()):
+                            
+                                $majorType = $val['Type'];
+                                
+                                echo $majorType;
+                                
+                            endwhile;
+                        ?>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Secondary Email:</b></td> 
@@ -133,17 +149,58 @@
                     <td><b>Work:</b></td>
                     <td id='border'><?php echo $work; ?></td>
                     <td><b>Major Name:</b></td>
-                    <td><?php echo $majorId; ?></td>
+                    <td>
+                        <?php 
+                            $sql3 = "SELECT Name FROM degree "
+                                    . "WHERE DegreeID = ".$majorId;
+                            
+                            $result3=$pdo->query($sql3);
+
+                            while($val=$result3->fetch()):
+                            
+                                $majorName = $val['Name'];
+                                
+                                echo $majorName;
+                                
+                            endwhile; 
+                        ?>
+                    </td>
                 </tr>
                 <tr>
                     <td><b>Tracked:</b></td> 
-                    <td id='border'><?php echo $tracked; ?></td>
+                    <td id='border'>
+                        <?php 
+                            if ($tracked == 0)
+                            {
+                                echo 'Yes'; 
+                            }
+                            else 
+                            {
+                                echo 'No';
+                            } 
+                        ?>
+                    </td>
                     <td><b>State:</b></td>
                     <td id='border'><?php echo $state; ?></td>
                     <td><b>Home:</b></td>
                     <td id='border'><?php echo $home; ?></td>
                     <td><b>Minor:</b></td>
-                    <td><?php echo $minorId; ?></td>
+                    <td>
+                        <?php 
+                            $sql4 = "SELECT Name FROM degree "
+                                    . "WHERE DegreeID = ".$minorId;
+                            
+                            $result4=$pdo->query($sql4);
+
+                            while($val=$result4->fetch()):
+                            
+                                $minorName = $val['Name'];
+                                
+                                echo $minorName;
+                                
+                            endwhile;  
+                        ?>
+                    </td>
                 </tr> 
                 <tr>
                     <td></td>
@@ -168,7 +225,7 @@
             </table>
             <table id='content'>
                 <tr>
-                    <td id='group'>
+                    <td colspan="8" id='group'>
                         Grad School
                     </td>
                 </tr>
@@ -186,7 +243,7 @@
             </table>
             <table id='content'>
                 <tr>
-                    <td id='group'>
+                    <td colspan="12" id='group'>
                         Employment
                     </td>
                 </tr>
