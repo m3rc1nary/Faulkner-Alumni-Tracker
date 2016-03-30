@@ -20,7 +20,11 @@
                     header("Location: Employer.php");
                 }
             ?>
-            <p><a href="CreateEmployer.php"><button id="button">Add Employer</button></a></p>
+            <?php
+                 $empID=NULL;
+            ?>
+            <p><a href="EmployerView.php?edit_id=<?php echo $empID ?>"><button id="button">Add Employer</button></a></p>
+            
             <table>
                 <thead>
                     <tr>
@@ -54,7 +58,7 @@
                         <td><?php echo $empNum; ?></td>
                         <td><?php echo $empComp; ?></td>
                         <td><?php echo $employerEmail; ?></td>
-                        <td><a href="EditEmployer.php?edit_id=<?php echo $empID ?>"><input type="submit" value="Edit"></a></td>
+                        <td><a href="EmployerView.php?edit_id=<?php echo $empID ?>"><input type="submit" value="Edit"></a></td>
                         <td><a href="Employer.php?delete_id=<?php echo $empID ?>" onclick="return confirm('Are you sure you want to delete this employer?');"><input type="submit" value="Delete"></a></td>
                         <?php
                             endwhile;

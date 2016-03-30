@@ -17,6 +17,7 @@
     $sql="INSERT INTO employer (EmployerName, EmployerNum, EmployerComp, EmployerEmail)
           VALUES ('".$empName."', '".$empNum."', '".$empComp."', '".$empEmail."')";
     
+    
     $pdo->exec($sql);
     
     header("Location: /AlumniTracker/View/Employer.php");

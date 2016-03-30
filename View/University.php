@@ -21,7 +21,10 @@
                     header("Location: University.php");
                 }
             ?>
-            <p><a href="CreateUniversity.php"><button id="button">Add University</button></a></p>
+            <?php
+                $uniID=NULL;
+            ?>
+            <p><a href="UniversityView.php?edit_id=<?php echo $uniId ?>"><button id="button">Add University</button></a></p>
             <table>
                 <thead>
                     <tr id="tableHead">
@@ -44,7 +47,7 @@
                     ?>
                     <tr id="tablebody">
                         <td><?php echo $uniName; ?></td>
-                        <td><a href="EditUniversity.php?edit_id=<?php echo $uniId ?>"><input type="submit" value="Edit"></a></td>
+                        <td><a href="UniversityView.php?edit_id=<?php echo $uniId ?>"><input type="submit" value="Edit"></a></td>
                         <td><a href="University.php?delete_id=<?php echo $uniId ?>" onclick="return confirm('Are you sure you want to delete this university?');"><input type="submit" value="Delete"></a></td>
                         <?php
                             endwhile;
