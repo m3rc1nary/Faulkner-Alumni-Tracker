@@ -22,16 +22,20 @@
     $val=$result->fetch();
     
     $deptID = $val['DepartmentID'];
-     echo $deptID;
     } 
     catch (Exception $ex) 
     {
         echo "Connection Failed: " . $ex->getMessage();
     }
-   
+    if($degreeID == NULL){
+      $sql2 = "INSERT INTO degree (Type, Name, College, Department_DepartmentID)
+             VALUES ('".$type."','".$major."','".$college."','".$deptID."')";
+    }
+    else {
     $sql2="UPDATE degree "
             . "SET Type='".$type."', Name='".$major."', College='".$college."', Department_DepartmentID='".$deptID."' "
             . " WHERE DegreeID=".$degreeID;
+    }
     $pdo->query($sql2);
 
     header("Location: /AlumniTracker/View/Major.php");
