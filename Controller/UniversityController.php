@@ -3,7 +3,7 @@
 /* 
  * MySQL to edit information about a university.
  * 
- * @author: Robert Vines
+ * @author: Robert Coleman
  */
          
     include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');    
