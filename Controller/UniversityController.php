@@ -5,7 +5,7 @@
  * 
  * @author: Robert Vines
  */
-        
+         
     include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');    
            
     $uniId = $_GET['edit_id'];
