@@ -20,8 +20,12 @@
 
                     header("Location: Department.php");
                 }
-            ?>
-            <p><a href="CreateDepartment.php"><button id="button">Add Department</button></a></p>
+              
+                $deptId = NULL;
+                
+                
+                ?>
+            <p><a href="DepartmentView.php?edit_id=<?php echo $deptId ?>"><button id="button">Add Department</button></a></p>
             <table>
                 <thead>
                     <tr>
@@ -46,7 +50,7 @@
                 ?>
                     <tr>
                         <td><?php echo $deptName; ?></td>
-                        <td><a href="EditDepartment.php?edit_id=<?php echo $deptId ?>"><input type="submit" value="Edit"></a></td>
+                        <td><a href="DepartmentView.php?edit_id=<?php echo $deptId ?>"><input type="submit" value="Edit"></a></td>
                         <td><a href="Department.php?delete_dept=<?php echo $deptId ?>" onclick="return confirm('Are you sure you want to delete this department?');"><input type="submit" value="Delete"></a></td>
                         <?php
                             endwhile;

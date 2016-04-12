@@ -5,22 +5,26 @@
  *
  * @author Robert Vines
  */
-
     include('Header.php');
-       
     $degreeID = $_GET['edit_id'];
     
-    $sql = "SELECT degree.DegreeID, degree.Type, degree.Name, degree.College, department.DeptName"
-            . " FROM degree "
-            . "JOIN department "
-            . "ON degree.Department_DepartmentID = department.DepartmentID WHERE DegreeID=".$degreeID;
-    $result = $pdo->query($sql);
-    $val=$result->fetch();
-    
-    $degreeType = $val['Type'];
-    $degreeMajor = $val['Name'];
-    $degreeCollege = $val['College'];
-    $deptName = $val['DeptName'];
+    if($degreeID != NULL){
+        $title = "Edit Degree";
+        $sql = "SELECT degree.DegreeID, degree.Type, degree.Name, degree.College, department.DeptName"
+                . " FROM degree "
+                . "JOIN department "
+                . "ON degree.Department_DepartmentID = department.DepartmentID WHERE DegreeID=".$degreeID;
+        $result = $pdo->query($sql);
+        $val=$result->fetch();
+        
+        $degreeType = $val['Type'];
+        $degreeMajor = $val['Name'];
+        $degreeCollege = $val['College'];
+        $deptName = $val['DeptName'];
+    }
+    else{
+        $title = "Add Degree";
+    }
     ?>
 <style>
     td {
@@ -29,9 +33,9 @@
 </style>
 
 <div id='page'>
-    <h1>Edit Major</h1>
+    <h1><?php echo $title ?></h1>
         <div id="body">
-            <form method='post' action='/AlumniTracker/Controller/EditMajorController.php?edit_major=<?php echo $degreeID ?>'>
+            <form method='post' action='/AlumniTracker/Controller/MajorController.php?edit_major=<?php echo $degreeID ?>'>
                 <table id="formTable">
                     <tr>
                         <td>College:</td>

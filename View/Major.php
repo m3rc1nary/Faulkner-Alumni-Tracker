@@ -19,11 +19,12 @@
  
         header("Location: Major.php");
     }
+    $degreeID = NULL;
 ?>
 <div id='page'>
     <h1>List of Majors</h1>
         <div id="body">
-            <p><a href="CreateMajor.php"><button id="button">Add Major</button></a></p>
+            <p><a href="MajorView.php?edit_id=<?php echo $degreeID ?>"<button id="button">Add Major</button></a></p>
             <table>
                 <thead>
                     <tr>
@@ -56,7 +57,7 @@
                         <td><?php echo $degreeType; ?></td>
                         <td><?php echo $degreeMajor; ?></td>
                         <td><?php echo $deptName; ?></td>
-                        <td><a href="EditMajor.php?edit_id=<?php echo $degreeID ?>"><button type="button">Edit</button></a></td>
+                        <td><a href="MajorView.php?edit_id=<?php echo $degreeID ?>"><button type="button">Edit</button></a></td>
                         <td><a href="Major.php?delete_id=<?php echo $degreeID ?>" onclick="return confirm('Are you sure you want to delete this major?');"><input type="submit" value="Delete"></td>
                     </tr>
                     <?php
