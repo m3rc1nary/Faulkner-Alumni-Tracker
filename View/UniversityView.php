@@ -2,7 +2,7 @@
 /*  
  * Form to edit a university.
  * 
- * @author: Robert Vines
+ * @author: Robert Coleman
  */
 
     include('Header.php');

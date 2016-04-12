@@ -7,7 +7,7 @@
  */
 
 include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
-
+    $personID = $_GET['edit_id'];
     //get information from EditAlumniForm.php form
     $firstName = $_POST['FirstName'];
     $middleName = $_POST['MiddleName'];
@@ -41,23 +41,23 @@ include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
 
     //get id associated with major type and name
     $sql = "SELECT ";
-//    $result = $pdo->query($sql);
-//        while ($val = $result->fetch()):
-//        $degreeType = $val['Type'];
-//
-//        {
-//            echo "<option>" . $degreeType . "</option>";
-//        }endwhile;
+    $result = $pdo->query($sql);
+        while ($val = $result->fetch()):
+        $degreeType = $val['Type'];
+
+        {
+            echo "<option>" . $degreeType . "</option>";
+        }endwhile;
     
     //get id associated with minor name
     $sql2 = "SELECT ";
-//    $result = $pdo->query($sql);
-//        while ($val = $result->fetch()):
-//        $degreeType = $val['Type'];
-//
-//        {
-//            echo "<option>" . $degreeType . "</option>";
-//        }endwhile;
+    $result = $pdo->query($sql);
+        while ($val = $result->fetch()):
+        $degreeType = $val['Type'];
+
+        {
+            echo "<option>" . $degreeType . "</option>";
+        }endwhile;
     
     //update person, address, gradschool, graduated, and employment tables
     $sql3 = "UPDATE person, address, gradschool, graduated, employment "
@@ -65,13 +65,13 @@ include($_SERVER["DOCUMENT_ROOT"]. '/AlumniTracker/Database/Config.php');
             . "WHERE ";
     $pdo->query($sql3);
     
-//    $sql4="Update schoolemployee, login "
-//            . "SET schoolemployee.FirstName='".$firstName."', schoolemployee.LastName='".$lastName."', "
-//            . "schoolemployee.Email='".$email."', schoolemployee.Role='".$role."', "
-//            . "login.UserName='".$userName."', "
-//            . "login.Password='".$password."' "
-//            . "WHERE schoolemployee.Login_LoginID = login.LoginID AND EmployeeID='".$employeeId."';";
-//    $pdo->query($sql4);
+    $sql4="Update schoolemployee, login "
+            . "SET schoolemployee.FirstName='".$firstName."', schoolemployee.LastName='".$lastName."', "
+            . "schoolemployee.Email='".$email."', schoolemployee.Role='".$role."', "
+            . "login.UserName='".$userName."', "
+            . "login.Password='".$password."' "
+            . "WHERE schoolemployee.Login_LoginID = login.LoginID AND EmployeeID='".$employeeId."';";
+    $pdo->query($sql4);
 
     //After sql return to EditAlumni.php with updated information
     header("Location: /AlumniTracker/View/Alumni.php");

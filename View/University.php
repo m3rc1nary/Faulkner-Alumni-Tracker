@@ -3,7 +3,7 @@
 /* 
  * Display a university to update and delete. Also, navigate to add a university.
  * 
- * @author: Robert Vines
+ * @author: Robert Coleman
  */
 
     include('Header.php');

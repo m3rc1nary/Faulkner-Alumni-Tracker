@@ -14,9 +14,9 @@
 </style>
 
 <div id='page'>
-    <h1>Create Alumni</h1>
+    <h1><?php echo $title?></h1>
         <div id="body">
-            <form method='post' action="/AlumniTracker/Controller/CreateAlumniController.php">
+            <form method='post' action="/AlumniTracker/Controller/AlumniController.php">
                 <table id="formTable">
                    <tr>
                        <td>First Name:</td> <td><input type="text" name="FirstName" required /></td>

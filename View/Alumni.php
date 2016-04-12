@@ -8,22 +8,25 @@
     include ('Header.php');
 ?>
 <?php
-//    if(isset($_GET['delete_id']))
-//    {               
-//        $employeeId = $_GET['delete_id'];
-//        
-//        $sql="DELETE schoolemployee.*, login.* FROM schoolemployee "
-//                . "JOIN login "
-//                . "ON schoolemployee.Login_LoginID=login.LoginID WHERE EmployeeID=".$employeeId;
-//        $pdo->query($sql);
-//        
-//        header("Location: EditUser.php");
-//    }
+    if(isset($_GET['delete_id']))
+    {               
+        $employeeId = $_GET['delete_id'];
+        
+        $sql="DELETE schoolemployee.*, login.* FROM schoolemployee "
+                . "JOIN login "
+                . "ON schoolemployee.Login_LoginID=login.LoginID WHERE EmployeeID=".$employeeId;
+        $pdo->query($sql);
+        
+        header("Location: EditUser.php");
+    }
 ?>
+<?php
+    $personID=NULL;
+ ?>
 <div id='page'>
     <h1>Alumni</h1>
         <div id="body">
-            <p><a href="CreateAlumni.php"><button id="button" type="submit">Add Alumni</button></a></p>
+            <p><a href="CreateAlumni.php?edit_id=<?php echo $personId ?>"><button id="button" type="submit">Add Alumni</button></a></p>
             <table class="column1">
                 <thead>
                     <tr>

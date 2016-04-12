@@ -4,7 +4,7 @@
 /* 
  * For to edit an employer.
  * 
- * @author: Robert Vines
+ * @author: Robert Coleman
  */
 
     include('Header.php');
@@ -24,7 +24,7 @@
             $empName = $val['EmployerName'];    
             $empNum = $val['EmployerNum'];
             $empComp = $val['EmployerComp'];
-            $employerEmail = $val['EmployerEmail'];
+            $empEmail = $val['EmployerEmail'];
             $title='Edit Employer';
             
         }
@@ -51,7 +51,7 @@
                         <td>Employer Company:</td><td><input type="text" name="EmpComp" value="<?php echo $empComp ?>" /></td>
                     </tr>
                     <tr>
-                        <td>Employer email:</td><td><input type="email" name="EmpEmail" value="<?php echo $employerEmail ?>" /></td>
+                        <td>Employer email:</td><td><input type="email" name="EmpEmail" value="<?php echo $empEmail ?>" /></td>
                     </tr>
                 </table>
                 <br>
