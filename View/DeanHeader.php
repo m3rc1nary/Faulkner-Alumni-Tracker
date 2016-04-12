@@ -19,13 +19,13 @@
     <header>
         <a href="DeanHome.php"><img style="float:left; z-index: 1" src="/AlumniTracker/Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
                         Tracker" id="logo"></a>
-        <div id="logout"><a href="Logout.php">Log out</a></div>
+        <div id="logout"><a id="user" href="Logout.php">Log out</a></div>
         <hr noshade />
     </header>
         
         <div id="navigation">
             <ul>
-                <li><a href="DeanHome.php">Home</a></li>
+                <li><a id="user" href="Home.php">Home</a></li>
                 <li><a href="Major.php">Major</a></li>
                 <li><a href="Department.php">Department</a></li>
                 <li><a href="Employer.php">Employer</a></li>

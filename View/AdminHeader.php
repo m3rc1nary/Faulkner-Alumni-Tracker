@@ -15,14 +15,14 @@
     </head>
     <body>
         <header>
-            <a href="AdminHome.php"><img src="/AlumniTracker/Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
+            <img src="/AlumniTracker/Images/AlumniTrackerLogo.jpg" alt="Faulkner University Alumni 
                             Tracker" id="logo" /></a>
-        <div id="logout"><a href="Logout.php">Log out</a></div>
+        <div id="logout"><a id="user" href="Logout.php">Log out</a></div>
         <hr noshade />
     </header>
         <div id="navigation">
             <ul>
-                <li><a href="AdminHome.php">Home</a></li>
+                <li><a  id="user" href="Home.php">Home</a></li>
                 <li><a href="Account.php">Accounts</a></li>
                 <li><a href="Major.php">Major</a></li>
                 <li><a href="Department.php">Department</a></li>
