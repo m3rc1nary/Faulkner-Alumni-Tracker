@@ -57,13 +57,13 @@
             echo $_SESSION['role'];
     //Depending on type of user we will redirect to various pages		
             if($role == 'Admin')	 
-                { header( "location:AdminHome.php"); 	}
+                { header( "location:Home.php"); 	}
             else if($role == 'Department Chair')	 
-                { header( "location:ChairSecHome.php"); }
+                { header( "location:Home.php"); }
             else if($role == 'Secretary')	 
-                { header( "location:ChairSecHome.php"); }
+                { header( "location:Home.php"); }
             else if($role == 'Dean')	 
-                { header( "location:DeanHome.php"); 	}
+                { header( "location:Home.php"); 	}
             else    
                 { header( "location:Login.php");      }
     }
