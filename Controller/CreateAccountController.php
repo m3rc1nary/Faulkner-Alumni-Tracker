@@ -51,7 +51,6 @@
             $sql3 = "INSERT INTO department_has_schoolemployee (Department_DepartmentID, SchoolEmployee_EmployeeID)"
                     . " VALUES ('".$dept."', '".$empId."') ";
             $pdo->query($sql3);
-            echo 'It worked';
             } 
     
     //automatically send to new page
